@@ -1,0 +1,85 @@
+@import "vars";
+@import "mixins";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  color: $color-secondary;
+  background-color: $color-white;
+
+  //  Body Scrollbar
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #1c1b1b;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 2px;
+  }
+
+  &::-moz-scrollbar {
+    width: 21px;
+  }
+
+  &::-moz-scrollbar-track {
+    background: #1c1b1b;
+  }
+
+  &::-moz-scrollbar-thumb {
+    background: $color-primary;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.textRed {
+  color: $color-red;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 20px;
+
+  //padding-right: 100px;
+  //padding-left: 100px;
+
+  /*
+  @include xlScreenMedia {
+    max-width: 960px;
+  }
+
+  @include lgScreenMedia {
+    max-width: 820px;
+  }
+
+  @include mdScreenMedia {
+    max-width: 640px;
+  }*/
+
+  @include smScreenMedia {
+    max-width: 360px;
+    //padding-left: 16px;
+    // padding-right: 16px;
+  }
+}
