@@ -1,14 +1,16 @@
-import Header from "../global/Header/Header"; 
-import Footer from "../global/Footer/Footer" 
- 
+import AppRouter from "../../router/AppRouter";
+import Header from "../global/Header/Header";
+import Subscription from "../global/Subscription/Subscription";
+import Footer from "../global/Footer/Footer";
 
 function App() {
   return (
     <>
-      <Header />
       <div className="container">
-        Container
+        <Header />
+        <AppRouter />
       </div>
+      <Subscription />
       <Footer />
     </>
   );

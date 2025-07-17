@@ -1,6 +1,6 @@
 import AboutMain from "../components/AboutPage/AboutMain/AboutMain";
 
-const AboutPage = () => {
+const BlogPage = () => {
   return (
     <>
       <AboutMain />
@@ -8,4 +8,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default BlogPage;

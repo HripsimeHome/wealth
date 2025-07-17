@@ -4,9 +4,11 @@ import Footer from "../global/Footer/Footer";
 function App() {
   return (
     <>
-      <Header />
-      <div className="container">Container</div>
-      <Footer />
+      <div className="container">
+        <Header />
+        <AppRouter />
+        <Footer />
+      </div>
     </>
   );
 }

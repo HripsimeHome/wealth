@@ -1,0 +1,9 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.subscription {
+  height: 300px;
+  color: $color-white;
+  background-color: $color-primary;
+  margin-top: auto;
+}

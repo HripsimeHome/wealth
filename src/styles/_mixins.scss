@@ -52,50 +52,24 @@
   border: $border;
   background: $bg;
   cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 @mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
   width: $width;
-  height: $height;
   fill: $color;
+  height: $height;
   stroke: $stroke;
 }
 
-@mixin setFont(
-  $size,
-  $weight,
-  $family: $font-fam-primary,
-  $color: $color-text,
-  $useMedia: true
-) {
+@mixin setFont($size, $weight, $color: $color-secondary, $useMedia: true) {
   font-size: $size;
   font-weight: $weight;
-  font-family: $family;
   color: $color;
-
-  @if ($useMedia) {
-    @if ($size == 16px) {
-      @include lgScreenMedia {
-        font-size: 14px;
-      }
-    } @else if ($size == 20px) {
-      @include xlScreenMedia {
-        font-size: 18px;
-      }
-
-      @include lgScreenMedia {
-        font-size: 16px;
-      }
-    } @else if ($size == 24px) {
-      @include xlScreenMedia {
-        font-size: 22px;
-      }
-
-      @include lgScreenMedia {
-        font-size: 20px;
-      }
-    }
-  }
+  font-family: $font-family;
 }
 
 @mixin flexCol($layout: center, $align: center) {
@@ -111,29 +85,3 @@
     background-image: url($srcSet);
   }
 }
-// .class {
-//   @include bgWebp("../../assets/images/all/example.png","../../assets/images/all/example.webp")
-// }
-
-@mixin setDistance($distance, $prop: margin-bottom) {
-  @if ($distance == 120) {
-    #{$prop}: 120px;
-
-    @include xxlScreenMedia {
-      #{$prop}: 110px;
-    }
-
-    @include xlScreenMedia {
-      #{$prop}: 100px;
-    }
-
-    @include lgScreenMedia {
-      #{$prop}: 80px;
-    }
-
-    @include smScreenMedia {
-      #{$prop}: 60px;
-    }
-  }
-}
- 

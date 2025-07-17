@@ -1,30 +1,39 @@
-import { ReactElement } from "react";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
- 
-import ErrorPage from "../pages/ErrorPage";
-import { Navigate } from "react-router-dom";
+import ServicesPage from "../pages/ServicesPage";
+import BlogPage from "../pages/BlogPage";
+import ContactsPage from "../pages/ContactsPage";
+//import { Navigate } from "react-router-dom";
 
 // Paths
-
 export const homePagePath = "/";
 export const aboutPagePath = "/about";
- 
+export const servicesPagePath = "/services";
+export const blogPagePath = "/blog";
+export const contactsPagePath = "/contacts";
 
 // Routes
-
 export const routes = [
   {
     path: homePagePath,
     component: <HomePage />,
   },
-
   {
     path: aboutPagePath,
     component: <AboutPage />,
   },
+
   {
-    path: "*",
-    component: <ErrorPage />,
+    path: servicesPagePath,
+    component: <ServicesPage />,
+  },
+  {
+    path: contactsPagePath,
+    component: <ContactsPage />,
+  },
+
+  {
+    path: blogPagePath,
+    component: <BlogPage />,
   },
 ];

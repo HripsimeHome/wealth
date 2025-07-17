@@ -7,18 +7,17 @@ $xl-screen: 1280px;
 $xxl-screen: 1440px;
 
 // font
-$font-family: "Montserrat", sans-serif;
+$font-family: "Inter", sans-serif;
 
 // Transition
 $transition: all 0.3s;
 $transitionEaseOut: all 0.3s ease-out 0s;
 
 // colors
+$color-primary: #dbec62;
+$color-secondary: #1c1c1c;
 $color-white: #ffffff;
-$color-secondary: #000000;
-$color-primary: #8c52ff;
-$color-lightPrimary: #b164ff;
-$color-grey: #919191;
-$color-lightGrey: #e5e5e5;
-$color-darkGrey: #575757;
+$color-black: #050505;
+$color-lightGrey: #e7e7e9;
+$color-darkGrey: #c7c7c7;
 $color-red: #e53935;
