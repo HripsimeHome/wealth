@@ -1,9 +1,9 @@
-import AboutMain from "../components/AboutPage/AboutMain/AboutMain";
+import BlogMain from "../components/BlogPage/BlogMain/BlogMain";
 
 const BlogPage = () => {
   return (
     <>
-      <AboutMain />
+      <BlogMain />
     </>
   );
 };

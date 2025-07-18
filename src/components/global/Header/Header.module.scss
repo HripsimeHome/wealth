@@ -4,10 +4,9 @@
 .header {
   @include flexCol();
   max-width: 500px;
+  gap: 20px;
   width: 100%;
   margin: 80px auto;
-  @include flexCol();
-  gap: 20px;
 
   @include lgScreenMedia {
     flex-direction: column;
@@ -15,8 +14,8 @@
     max-width: 300px;
   }
 
-  .title {
-    @include setFont(56px, 600, $color-secondary);
+  &__title {
+    @include setFont(62px, 600, $color-secondary);
     line-height: 4.5rem;
   }
 

@@ -1,13 +1,16 @@
 //import styles from "./ServicesHeader.module.scss";
-import SectionTitle from "../../layout/SectionTitle/SectionTitle";
+import Header from "../../global/Header/Header";
 import { investmentsIcon } from "../../../assets/svg";
 
 const ServicesHeader = () => {
   return (
-    <section>
-      <div className="container"></div>
-
-      <SectionTitle icon={investmentsIcon} title="stock analysis" />
+    <section className="container">
+      <Header
+        icon={investmentsIcon}
+        sectionTitle="Stock Analysis"
+        title="Services"
+        subtitle="Lorem"
+      />
     </section>
   );
 };
