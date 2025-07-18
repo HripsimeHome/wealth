@@ -1,0 +1,154 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.headerMenu {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @include flexCol(space-between, center);
+  transition: $transition;
+  background-color: $color-lightGrey;
+  padding: 20px 4.5rem;
+
+  @include lgScreenMedia {
+    padding: 20px 0;
+  }
+
+  @include smScreenMedia {
+    padding: 15px 0;
+  }
+
+  // &__container {
+  //   max-width: 100%;
+  //   width: 100%;
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+  //   @include flexCol(space-between, center);
+  // }
+
+  &__logoImg {
+    width: 80px;
+
+    @include lgScreenMedia {
+      width: 65px;
+    }
+
+    @include smScreenMedia {
+      width: 48px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 58px;
+
+    @include mdScreenMedia {
+      gap: 24px;
+    }
+
+    @include smScreenMedia {
+      display: none;
+      gap: 30px;
+    }
+
+    &_open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      max-width: 193px;
+      width: 100%;
+      background-color: $color-secondary;
+      padding-top: 100px;
+      padding-left: 20px;
+    }
+  }
+
+  &__menuLink {
+    @include setFont(16px, 300, $color-black);
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    @include mdScreenMedia {
+      // font-size: 16px;
+    }
+
+    &:hover,
+    &_active {
+      // color: $color-white;
+    }
+
+    &_active {
+      text-decoration: underline;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+  &__btnBurger {
+    background: none;
+    display: none;
+    border: none;
+
+    @include smScreenMedia {
+      display: block;
+    }
+  }
+
+  &__burgerIcon {
+    @include svg(27px, $color-white);
+
+    &:hover {
+      fill: $color-primary;
+      cursor: pointer;
+      transition: $transition;
+    }
+
+    @include smScreenMedia {
+      @include svg(24px, $color-white);
+    }
+  }
+
+  &__btnClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  &__crossIcon {
+    @include svg(40px, $color-white);
+
+    &:hover {
+      fill: $color-primary;
+      transition: $transition;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+
+  @include smScreenMedia {
+    &__dropdown {
+      display: none;
+    }
+  }
+}

@@ -1,22 +1,15 @@
 import styles from "./Header.module.scss";
 //import Svg from "../../layout/Svg/Svg";
 
-import {
-  homePagePath,  
-} from "../../../router/path";
+import { homePagePath } from "../../../router/path";
 
-import {
-   //arrowPrevIcon 
-} from "../../../assets/svg";
+import //arrowPrevIcon
+"../../../assets/svg";
 
- 
-
-const Header = () => {      
+const Header = () => {
   return (
     <>
-      <header>
-         Header
-      </header>
+      <header>Header</header>
     </>
   );
 };

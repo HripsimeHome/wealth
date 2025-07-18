@@ -1,6 +1,9 @@
 // Home
-//import avatarImage from "./images/header/avatar.jpg";
+import logoImage from "./images/logo.png";
+import logoWebpImage from "./images/logo.webp";
 
-export // Home
-// avatarImage,
- {};
+export {
+  logoImage,
+  logoWebpImage,
+  // Home
+};

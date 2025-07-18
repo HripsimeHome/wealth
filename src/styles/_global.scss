@@ -20,12 +20,12 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    background: #1c1b1b;
+    background: $color-primary;
     border-radius: 2px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $color-primary;
+    background: $color-darkGrey;
     border-radius: 2px;
   }
 
@@ -34,11 +34,11 @@ body {
   }
 
   &::-moz-scrollbar-track {
-    background: #1c1b1b;
+    background: $color-primary;
   }
 
   &::-moz-scrollbar-thumb {
-    background: $color-primary;
+    background: $color-darkGrey;
   }
 }
 

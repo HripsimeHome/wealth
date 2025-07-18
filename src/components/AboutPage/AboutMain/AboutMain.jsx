@@ -1,9 +1,9 @@
-import styles from "./AboutMain.module.scss";
+import AboutHeader from "./AboutHeader/AboutHeader";
 
 const AboutMain = () => {
   return (
     <>
-      <section className={styles.aboutMain}></section>
+      <AboutHeader />
     </>
   );
 };

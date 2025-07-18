@@ -1,12 +1,15 @@
-import styles from "./HomeMain.module.scss";
+import HomeHeader from "./HomeHeader/HomeHeader";
+import HomeReturns from "./HomeReturns/HomeReturns";
+import HomeContent from "./HomeContent/HomeContent";
+import HomePosts from "./HomePosts/HomePosts";
 
 const HomeMain = () => {
   return (
     <>
-      <section className={styles.homeMain}>
-
-        Home main
-      </section>
+      <HomeHeader />
+      <HomeReturns />
+      <HomeContent />
+      <HomePosts />
     </>
   );
 };
