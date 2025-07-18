@@ -42,18 +42,18 @@ body {
   }
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .center {
   text-align: center;
 }
 
 .textRed {
   color: $color-red;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .container {

@@ -8,9 +8,16 @@ import //arrowPrevIcon
 
 const Header = () => {
   return (
-    <>
-      <header>Header</header>
-    </>
+    <header className={styles.header}>
+      <div>
+        <span>title</span>
+        <h1 className={styles.header__title}>Contacts</h1>
+      </div>
+
+      <h5 className={styles.header__subtitle}>
+        Contact us to discuss your project and find out how we can help you
+      </h5>
+    </header>
   );
 };
 
