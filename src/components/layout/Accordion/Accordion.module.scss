@@ -1,0 +1,33 @@
+.accordion {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion__header {
+  background: none;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion__title {
+  flex-grow: 1;
+}
+
+.accordion__toggle {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion__content {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
