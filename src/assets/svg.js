@@ -1,4 +1,5 @@
 export const investmentsIcon = "investments";
+export const innovationIcon = "innovation";
 export const expertsIcon = "experts";
 export const realtimeIcon = "realtime";
 export const companyIcon = "company";

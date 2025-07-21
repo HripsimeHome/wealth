@@ -2,4 +2,76 @@
 @import "../../../../styles/vars";
 
 .homeHeader {
+  @include flexCol(start, start);
+  gap: 50px;
+
+  &__leftBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    @include setFont(143px, 500);
+    text-transform: uppercase;
+    line-height: 115px;
+  }
+
+  &__titleThin {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 90px;
+  }
+
+  &__rotateLine {
+    position: relative;
+    bottom: 12px;
+    display: block;
+    height: 5px;
+    background-color: $color-primary;
+    transform: rotate(-3deg);
+  }
+
+  &__blockContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__stocksBlock {
+    @include flexCol();
+    flex-direction: column;
+    //padding: 20px;
+    background-color: $color-primary;
+    border-radius: 24px;
+  }
+
+  &__stocks {
+    @include flexCol();
+    gap: 5px;
+  }
+
+  &__stocksIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__customersBlock {
+    @include flexCol();
+    background-color: $color-black;
+    border-radius: 24px;
+    color: $color-white;
+  }
+
+  // Right block
+
+  &__imgContainer {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 50px;
+  }
 }

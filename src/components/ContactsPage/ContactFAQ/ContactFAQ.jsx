@@ -1,6 +1,6 @@
-import Header from "../../../global/Header/Header";
-import Accordion from "../../../layout/Accordion/Accordion";
-import { investmentsIcon } from "../../../../assets/svg";
+import Header from "../../global/Header/Header";
+import Accordion from "../../layout/Accordion/Accordion";
+import { investmentsIcon } from "../../../assets/svg";
 
 const ContactFAQ = () => {
   return (

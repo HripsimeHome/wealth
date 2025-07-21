@@ -9,7 +9,7 @@
   @include flexCol(space-between, center);
   transition: $transition;
   background-color: $color-lightGrey;
-  padding: 20px 4.5rem;
+  padding: 32px 4.5rem;
 
   @include lgScreenMedia {
     padding: 20px 0;
@@ -28,7 +28,7 @@
   // }
 
   &__logoImg {
-    width: 80px;
+    width: 110px;
 
     @include lgScreenMedia {
       width: 65px;
@@ -41,15 +41,15 @@
 
   &__menu {
     display: flex;
-    gap: 58px;
+    gap: 35px;
 
     @include mdScreenMedia {
-      gap: 24px;
+      //gap: 24px;
     }
 
     @include smScreenMedia {
       display: none;
-      gap: 30px;
+      // gap: 30px;
     }
 
     &_open {
@@ -70,9 +70,9 @@
   }
 
   &__menuLink {
-    @include setFont(16px, 300, $color-black);
+    @include setFont(15px, 300, $color-black);
     display: inline-block;
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-decoration: none;
 
     @include mdScreenMedia {

@@ -1,6 +1,6 @@
 import styles from "./ContactForm.module.scss";
-import Header from "../../../global/Header/Header";
-import { contactsIcon } from "../../../../assets/svg";
+import Header from "../../global/Header/Header";
+import { contactsIcon } from "../../../assets/svg";
 
 const ContactForm = () => {
   return (
