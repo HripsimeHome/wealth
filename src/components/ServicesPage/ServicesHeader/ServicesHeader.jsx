@@ -9,7 +9,8 @@ const ServicesHeader = () => {
         icon={investmentsIcon}
         sectionTitle="Stock Analysis"
         title="Services"
-        subtitle="Lorem"
+        subtitle="Quality research paired with real-time trade alerts
+"
       />
     </section>
   );

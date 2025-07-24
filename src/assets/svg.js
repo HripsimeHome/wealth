@@ -1,4 +1,8 @@
+//Home
+
 export const investmentsIcon = "investments";
+export const leftTopIcon = "leftTop";
+
 export const innovationIcon = "innovation";
 export const expertsIcon = "experts";
 export const realtimeIcon = "realtime";

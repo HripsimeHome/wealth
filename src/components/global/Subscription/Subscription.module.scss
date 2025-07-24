@@ -2,8 +2,40 @@
 @import "../../../styles/vars";
 
 .subscription {
-  height: 300px;
+  position: relative;
+  min-height: 300px;
   color: $color-white;
   background-color: $color-primary;
-  margin-top: auto;
+  //margin-top: 240px;
+
+  &__container {
+    @include flexCol;
+    color: $color-black;
+  }
+
+  &__contentWrapper {
+    @include flexCol;
+    max-width: 850px;
+    min-height: 500px;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 24px;
+    margin: 0 auto;
+    @include bgWebp(
+      "../../../assets/images/subscription/subscription.jpg",
+      "../../../assets/images/subscription/subscription.webp"
+    );
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    box-shadow: 0 1.11vw 2.22vw #0000001a;
+  }
+
+  &__content {
+    @include flexCol;
+
+    flex-direction: column;
+    max-width: 640px;
+  }
 }

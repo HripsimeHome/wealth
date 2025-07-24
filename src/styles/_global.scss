@@ -81,3 +81,23 @@ body {
   padding-left: 4.5rem;
   padding-right: 4.5rem;
 }
+
+.containerBlack {
+  min-height: 500px;
+  background-color: $color-black;
+  border-radius: 69px;
+}
+
+.scrollAnim {
+  animation: animationScroll;
+}
+
+.animationScroll {
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: translate3d(0px, -20%, 0) scale3d(1, 1, 1) rotateX(1deg);
+  }
+}

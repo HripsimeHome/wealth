@@ -1,0 +1,15 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.servicesContent {
+  margin-top: 240px;
+
+  &__video {
+    @include flexCol;
+    max-width: 850px;
+    width: 100%;
+    transform: translateY(-50%);
+    border-radius: 24px;
+    margin: 0 auto;
+  }
+}

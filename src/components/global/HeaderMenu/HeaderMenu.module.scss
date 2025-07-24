@@ -9,7 +9,7 @@
   @include flexCol(space-between, center);
   transition: $transition;
   background-color: $color-lightGrey;
-  padding: 32px 4.5rem;
+  padding: 32px 4.5rem 15px;
 
   @include lgScreenMedia {
     padding: 20px 0;

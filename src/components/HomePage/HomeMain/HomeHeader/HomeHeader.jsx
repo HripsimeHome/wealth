@@ -3,7 +3,11 @@ import SectionTitle from "../../../layout/SectionTitle/SectionTitle";
 import { stocksImage, stocksWebpImage } from "../../../../assets/images";
 import Svg from "../../../layout/Svg/Svg";
 
-import { investmentsIcon, innovationIcon } from "../../../../assets/svg";
+import {
+  investmentsIcon,
+  innovationIcon,
+  leftTopIcon,
+} from "../../../../assets/svg";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 const HomeHeader = () => {
@@ -41,13 +45,24 @@ const HomeHeader = () => {
       {/* /Left block */}
 
       {/* Right Block */}
-      <div className={styles.homeHeader_imgContainer}>
+      <div className={styles.homeHeader__imgContainer}>
         <ImageWebp
           src={stocksImage}
           srcSet={stocksWebpImage}
           className={styles.homeHeader__img}
         />
+        <div className={styles.homeHeader__test}>
+          {/* <Svg id={leftTopIcon} className={styles.homeHeader__test} /> */}
+        </div>
       </div>
+
+      <div className={styles.homeHeader__marqueeContainer}>
+        <div className={styles.homeHeader__marquee}>
+          <span>• Stock Alerts</span>
+        </div>
+      </div>
+      {/* <div className="animationScroll">ass</div> */}
+
       {/* /Right Block */}
     </section>
   );

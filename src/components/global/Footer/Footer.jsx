@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        FOoterl log
+        Footerl logo
         <div className={styles.footer__footerBottom}>
           <p className={styles.footer__copyright}>
             Copyright &copy; {new Date().getFullYear()}. Wealth Bento. All

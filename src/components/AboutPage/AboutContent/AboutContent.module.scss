@@ -1,0 +1,36 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.aboutContent {
+  &__statistics {
+    @include flexCol;
+    gap: 23px;
+    color: $color-white;
+  }
+
+  &__statisticsCount {
+    font-size: 100px;
+  }
+
+  &__statisticsText {
+  }
+
+  &__staffContainer {
+    @include flexCol;
+    gap: 45px;
+    color: $color-white;
+  }
+
+  &__staffImg {
+    max-width: 430px;
+    border-radius: 24px;
+  }
+
+  &__staffTitle {
+    font-size: 45px;
+  }
+
+  &__staffText {
+    font-size: 16px;
+  }
+}

@@ -7,9 +7,7 @@ function App() {
   return (
     <>
       <HeaderMenu />
-      <div className="container">
-        <AppRouter />
-      </div>
+      <AppRouter />
       <Subscription />
       <Footer />
     </>

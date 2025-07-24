@@ -7,9 +7,9 @@ const HomeMain = () => {
   return (
     <>
       <HomeHeader />
-      {/* <HomeReturns />
+      {/* <HomeReturns />*/}
       <HomeContent />
-      <HomePosts /> */}
+      {/* <HomePosts />  */}
     </>
   );
 };
