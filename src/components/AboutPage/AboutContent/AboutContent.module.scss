@@ -1,29 +1,92 @@
+// AboutContent.module.scss
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
 .aboutContent {
-  &__statistics {
+  &__container {
+    max-width: 1000px;
+  }
+
+  &__statisticsContainer {
     @include flexCol;
     gap: 23px;
+    max-width: 600px;
     color: $color-white;
+    margin: 0 auto;
+
+    @include lgScreenMedia {
+      flex-direction: column;
+    }
   }
 
   &__statisticsCount {
     font-size: 100px;
   }
 
-  &__statisticsText {
+  &__cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 270px;
+    min-height: 270px;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 24px;
+    padding: 40px;
+    color: $color-black;
+
+    // Fallback color (if no class matched)
+    background-color: $color-lightGrey;
+  }
+
+  &__cardTitle {
+    font-size: 35px;
+  }
+
+  &__cardSubtitle {
+    font-size: 12px;
+  }
+
+  &__cardIcon {
+    width: 42px;
+    height: 42px;
   }
 
   &__staffContainer {
     @include flexCol;
     gap: 45px;
     color: $color-white;
+
+    @include mdScreenMedia {
+      flex-direction: column;
+    }
+  }
+
+  &__staffImgContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__staffImg {
-    max-width: 430px;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 24px;
+  }
+
+  &__staff1RightBottom {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 10;
   }
 
   &__staffTitle {
@@ -32,5 +95,26 @@
 
   &__staffText {
     font-size: 16px;
+
+    @include lgScreenMedia {
+      text-align: center;
+    }
+  }
+
+  // Background color modifiers
+  .orange {
+    background-color: $color-lightGrey;
+  }
+
+  .blue {
+    background-color: $color-darkGrey;
+  }
+
+  .gray {
+    background-color: $color-primary;
+  }
+
+  .red {
+    background-color: $color-secondary;
   }
 }

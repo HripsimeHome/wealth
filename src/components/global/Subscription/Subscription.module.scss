@@ -22,10 +22,10 @@
     transform: translateY(-50%);
     border-radius: 24px;
     margin: 0 auto;
-    @include bgWebp(
-      "../../../assets/images/subscription/subscription.jpg",
-      "../../../assets/images/subscription/subscription.webp"
-    );
+    // @include bgWebp(
+    //   "../../../assets/images/subscription/subscription.jpg",
+    //   "../../../assets/images/subscription/subscription.webp"
+    // );
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;

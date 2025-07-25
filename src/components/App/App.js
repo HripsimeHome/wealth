@@ -8,7 +8,7 @@ function App() {
     <>
       <HeaderMenu />
       <AppRouter />
-      <Subscription />
+      {/* <Subscription /> */}
       <Footer />
     </>
   );

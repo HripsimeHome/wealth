@@ -12,7 +12,7 @@ import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 const HomeHeader = () => {
   return (
-    <section className={`${styles.homeHeader} pB`}>
+    <section className={`${styles.homeHeader} pB container`}>
       {/* Left block */}
       <div className={styles.homeHeader__leftBlock}>
         <SectionTitle icon={investmentsIcon} title="investments" />

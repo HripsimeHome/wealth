@@ -1,5 +1,8 @@
+// AboutContent.jsx
 import styles from "./AboutContent.module.scss";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+import Svg from "../../layout/Svg/Svg";
+
 import {
   JaneImage,
   JaneWebpImage,
@@ -7,28 +10,81 @@ import {
   JacobWebpImage,
 } from "../../../assets/images";
 
+import {
+  hardworkIcon,
+  researchIcon,
+  innovationIcon,
+  veteransIcon,
+  JaneRightBottomIcon,
+} from "../../../assets/svg";
+
+const cardData = [
+  {
+    icon: hardworkIcon,
+    title: "hardwork",
+    subtitle: "Lorem ipsum dolor sit amet.",
+    bgColor: "orange",
+  },
+  {
+    icon: researchIcon,
+    title: "research",
+    subtitle: "Duis aute irure dolor in reprehenderit.",
+    bgColor: "blue",
+  },
+  {
+    icon: innovationIcon,
+    title: "innovation",
+    subtitle: "Excepteur sint occaecat cupidatat non proident.",
+    bgColor: "gray",
+  },
+  {
+    icon: veteransIcon,
+    title: "veterans",
+    subtitle: "Ut enim ad minim veniam.",
+    bgColor: "red",
+  },
+];
+
 const AboutContent = () => {
   return (
-    <section className={`${styles.aboutContent} containerBlack`}>
+    <section className={`${styles.aboutContent} containerBlack pTB`}>
       <div className={`${styles.aboutContent__container} container`}>
-        <div className={styles.aboutContent__statistics}>
+        <div className={styles.aboutContent__statisticsContainer}>
           <span className={styles.aboutContent__statisticsCount}>114%</span>
           <span className={styles.aboutContent__statisticsText}>
             Cumulative Returns Since Inception - The Bento Wealth's cumulative
             return outperforms the Nasdaq-100's return during the same period
           </span>
         </div>
-        {/* statistics */}
+
+        <div className={`${styles.aboutContent__cardsContainer} pTB`}>
+          {cardData.map((card, i) => (
+            <div
+              key={i}
+              className={`${styles.aboutContent__card} ${styles[card.bgColor]}`}
+            >
+              <Svg id={card.icon} className={styles.aboutContent__cardIcon} />
+              <h4 className={styles.aboutContent__cardTitle}>{card.title}</h4>
+              <h5 className={styles.aboutContent__cardSubtitle}>
+                {card.subtitle}
+              </h5>
+            </div>
+          ))}
+        </div>
 
         <div className={styles.aboutContent__staffContainer}>
-          <div>
+          <div className={styles.aboutContent__staffImgContainer}>
             <ImageWebp
               src={JaneImage}
               srcSet={JaneWebpImage}
               alt="Jane Doe"
               className={styles.aboutContent__staffImg}
             />
+            <div className={styles.aboutContent__staff1RightBottom}>
+              <Svg id={JaneRightBottomIcon} />
+            </div>
           </div>
+
           <div>
             <h2 className={styles.aboutContent__staffTitle}>Jane Doe</h2>
             <br />
@@ -48,34 +104,6 @@ const AboutContent = () => {
             </span>
           </div>
         </div>
-        {/* staffContainer */}
-
-        <div className={styles.aboutContent__staffContainer}>
-          <div>
-            <h2 className={styles.aboutContent__staffTitle}>Jacob Smith</h2>
-            <br />
-            <span className={styles.aboutContent__staffText}>
-              Our seasoned Portfolio Manager, actively oversees the Bento Wealth
-              Fund, delivering insights and actionable strategies. He manages
-              our real-time trade alerts and stock positions.
-              <br />
-              <br />
-              Jacob's proven track record of outperforming the market during
-              volatile times underscores his expertise in navigating the dynamic
-              world of investing.
-            </span>
-          </div>
-
-          <div>
-            <ImageWebp
-              src={JacobImage}
-              srcSet={JacobWebpImage}
-              alt="Jane Doe"
-              className={styles.aboutContent__staffImg}
-            />
-          </div>
-        </div>
-        {/* staffContainer */}
       </div>
     </section>
   );
