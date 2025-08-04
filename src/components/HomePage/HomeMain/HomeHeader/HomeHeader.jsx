@@ -2,6 +2,7 @@ import styles from "./HomeHeader.module.scss";
 import SectionTitle from "../../../layout/SectionTitle/SectionTitle";
 import { stocksImage, stocksWebpImage } from "../../../../assets/images";
 import Svg from "../../../layout/Svg/Svg";
+import { arrowHorizontalIcon } from "../../../../assets/svg";
 
 import {
   investmentsIcon,
@@ -57,8 +58,13 @@ const HomeHeader = () => {
         </div>
 
         {/* className={styles.homeHeader__spinner} */}
-        <div>
-          <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
+
+        <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
+
+        <div className={styles.homeHeader__circleContainer}>
+          <div className={styles.homeHeader__circle}>
+            <Svg id={arrowHorizontalIcon} />
+          </div>
         </div>
       </div>
 

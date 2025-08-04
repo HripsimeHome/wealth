@@ -1,5 +1,7 @@
 import styles from "./ServicesContent.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
+import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
+import { aboutPagePath } from "../../../router/path";
 import {
   identifyIcon,
   investIcon,
@@ -29,6 +31,13 @@ const ServicesContent = () => {
       <div className="container">
         123
         <SectionTitle icon={identifyIcon} title="identify" />
+        <div className={styles.servicesContent__greyTheme}>
+          <ArrowRotation
+            to={aboutPagePath}
+            circleClass={styles.servicesContent__circle}
+            arrowClass={styles.servicesContent__arrow}
+          />
+        </div>
         <SectionTitle icon={investIcon} title="invest" />
         <div className={styles.servicesContent__blocksContainer}>
           <div className={styles.servicesContent__blocksColumn}>

@@ -1,0 +1,17 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.mainBtn {
+  @include button($color-primary, none);
+
+  @include setFont(18px, 700, $color-red);
+  border-radius: 50px;
+
+  white-space: nowrap;
+  text-align: center;
+  padding: 10px 5px 10px 25px;
+  border-radius: 30px;
+  transition: $transition;
+
+  display: block;
+}

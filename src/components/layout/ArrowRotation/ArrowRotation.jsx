@@ -1,0 +1,19 @@
+import styles from "./ArrowRotation.module.scss";
+import { Link } from "react-router-dom";
+import Svg from "../../layout/Svg/Svg";
+import { arrowHorizontalIcon } from "../../../assets/svg";
+
+const ArrowRotation = ({ to = "#", circleClass, arrowClass }) => {
+  return (
+    <div className={`${styles.arrowRotation} ${circleClass}`}>
+      <Link to={to}>
+        <Svg
+          id={arrowHorizontalIcon}
+          className={`${styles.arrowRotation__arrow} ${arrowClass}`}
+        />
+      </Link>
+    </div>
+  );
+};
+
+export default ArrowRotation;
