@@ -2,10 +2,13 @@
 
 export const timeWhiteIcon = "timeWhite";
 export const timeBlackIcon = "timeBlack";
+export const arrowHorizontalIcon = "arrowHorizontal";
+
 export const exitIcon = "exit";
 
 //Home
 
+export const spinnerIcon = "spinner";
 export const innovationIcon = "innovation";
 export const investmentsIcon = "investments";
 export const leftTopIcon = "leftTop";

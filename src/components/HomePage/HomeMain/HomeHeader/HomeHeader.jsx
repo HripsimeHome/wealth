@@ -7,6 +7,7 @@ import {
   investmentsIcon,
   innovationIcon,
   leftTopIcon,
+  spinnerIcon,
 } from "../../../../assets/svg";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
@@ -53,6 +54,11 @@ const HomeHeader = () => {
         />
         <div className={styles.homeHeader__test}>
           {/* <Svg id={leftTopIcon} className={styles.homeHeader__test} /> */}
+        </div>
+
+        {/* className={styles.homeHeader__spinner} */}
+        <div>
+          <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
         </div>
       </div>
 

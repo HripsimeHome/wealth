@@ -103,4 +103,24 @@
       transform: translateX(-100%);
     }
   }
+
+  &__spinner {
+    position: absolute;
+    top: 120px;
+    left: -50px;
+    border: 10px solid $color-lightGrey;
+    border-radius: 100%;
+    background-color: $color-primary;
+    width: 120px;
+    height: 120px;
+    animation: spinnerRotate 30s linear infinite;
+  }
+  @keyframes spinnerRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }

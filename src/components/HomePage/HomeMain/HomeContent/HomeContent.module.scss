@@ -2,4 +2,20 @@
 @import "../../../../styles/vars";
 
 .homeContent {
+  &__circle {
+    @include flexCol();
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: $color-black;
+    &:hover .homeContent__arrow {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    transition: $transition;
+  }
 }
