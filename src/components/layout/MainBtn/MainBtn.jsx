@@ -3,29 +3,18 @@ import styles from "./MainBtn.module.scss";
 import Svg from "../../layout/Svg/Svg";
 import { arrowHorizontalIcon } from "../../../assets/svg";
 
-const MainBtn = memo(({ className, children, secondaryBg, ...properties }) => {
+const MainBtn = memo(({ className, children, secondaryBg, ...attributes }) => {
   return (
     <button
       className={`
         ${styles.mainBtn} 
         ${secondaryBg ? styles.mainBtn_secondaryBg : ""} 
       `}
-      {...properties}
+      {...attributes}
     >
-      {children}
-      <span
-        className={`
-        ${styles.mainBtn__circle}
-        ${secondaryBg ? styles.mainBtn__secondaryCircle : ""}
-      `}
-      >
-        <Svg
-          id={arrowHorizontalIcon}
-          className={`
-          ${styles.mainBtn__arrow}
-          ${secondaryBg ? styles.mainBtn__secondaryArrow : ""}
-          `}
-        />
+      <span className={styles.mainBtn__btnText}>{children}</span>
+      <span className={styles.mainBtn__circle}>
+        <Svg id={arrowHorizontalIcon} className={styles.mainBtn__arrow} />
       </span>
     </button>
   );

@@ -19,6 +19,18 @@
     color: $color-white;
   }
 
+  &_secondaryBg &__circle {
+    background: $color-primary;
+  }
+
+  &_secondaryBg &__arrow {
+    fill: $color-black;
+  }
+
+  &:hover &__arrow {
+    animation: arrowAnimation 0.5s ease-in-out;
+  }
+
   &__circle {
     @include flexCol();
     width: 34px;
@@ -35,11 +47,48 @@
     transition: $transition;
   }
 
-  &__secondaryCircle {
-    background: $color-primary;
+  &__btnText {
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
-  &__secondaryArrow {
-    fill: $color-black;
+  &:hover &__btnText {
+    animation: textAnimation 0.6s ease-in-out forwards;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  49% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 1;
+  }
+  30% {
+    transform: rotate(-45deg) translate(12px, 2px);
+    // opacity: 0;
+  }
+  60% {
+    transform: rotate(-45deg) translate(-12px, 2px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 1;
   }
 }

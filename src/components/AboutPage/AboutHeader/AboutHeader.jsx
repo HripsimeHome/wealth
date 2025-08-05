@@ -7,7 +7,6 @@ const AboutHeader = () => {
   return (
     <section className={styles.aboutHeader}>
       <div className="container"></div>
-
       <SectionTitle icon={companyIcon} title="wealth bento" />
       <MainBtn secondaryBg>explore</MainBtn>
       <br />
