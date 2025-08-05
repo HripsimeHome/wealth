@@ -2,16 +2,44 @@
 @import "../../../styles/mixins";
 
 .mainBtn {
+  @include flexCol();
+  gap: 10px;
+  min-width: 150px;
   @include button($color-primary, none);
-
-  @include setFont(18px, 700, $color-red);
-  border-radius: 50px;
-
+  @include setFont(15px, 300, $color-black);
   white-space: nowrap;
   text-align: center;
-  padding: 10px 5px 10px 25px;
-  border-radius: 30px;
+  text-transform: uppercase;
+  border-radius: 50px;
   transition: $transition;
+  padding: 5px 10px 5px 25px;
 
-  display: block;
+  &_secondaryBg {
+    background: $color-secondary;
+    color: $color-white;
+  }
+
+  &__circle {
+    @include flexCol();
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    background: $color-secondary;
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    fill: $color-white;
+    transform: rotate(-45deg);
+    transition: $transition;
+  }
+
+  &__secondaryCircle {
+    background: $color-primary;
+  }
+
+  &__secondaryArrow {
+    fill: $color-black;
+  }
 }

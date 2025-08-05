@@ -1,15 +1,17 @@
 import styles from "./HomeContent.module.scss";
+import { useNavigate } from "react-router-dom";
 import SectionTitle from "../../../layout/SectionTitle/SectionTitle";
 import MainBtn from "../../../layout/MainBtn/MainBtn";
 import ArrowRotation from "../../../layout/ArrowRotation/ArrowRotation";
-import { servicesPagePath } from "../../../../router/path";
+import { aboutPagePath, servicesPagePath } from "../../../../router/path";
 import { exitIcon, timeBlackIcon } from "../../../../assets/svg";
 
 const HomeContent = () => {
+  const navigate = useNavigate();
   return (
     <section className={styles.homeContent}>
       <SectionTitle icon={exitIcon} title="experts" />
-      <MainBtn>explore</MainBtn>
+      <MainBtn onClick={() => navigate(aboutPagePath)}>explore</MainBtn>
       <SectionTitle icon={timeBlackIcon} title="real-time" />
       <ArrowRotation
         to={servicesPagePath}
