@@ -2,7 +2,30 @@ import styles from "./ContactForm.module.scss";
 import Header from "../../global/Header/Header";
 import MainInput from "../../layout/MainInput/MainInput";
 import { contactsIcon } from "../../../assets/svg";
+import Accordion from "../../layout/Accordion/Accordion";
 
+const formData = [
+  {
+    title: "1",
+    content: "1 text",
+  },
+  {
+    title: "2",
+    content: " 2text",
+  },
+  {
+    title: "3",
+    content: "3 text.",
+  },
+  {
+    title: "4",
+    content: "text",
+  },
+  {
+    title: "5",
+    content: "text",
+  },
+];
 const ContactForm = () => {
   return (
     <section className={styles.contactForm}>
@@ -12,6 +35,8 @@ const ContactForm = () => {
         title="Contact"
         subtitle="Contact us to discuss your project and find out how we can help you."
       />
+
+      <Accordion data={formData} />
       <form className={styles.contactForm__form}>
         <label htmlFor="name">Name</label>
         <MainInput name="fullName" id="name" placeholder="e.g. John Doe" />

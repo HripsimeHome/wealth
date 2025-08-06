@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.socialIcons {
+  display: flex;
+
+  a {
+    height: 44px;
+  }
+
+  &__icon {
+    @include svg(44px, black, 44px, black);
+
+    &:hover,
+    &:active {
+      stroke: $color-primary;
+      fill: $color-primary;
+      cursor: pointer;
+    }
+  }
+}
