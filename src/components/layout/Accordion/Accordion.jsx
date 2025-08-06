@@ -24,12 +24,15 @@ const Accordion = ({ data = [] }) => {
           >
             <div className={styles.accordion__header}>
               <span className={styles.accordion__title}>{title}</span>
-              <span
-                className={`${styles.accordion__toggle} ${
-                  isOpen ? styles.accordion__rotate : ""
-                }`}
-              >
-                {isOpen ? "−" : "+"}
+              <span className={styles.accordion__toggle}>
+                <span
+                  className={`${styles.accordion__line} ${styles.horizontal}`}
+                ></span>
+                <span
+                  className={`${styles.accordion__line} ${styles.vertical} ${
+                    isOpen ? styles.accordion__rotate : ""
+                  }`}
+                ></span>
               </span>
             </div>
             {isOpen && (
