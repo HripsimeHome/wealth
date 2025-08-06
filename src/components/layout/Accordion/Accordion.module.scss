@@ -2,18 +2,21 @@
 @import "../../../styles/vars";
 
 .accordion {
-  &__header {
-    background: none;
-    border: none;
-    padding: 1rem;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.1rem;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__item {
+    background-color: $color-white;
+    border-radius: 24px;
     cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    font-size: 1.1rem;
+    padding: 1rem;
+    align-items: center;
   }
 
   &__title {
@@ -22,13 +25,18 @@
 
   &__toggle {
     font-size: 1.5rem;
-    margin-left: 1rem;
+    margin-left: 20px;
+    display: inline-block;
     transition: transform 0.3s ease;
   }
 
+  &__rotate {
+    transform: rotate(180deg);
+  }
+
   &__content {
-    padding: 0 1rem 1rem;
     font-size: 1rem;
     line-height: 1.5;
+    padding: 0 1rem 1rem;
   }
 }

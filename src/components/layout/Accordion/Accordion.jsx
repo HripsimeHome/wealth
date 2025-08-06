@@ -16,17 +16,22 @@ const Accordion = ({ data = [] }) => {
       {data.map(({ title, content }, index) => {
         const isOpen = !!openStates[index];
         return (
-          <div key={index}>
-            <button
-              className={styles.accordion__header}
-              onClick={() => toggleItem(index)}
-              aria-expanded={isOpen}
-            >
+          <div
+            key={index}
+            className={styles.accordion__item}
+            onClick={() => toggleItem(index)}
+            aria-expanded={isOpen}
+          >
+            <div className={styles.accordion__header}>
               <span className={styles.accordion__title}>{title}</span>
-              <span className={styles.accordion__toggle}>
+              <span
+                className={`${styles.accordion__toggle} ${
+                  isOpen ? styles.accordion__rotate : ""
+                }`}
+              >
                 {isOpen ? "−" : "+"}
               </span>
-            </button>
+            </div>
             {isOpen && (
               <div className={styles.accordion__content}>{content}</div>
             )}
