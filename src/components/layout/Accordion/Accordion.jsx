@@ -7,7 +7,7 @@ const Accordion = ({ data = [] }) => {
   const toggleItem = (index) => {
     setOpenStates((prev) => ({
       ...prev,
-      [index]: !prev[index], // переключаем только нужный индекс
+      [index]: !prev[index],
     }));
   };
 
@@ -25,19 +25,28 @@ const Accordion = ({ data = [] }) => {
             <div className={styles.accordion__header}>
               <span className={styles.accordion__title}>{title}</span>
               <span className={styles.accordion__toggle}>
+                <span className={styles.accordion__horizontal}></span>
                 <span
-                  className={`${styles.accordion__line} ${styles.horizontal}`}
-                ></span>
-                <span
-                  className={`${styles.accordion__line} ${styles.vertical} ${
+                  className={`${styles.accordion__vertical} ${
                     isOpen ? styles.accordion__rotate : ""
                   }`}
                 ></span>
               </span>
             </div>
-            {isOpen && (
-              <div className={styles.accordion__content}>{content}</div>
-            )}
+
+            <div
+              className={`${styles.accordion__content} ${
+                isOpen ? styles.accordion__contentOpen : ""
+              }`}
+            >
+              <div
+                className={`${styles.accordion__content} ${
+                  isOpen ? styles.accordion__contentOpen : ""
+                }`}
+              >
+                {content}
+              </div>
+            </div>
           </div>
         );
       })}
