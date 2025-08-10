@@ -70,7 +70,7 @@
   }
 
   &__menuLink {
-    @include setFont(15px, 300, $color-black);
+    @include setFont(15px, 300, $color-secondary);
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;

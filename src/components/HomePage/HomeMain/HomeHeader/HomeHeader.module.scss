@@ -59,7 +59,7 @@
 
   &__customersBlock {
     @include flexCol();
-    background-color: $color-black;
+    background-color: $color-secondary;
     border-radius: 24px;
     color: $color-white;
   }
@@ -136,7 +136,7 @@
     padding: 5px;
   }
   &__circle {
-    background-color: $color-black;
+    background-color: $color-secondary;
 
     width: 40px;
     height: 40px;
@@ -144,6 +144,6 @@
   }
 
   &__arrow {
-    fill: $color-black;
+    fill: $color-secondary;
   }
 }

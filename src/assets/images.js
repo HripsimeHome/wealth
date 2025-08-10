@@ -14,6 +14,19 @@ import JacobWebpImage from "./images/about/Jacob.webp";
 import subscriptionImage from "./images/subscription/subscription.jpg";
 import subscriptionWebpImage from "./images/subscription/subscription.webp";
 
+// BLog
+import investingStartersImage from "./images/blog/investingStarters.jpg";
+import investingStartersWebpImage from "./images/blog/investingStarters.webp";
+
+import moneyImage from "./images/blog/money.jpg";
+import moneyWebpImage from "./images/blog/money.webp";
+
+import investingImage from "./images/blog/investing.jpg";
+import investingWebpImage from "./images/blog/investing.webp";
+
+import portfolioImage from "./images/blog/portfolio.jpg";
+import portfolioWebpImage from "./images/blog/portfolio.webp";
+
 export {
   logoImage,
   logoWebpImage,
@@ -28,4 +41,14 @@ export {
   JacobWebpImage,
   subscriptionImage,
   subscriptionWebpImage,
+
+  // BLog
+  investingStartersImage,
+  investingStartersWebpImage,
+  moneyImage,
+  moneyWebpImage,
+  investingImage,
+  investingWebpImage,
+  portfolioImage,
+  portfolioWebpImage,
 };

@@ -10,7 +10,7 @@
 
   &__container {
     @include flexCol;
-    color: $color-black;
+    color: $color-secondary;
   }
 
   &__contentWrapper {

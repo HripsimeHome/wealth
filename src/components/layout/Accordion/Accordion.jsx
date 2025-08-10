@@ -33,19 +33,12 @@ const Accordion = ({ data = [] }) => {
                 ></span>
               </span>
             </div>
-
             <div
               className={`${styles.accordion__content} ${
                 isOpen ? styles.accordion__contentOpen : ""
               }`}
             >
-              <div
-                className={`${styles.accordion__content} ${
-                  isOpen ? styles.accordion__contentOpen : ""
-                }`}
-              >
-                {content}
-              </div>
+              {content}
             </div>
           </div>
         );

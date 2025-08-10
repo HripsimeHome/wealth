@@ -26,7 +26,6 @@
   }
 
   &__title {
-    // flex-grow: 1;
   }
 
   &__toggle {
@@ -41,7 +40,7 @@
 
   &__line {
     position: absolute;
-    background-color: $color-black;
+    background-color: $color-secondary;
     transition: transform 0.3s ease;
   }
 
@@ -55,7 +54,6 @@
     @extend .accordion__line;
     width: 2px;
     height: 100%;
-    // margin-left: -10px;
   }
 
   &__rotate {
@@ -66,12 +64,12 @@
     overflow: hidden;
     max-height: 0;
     padding: 0 1rem; // keep horizontal padding always
-    transition: max-height 0.3s linear, padding-top 0.3s linear,
-      padding-bottom 0.3s linear;
+    transition: max-height 0.4s linear, padding-top 0.4s linear,
+      padding-bottom 0.4s linear;
   }
 
   &__contentOpen {
-    max-height: 500px; // or larger than your content
+    max-height: 300px; // or larger than your content
     padding-top: 0.5rem;
     padding-bottom: 1rem;
   }

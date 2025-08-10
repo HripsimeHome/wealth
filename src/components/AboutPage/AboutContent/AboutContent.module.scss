@@ -1,6 +1,6 @@
 // AboutContent.module.scss
-@import "../../../styles/mixins";
 @import "../../../styles/vars";
+@import "../../../styles/mixins";
 
 .aboutContent {
   &__container {
@@ -11,7 +11,7 @@
     @include flexCol;
     gap: 23px;
     max-width: 600px;
-    color: $color-white;
+    @include setFont(base, 600, $color-white);
     margin: 0 auto;
 
     @include lgScreenMedia {
@@ -41,7 +41,7 @@
     text-transform: uppercase;
     border-radius: 24px;
     padding: 40px;
-    color: $color-black;
+    color: $color-secondary;
 
     // Fallback color (if no class matched)
     background-color: $color-lightGrey;

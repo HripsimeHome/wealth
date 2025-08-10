@@ -1,7 +1,9 @@
 import styles from "./HomeHeader.module.scss";
 import SectionTitle from "../../../layout/SectionTitle/SectionTitle";
-import { stocksImage, stocksWebpImage } from "../../../../assets/images";
+import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 import Svg from "../../../layout/Svg/Svg";
+
+import { stocksImage, stocksWebpImage } from "../../../../assets/images";
 import { arrowHorizontalIcon } from "../../../../assets/svg";
 
 import {
@@ -10,7 +12,6 @@ import {
   leftTopIcon,
   spinnerIcon,
 } from "../../../../assets/svg";
-import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 const HomeHeader = () => {
   return (

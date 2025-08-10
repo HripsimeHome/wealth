@@ -6,7 +6,7 @@
   gap: 10px;
   min-width: 150px;
   @include button($color-primary, none);
-  @include setFont(15px, 300, $color-black);
+  @include setFont(15px, 300, $color-secondary);
   white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
@@ -24,7 +24,7 @@
   }
 
   &_secondaryBg &__arrow {
-    fill: $color-black;
+    fill: $color-secondary;
   }
 
   &:hover &__arrow {

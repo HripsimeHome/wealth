@@ -9,9 +9,13 @@
   padding: 0;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body {
   font-family: $font-family;
-  color: $color-black;
+  color: $color-secondary;
   background-color: $color-lightGrey;
 
   //  Body Scrollbar
@@ -72,6 +76,26 @@ button {
   }
 }
 
+h1 {
+  font-size: 2rem; // 32px
+}
+
+h2 {
+  font-size: 1.5; // 24px
+}
+
+h3 {
+  font-size: 1.375; // 22px
+}
+
+h4 {
+  font-size: 1.25; //20px
+}
+
+h4 {
+  font-size: 1.125; // 18px
+}
+
 .pTB {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -92,7 +116,7 @@ button {
   border-radius: 10px;
   padding: 9px 15px;
   &:hover {
-    background-color: $color-black;
+    background-color: $color-secondary;
     transition: background-color 0.25s;
     cursor: pointer;
   }
@@ -117,7 +141,7 @@ button {
 
 .containerBlack {
   min-height: 500px;
-  background-color: $color-black;
+  background-color: $color-secondary;
   border-radius: 69px;
 }
 

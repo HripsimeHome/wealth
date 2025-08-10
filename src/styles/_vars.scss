@@ -1,23 +1,33 @@
-// media
+// vars.scss
+
+// Media breakpoints
 $xsm-screen: 360px;
 $sm-screen: 576px;
 $md-screen: 768px;
 $lg-screen: 1024px;
-$xl-screen: 1280px;
+$xl-screen: 1200px;
 $xxl-screen: 1440px;
 
-// font
+// Font family
 $font-family: "Inter", sans-serif;
 
-// Transition
-$transition: all 0.3s;
-$transitionEaseOut: all 0.3s ease-out 0s;
+// Font sizes
+$font-xsm: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-base: 1rem; // 16px
+$font-md: 1.125rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xl: 1.375rem; // 22px
+$font-xxl: 1.5rem; // 24px
 
-// colors
+// Colors
 $color-primary: #dbec62;
-$color-secondary: #1c1c1c;
+$color-secondary: #050505;
 $color-white: whitesmoke;
-$color-black: #050505;
 $color-lightGrey: #e7e7e9;
 $color-darkGrey: #c7c7c7;
 $color-red: #e53935;
+
+// Transitions
+$transition: all 0.3s;
+$transitionEaseOut: all 0.3s ease-out 0s;

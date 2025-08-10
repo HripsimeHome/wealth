@@ -1,0 +1,86 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.blogMain {
+  color: $color-white;
+
+  &__container {
+    padding: 100px;
+  }
+
+  &__counter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: space-around;
+
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    @include flexCol(space-between, center);
+    border-bottom: 1px solid $color-white;
+    padding-bottom: 20px;
+  }
+
+  &__headerDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__cardContainer {
+    max-width: 900px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+  }
+
+  &__card {
+    width: 300px;
+  }
+
+  &__imgWrapper {
+    border-radius: 20px;
+    min-width: 25vw;
+    max-width: 25vw;
+    min-height: 25vw;
+    max-height: 25vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    min-width: 22.5rem;
+    max-width: 22.5rem;
+    min-height: 22.5rem;
+    max-height: 22.5rem;
+  }
+
+  &__more {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: $color-primary;
+    border-radius: 100%;
+    @include flexCol();
+    @include setFont(20px, $color-secondary);
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-secondary;
+      transition: $transition;
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+}
