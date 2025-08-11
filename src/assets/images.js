@@ -27,6 +27,8 @@ import investingWebpImage from "./images/blog/investing.webp";
 import portfolioImage from "./images/blog/portfolio.jpg";
 import portfolioWebpImage from "./images/blog/portfolio.webp";
 
+import avatarImage from "./images/blog/avatar.jpg";
+
 export {
   logoImage,
   logoWebpImage,
@@ -51,4 +53,5 @@ export {
   investingWebpImage,
   portfolioImage,
   portfolioWebpImage,
+  avatarImage,
 };

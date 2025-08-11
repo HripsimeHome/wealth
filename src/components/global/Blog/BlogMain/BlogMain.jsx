@@ -14,6 +14,7 @@ import {
   investingWebpImage,
   portfolioImage,
   portfolioWebpImage,
+  avatarImage,
 } from "../../../../assets/images";
 
 const BlogMain = () => {
@@ -48,13 +49,38 @@ const BlogMain = () => {
               <div className={styles.blogMain__card}>
                 <div className={styles.blogMain__imgWrapper}>
                   <ImageWebp
-                    src={investingStartersImage}
-                    srcSet={investingStartersWebpImage}
+                    src={investingImage}
+                    srcSet={investingWebpImage}
                     alt="Investing Starters"
                     className={styles.blogMain__img}
                   />
                   <span className={styles.blogMain__more}>+</span>
                 </div>
+
+                <div className={styles.blogMain__info}>
+                  <div className={styles.blogMain__test}>
+                    <span>
+                      <img
+                        src={avatarImage}
+                        alt="Blogger avatar"
+                        className={styles.blogMain__avatar}
+                      />
+                    </span>
+
+                    <span className={styles.blogMain__name}>
+                      {" "}
+                      david ross
+                      <hr className={styles.blogMain__line} />
+                    </span>
+                  </div>
+
+                  <div className={styles.blogMain__test1}>
+                    <span className={styles.blogMain__label}>investing</span>
+                    <span className={styles.blogMain__data}>Aug 11</span>
+                  </div>
+                </div>
+                {/* info */}
+
                 <h2 className={styles.blogMain__title}>
                   Investing Starters Advice 101
                 </h2>
