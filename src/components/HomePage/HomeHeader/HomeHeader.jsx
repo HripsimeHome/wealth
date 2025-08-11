@@ -1,17 +1,17 @@
 import styles from "./HomeHeader.module.scss";
-import SectionTitle from "../../../layout/SectionTitle/SectionTitle";
-import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
-import Svg from "../../../layout/Svg/Svg";
+import SectionTitle from "../../layout/SectionTitle/SectionTitle";
+import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
+import Svg from "../../layout/Svg/Svg";
 
-import { stocksImage, stocksWebpImage } from "../../../../assets/images";
-import { arrowHorizontalIcon } from "../../../../assets/svg";
+import { stocksImage, stocksWebpImage } from "../../../assets/images";
 
 import {
   investmentsIcon,
   innovationIcon,
   leftTopIcon,
   spinnerIcon,
-} from "../../../../assets/svg";
+  arrowHorizontalIcon,
+} from "../../../assets/svg";
 
 const HomeHeader = () => {
   return (

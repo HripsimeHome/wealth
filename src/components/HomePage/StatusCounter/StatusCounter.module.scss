@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.statusCounter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-around;
+  color: $color-white;
+  margin-bottom: 50px;
+
+  &__col {
+    @include flexCol();
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__digit {
+    font-size: 76px;
+  }
+}

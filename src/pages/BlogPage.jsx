@@ -1,9 +1,11 @@
-import BlogMain from "../components/global/Blog/BlogMain/BlogMain";
+import { Outlet } from "react-router-dom";
+import BLog from "../components/global/Blog/BLog";
 
 const BlogPage = () => {
   return (
     <>
-      <BlogMain />
+      <BLog />
+      {/* <Outlet /> */}
     </>
   );
 };

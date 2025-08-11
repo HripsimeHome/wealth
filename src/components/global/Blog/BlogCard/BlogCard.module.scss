@@ -1,32 +1,8 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
-.blogMain {
+.blogCard {
   color: $color-white;
-
-  &__container {
-    padding: 100px;
-  }
-
-  &__counter {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-content: space-around;
-    margin-bottom: 50px;
-  }
-
-  &__header {
-    @include flexCol(space-between, center);
-    border-bottom: 1px solid $color-white;
-    padding-bottom: 20px;
-  }
-
-  &__headerDescription {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
 
   &__cardContainer {
     max-width: 900px;
@@ -34,17 +10,21 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 2.6vw;
     margin: 50px auto;
 
     a {
       color: $color-white;
       text-decoration: none;
     }
+
+    @include mdScreenMedia {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
-    width: 300px;
+    //width: 300px;
   }
 
   &__imgWrapper {
@@ -69,8 +49,8 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
     background-color: $color-primary;
     border-radius: 100%;
     @include flexCol();
@@ -84,12 +64,12 @@
     }
   }
 
-  &__info {
+  &__infoBlock {
     @include flexCol(space-between, center);
     margin: 15px 0 20px;
   }
 
-  &__test {
+  &__author {
     @include flexCol();
     gap: 10px;
   }
@@ -112,13 +92,13 @@
     outline: 0;
   }
 
-  &__test1 {
+  &__blogInfo {
     @include flexCol();
     flex-direction: column;
     gap: 10px;
   }
 
-  &__label {
+  &__category {
     color: $color-secondary;
     background-color: $color-primary;
     text-transform: uppercase;
@@ -132,6 +112,13 @@
   }
 
   &__title {
+    // font-size: 2.78vw;
+    font-size: 32px;
+    font-weight: 500;
     text-align: left;
+
+    @include mdScreenMedia {
+      text-align: center;
+    }
   }
 }

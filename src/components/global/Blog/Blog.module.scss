@@ -1,0 +1,22 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.blog {
+  color: $color-white;
+
+  &__container {
+    padding: 100px;
+  }
+
+  &__header {
+    @include flexCol(space-between, center);
+    border-bottom: 1px solid $color-white;
+    padding-bottom: 20px;
+  }
+
+  &__headerDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

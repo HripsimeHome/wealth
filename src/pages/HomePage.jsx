@@ -1,9 +1,13 @@
-import HomeMain from "../components/HomePage/HomeMain/HomeMain";
+import HomeHeader from "../components/HomePage/HomeHeader/HomeHeader";
+import HomeReturns from "../components/HomePage/HomeReturns/HomeReturns";
+import HomeContent from "../components/HomePage/HomeContent/HomeContent";
 
 const HomePage = () => {
   return (
     <>
-      <HomeMain />
+      <HomeHeader />
+      <HomeReturns />
+      <HomeContent />
     </>
   );
 };
