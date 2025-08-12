@@ -14,6 +14,7 @@ const HomeContent = () => {
   return (
     <section className={styles.homeContent}>
       <SectionTitle icon={exitIcon} title="experts" />
+      our team of experienced analysts.
       <MainBtn onClick={() => navigate(aboutPagePath)}>explore</MainBtn>
       <SectionTitle icon={timeBlackIcon} title="real-time" />
       <ArrowRotation
@@ -21,7 +22,6 @@ const HomeContent = () => {
         circleClass={styles.homeContent__circle}
         arrowClass={styles.homeContent__arrow}
       />
-
       <div className="containerBlack">
         <StatusCounter />
         <BlogHeader />

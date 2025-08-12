@@ -12,7 +12,6 @@ import {
   innovationIcon,
   leftTopIcon,
   spinnerIcon,
-  arrowHorizontalIcon,
 } from "../../../assets/svg";
 
 const HomeHeader = () => {
