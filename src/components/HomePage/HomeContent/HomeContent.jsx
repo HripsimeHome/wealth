@@ -2,7 +2,8 @@ import styles from "./HomeContent.module.scss";
 import { useNavigate } from "react-router-dom";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import StatusCounter from "../StatusCounter/StatusCounter";
-import BLog from "../../global/Blog/BLog";
+import BlogHeader from "../../global/Blog/BlogHeader/BlogHeader";
+import BlogCard from "../../global/Blog/BlogCard/BlogCard";
 import MainBtn from "../../layout/MainBtn/MainBtn";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath, servicesPagePath } from "../../../router/path";
@@ -23,7 +24,8 @@ const HomeContent = () => {
 
       <div className="containerBlack">
         <StatusCounter />
-        <BLog limit={3} showHeader={false} />
+        <BlogHeader />
+        <BlogCard limit={3} />
       </div>
     </section>
   );

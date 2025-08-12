@@ -1,11 +1,9 @@
-import ContactForm from "../components/ContactsPage/ContactForm/ContactForm";
-import ContactFAQ from "../components/ContactsPage/ContactFAQ/ContactFAQ";
+import ContactsMain from "../components/ContactsPage/ContactsMain/ContactsMain";
 
 const ContactsPage = () => {
   return (
     <>
-      <ContactForm />
-      <ContactFAQ />
+      <ContactsMain />
     </>
   );
 };

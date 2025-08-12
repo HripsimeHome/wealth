@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.arrowAnimation {
+  @include flexCol();
+  width: 34px;
+  height: 34px;
+  // width: 2.8vw;
+  // height: 2.8vw;
+  background-color: $color-secondary;
+  border-radius: 50px;
+  cursor: pointer;
+
+  &:hover .arrowAnimation__arrow {
+    animation: arrowAnimation 0.5s ease-in-out;
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    fill: $color-white;
+    transform: rotate(-45deg);
+    transition: $transition;
+    fill: $color-white;
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 1;
+  }
+  30% {
+    transform: rotate(-45deg) translate(12px, 2px);
+    // opacity: 0;
+  }
+  60% {
+    transform: rotate(-45deg) translate(-12px, 2px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 1;
+  }
+}

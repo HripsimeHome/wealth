@@ -8,7 +8,8 @@ const AboutHeader = () => {
     <section className={styles.aboutHeader}>
       <div className="container"></div>
       <SectionTitle icon={companyIcon} title="wealth bento" />
-      <MainBtn secondaryBg>explore</MainBtn>
+      {/* <MainBtn secondaryBg>explore</MainBtn> */}
+      <MainBtn circleVariant="secondary">explore</MainBtn>
       <br />
     </section>
   );

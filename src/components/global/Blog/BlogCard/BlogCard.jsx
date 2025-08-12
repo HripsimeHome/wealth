@@ -15,6 +15,18 @@ import {
   avatarImage,
 } from "../../../../assets/images";
 
+const postData = [
+  {
+    image: "",
+    webpImage: "",
+    avatar: "",
+    name: "",
+    category: "",
+    data: "",
+    title: "",
+  },
+];
+
 const BlogCard = () => {
   return (
     <div className={styles.blogCard__cardContainer}>

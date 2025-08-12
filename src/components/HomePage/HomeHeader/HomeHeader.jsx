@@ -1,6 +1,8 @@
 import styles from "./HomeHeader.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
+import ArrowAnimation from "../../layout/ArrowAnimation/ArrowAnimation";
 import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
+import { aboutPagePath } from "../../../router/path";
 import Svg from "../../layout/Svg/Svg";
 
 import { stocksImage, stocksWebpImage } from "../../../assets/images";
@@ -63,9 +65,11 @@ const HomeHeader = () => {
         <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
 
         <div className={styles.homeHeader__circleContainer}>
-          <div className={styles.homeHeader__circle}>
-            <Svg id={arrowHorizontalIcon} />
-          </div>
+          <ArrowAnimation
+            to={aboutPagePath}
+            circleClass={styles.homeHeader__circle}
+            arrowClass={styles.homeHeader__arrow}
+          />
         </div>
       </div>
 

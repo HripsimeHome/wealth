@@ -114,8 +114,10 @@ h1 {
 .btnPrimary {
   background-color: $color-primary;
   border-radius: 10px;
+  border: none;
   padding: 9px 15px;
   &:hover {
+    color: $color-white;
     background-color: $color-secondary;
     transition: background-color 0.25s;
     cursor: pointer;

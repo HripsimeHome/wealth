@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import BLog from "../components/global/Blog/BLog";
+import Blog from "../components/global/Blog/Blog";
 
 const BlogPage = () => {
   return (
     <>
-      <BLog />
+      <Blog />
       {/* <Outlet /> */}
     </>
   );

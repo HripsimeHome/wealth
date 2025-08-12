@@ -1,18 +1,18 @@
-import styles from "./ContactForm.module.scss";
+import styles from "./ContactsForm.module.scss";
 import Header from "../../global/Header/Header";
 import MainInput from "../../layout/MainInput/MainInput";
 import { contactsIcon } from "../../../assets/svg";
 
-const ContactForm = () => {
+const ContactsForm = () => {
   return (
-    <section className={styles.contactForm}>
+    <section className={styles.contactsForm}>
       <Header
         icon={contactsIcon}
         sectionTitle="get in touch"
         title="Contact"
         subtitle="Contact us to discuss your project and find out how we can help you."
       />
-      <form className={styles.contactForm__form}>
+      <form className={styles.contactsForm__form}>
         <label htmlFor="name">Name</label>
         <MainInput name="fullName" id="name" placeholder="e.g. John Doe" />
 
@@ -41,4 +41,4 @@ const ContactForm = () => {
     </section>
   );
 };
-export default ContactForm;
+export default ContactsForm;

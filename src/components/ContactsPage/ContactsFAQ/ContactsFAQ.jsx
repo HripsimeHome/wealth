@@ -1,4 +1,4 @@
-import styles from "./ContactFAQ.module.scss";
+import styles from "./ContactsFAQ.module.scss";
 import Header from "../../global/Header/Header";
 import Accordion from "../../layout/Accordion/Accordion";
 import { investmentsIcon } from "../../../assets/svg";
@@ -32,7 +32,7 @@ const faqData = [
   },
 ];
 
-const ContactFAQ = () => {
+const ContactsFAQ = () => {
   return (
     <section className={styles.contactFAQ}>
       <Header
@@ -46,4 +46,4 @@ const ContactFAQ = () => {
   );
 };
 
-export default ContactFAQ;
+export default ContactsFAQ;
