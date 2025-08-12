@@ -19,32 +19,20 @@
     color: $color-white;
   }
 
-  &_secondaryBg &__circle {
-    background: $color-primary;
-  }
-
-  &_secondaryBg &__arrow {
-    fill: $color-secondary;
-  }
-
-  &:hover &__arrow {
-    animation: arrowAnimation 0.5s ease-in-out;
-  }
-
-  &__circle {
-    @include flexCol();
-    width: 34px;
-    height: 34px;
-    border-radius: 50px;
+  &_circleSecondary {
     background: $color-secondary;
   }
 
-  &__arrow {
-    width: 16px;
-    height: 16px;
+  &_arrowSecondary {
     fill: $color-white;
-    transform: rotate(-45deg);
-    transition: $transition;
+  }
+
+  &_circlePrimary {
+    background: $color-primary;
+  }
+
+  &_arrowPrimary {
+    fill: $color-secondary;
   }
 
   &__btnText {
@@ -55,6 +43,7 @@
     animation: textAnimation 0.6s ease-in-out forwards;
   }
 }
+
 @keyframes textAnimation {
   0% {
     transform: translateY(0);
@@ -70,25 +59,6 @@
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes arrowAnimation {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 1;
-  }
-  30% {
-    transform: rotate(-45deg) translate(12px, 2px);
-    // opacity: 0;
-  }
-  60% {
-    transform: rotate(-45deg) translate(-12px, 2px);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(-45deg) translate(0, 0);
     opacity: 1;
   }
 }

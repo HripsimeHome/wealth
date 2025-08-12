@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import styles from "./MainBtn.module.scss";
-import Svg from "../../layout/Svg/Svg";
-import { arrowHorizontalIcon } from "../../../assets/svg";
+import ArrowAnimation from "../../layout/ArrowAnimation/ArrowAnimation";
 
 const MainBtn = memo(({ className, children, secondaryBg, ...attributes }) => {
   return (
@@ -13,9 +12,18 @@ const MainBtn = memo(({ className, children, secondaryBg, ...attributes }) => {
       {...attributes}
     >
       <span className={styles.mainBtn__btnText}>{children}</span>
-      <span className={styles.mainBtn__circle}>
-        <Svg id={arrowHorizontalIcon} className={styles.mainBtn__arrow} />
-      </span>
+      <ArrowAnimation
+        circleClass={
+          secondaryBg
+            ? styles.mainBtn_circlePrimary
+            : styles.mainBtn_circleSecondary
+        }
+        arrowClass={
+          secondaryBg
+            ? styles.mainBtn_arrowPrimary
+            : styles.mainBtn_arrowSecondary
+        }
+      />
     </button>
   );
 });

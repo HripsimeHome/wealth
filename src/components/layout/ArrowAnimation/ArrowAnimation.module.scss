@@ -7,7 +7,6 @@
   height: 34px;
   // width: 2.8vw;
   // height: 2.8vw;
-  background-color: $color-secondary;
   border-radius: 50px;
   cursor: pointer;
 
@@ -18,10 +17,8 @@
   &__arrow {
     width: 16px;
     height: 16px;
-    fill: $color-white;
     transform: rotate(-45deg);
     transition: $transition;
-    fill: $color-white;
   }
 }
 
