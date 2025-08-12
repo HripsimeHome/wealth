@@ -1,7 +1,18 @@
 import styles from "./ServicesContent.module.scss";
+import { useNavigate } from "react-router-dom";
+import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
+import MainBtn from "../../layout/MainBtn/MainBtn";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath } from "../../../router/path";
+
+import {
+  cuttingEdgeTechImage,
+  cuttingEdgeTechWebpImage,
+  detailedDataImage,
+  detailedDatanWebpImage,
+} from "../../../assets/images";
+
 import {
   identifyIcon,
   investIcon,
@@ -12,6 +23,7 @@ import {
 } from "../../../assets/svg";
 
 const ServicesContent = () => {
+  const navigate = useNavigate();
   return (
     <section className={`${styles.servicesContent} containerBlack`}>
       {process.env.NODE_ENV !== "development" && (
@@ -29,8 +41,28 @@ const ServicesContent = () => {
         </video>
       )}
       <div className="container">
-        123
-        <SectionTitle icon={identifyIcon} title="identify" />
+        <TwoColumnSection
+          image={cuttingEdgeTechImage}
+          webpImage={cuttingEdgeTechWebpImage}
+          sectionTitle={<SectionTitle icon={identifyIcon} title="identify" />}
+          title="cutting-edge tech and in-depth market"
+          titleThin="wknowledge"
+          description="Receive actionable insights and make informed decisions based on expert analysis."
+          reverse
+        />
+
+        <TwoColumnSection
+          image={detailedDataImage}
+          webpImage={detailedDatanWebpImage}
+          sectionTitle={<SectionTitle icon={investIcon} title="invest" />}
+          title="Detailed data and experts"
+          titleThin="View Points"
+          description="Never miss a chance to capitalize on market movements and make informed investment decisions."
+          button={
+            <MainBtn onClick={() => navigate(aboutPagePath)}>view more</MainBtn>
+          }
+        />
+
         <div className={styles.servicesContent__greyTheme}>
           <ArrowRotation
             to={aboutPagePath}
@@ -38,7 +70,7 @@ const ServicesContent = () => {
             arrowClass={styles.servicesContent__arrow}
           />
         </div>
-        <SectionTitle icon={investIcon} title="invest" />
+
         <div className={styles.servicesContent__blocksContainer}>
           <div className={styles.servicesContent__blocksColumn}>
             <div className={styles.servicesContent__blocksRow}>

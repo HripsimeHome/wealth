@@ -5,6 +5,12 @@ import logoWebpImage from "./images/logo.webp";
 import stocksImage from "./images/home/stocks.jpg";
 import stocksWebpImage from "./images/home/stocks.webp";
 
+import analystsImage from "./images/home/analysts.jpg";
+import analystsWebpImage from "./images/home/analysts.webp";
+
+import tradeImage from "./images/home/trade.jpg";
+import tradeWebpImage from "./images/home/trade.webp";
+
 // About
 import JaneImage from "./images/about/Jane.jpg";
 import JaneWebpImage from "./images/about/Jane.webp";
@@ -13,6 +19,13 @@ import JacobWebpImage from "./images/about/Jacob.webp";
 
 import subscriptionImage from "./images/subscription/subscription.jpg";
 import subscriptionWebpImage from "./images/subscription/subscription.webp";
+
+// Services
+import cuttingEdgeTechImage from "./images/services/cuttingEdgeTech.jpg";
+import cuttingEdgeTechWebpImage from "./images/services/cuttingEdgeTech.webp";
+
+import detailedDataImage from "./images/services/detailedData.jpg";
+import detailedDatanWebpImage from "./images/services/detailedData.webp";
 
 // BLog
 import investingStartersImage from "./images/blog/investingStarters.jpg";
@@ -32,9 +45,14 @@ import avatarImage from "./images/blog/avatar.jpg";
 export {
   logoImage,
   logoWebpImage,
+
   // Home
   stocksImage,
   stocksWebpImage,
+  analystsImage,
+  analystsWebpImage,
+  tradeImage,
+  tradeWebpImage,
 
   // About
   JaneImage,
@@ -43,6 +61,12 @@ export {
   JacobWebpImage,
   subscriptionImage,
   subscriptionWebpImage,
+
+  // Services
+  cuttingEdgeTechImage,
+  cuttingEdgeTechWebpImage,
+  detailedDataImage,
+  detailedDatanWebpImage,
 
   // BLog
   investingStartersImage,

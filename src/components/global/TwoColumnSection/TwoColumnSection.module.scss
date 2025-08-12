@@ -1,0 +1,54 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.twoColumnSection {
+  @include flexCol();
+  gap: 5vw;
+  margin: 100px 0;
+
+  @include lgScreenMedia {
+    flex-direction: column;
+  }
+
+  &__imgWrapper {
+    flex: 1;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 24px;
+  }
+
+  &__content {
+    flex: 1;
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  &__sectionTitle {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    @include setFont(3.5rem, 500);
+    line-height: 4rem;
+    letter-spacing: -0.06rem;
+    text-transform: capitalize;
+    margin: 15px 0;
+  }
+
+  &__titleThin {
+    font-style: italic;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    line-height: 1.7rem;
+    margin-bottom: 15px;
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}

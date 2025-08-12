@@ -70,13 +70,14 @@ const HomeHeader = () => {
             arrowClass={styles.homeHeader__arrow}
           />
         </div>
-      </div>
 
-      <div className={styles.homeHeader__marqueeContainer}>
-        <div className={styles.homeHeader__marquee}>
-          <span>• Stock Alerts</span>
+        <div className={styles.homeHeader__marqueeContainer}>
+          <div className={styles.homeHeader__marquee}>
+            <span>• Stock Alerts</span>
+          </div>
         </div>
       </div>
+
       {/* <div className="animationScroll">ass</div> */}
 
       {/* /Right Block */}

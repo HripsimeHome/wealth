@@ -72,7 +72,7 @@
 
   &__img {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 24px;
   }
 
   &__test {
@@ -82,16 +82,18 @@
   }
 
   &__marqueeContainer {
+    position: absolute;
+    top: 20px;
+    left: 0;
     overflow: hidden;
     white-space: nowrap;
     width: 20%;
-    background: $color-lightGrey;
+    //background: $color-lightGrey;
   }
 
   &__marquee {
     display: inline-block;
     padding-left: 100%;
-
     animation: mqrqueue 10s linear infinite;
   }
 
@@ -115,6 +117,7 @@
     border-radius: 100%;
     animation: spinnerRotation 18s linear infinite;
   }
+
   @keyframes spinnerRotation {
     from {
       transform: rotate(0deg);
