@@ -47,7 +47,34 @@
       </clipPath>
     </defs>
   </symbol>
- 
+
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277 121" id="analystsLeftTop">
+    <g clip-path="url(#clip0_4_58)">
+      <path d="M0 0H253V73C253 86.2548 242.255 97 229 97H0V0Z" fill="#E7E7E9"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 97H0V121C0 107.745 10.7452 97 24 97Z" fill="#E7E7E9"></path>
+    </g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M277 0H253V24C253 10.7452 263.745 0 277 0Z" fill="#E7E7E9"></path>
+    <defs>
+      <clipPath id="clip0_4_58">
+        <rect width="253" height="121" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 121" id="tradeLeftBottom">
+    <g clip-path="url(#clip0_5_76)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L0 24H24C10.7452 24 0 13.2548 0 0Z" fill="#E7E7E9"></path>
+      <path d="M0 24H296C309.255 24 320 34.7452 320 48V121H0V24Z" fill="#E7E7E9"></path>
+    </g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M320 97V121H344C330.745 121 320 110.255 320 97Z" fill="#E7E7E9"></path>
+    <defs>
+      <clipPath id="clip0_5_76">
+        <rect width="320" height="121" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
 
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="investments">
     <path fill="#050505" d="M5 20v-6h3v6zm6 0V9h3v11zm6 0V4h3v16z"></path>
@@ -101,8 +128,47 @@
     <path fill="#050505" d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2z"></path>
   </symbol>
 
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 121" id="cuttingEdgeTechLefBottom">
+    <g clip-path="url(#clip0_6_103)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L0 24H24C10.7452 24 0 13.2548 0 0Z" fill="#050505"></path>
+      <path d="M0 24H136C149.255 24 160 34.7452 160 48V121H0V24Z" fill="#050505"></path>
+    </g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M160 97V121H184C170.745 121 160 110.255 160 97Z" fill="#050505"></path>
+    <defs>
+      <clipPath id="clip0_6_103">
+        <rect width="160" height="121" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 426" id="invest">
     <path d="M212.282 307.006L118.415 213.14L212.282 119.273L306.148 213.14L212.282 307.006ZM242.148 413.14C238.237 417.051 233.615 420.073 228.282 422.206C222.948 424.34 217.615 425.406 212.282 425.406C206.948 425.406 201.615 424.34 196.282 422.206C190.948 420.073 186.326 417.051 182.415 413.14L12.2818 243.006C8.37069 239.095 5.34847 234.473 3.21514 229.14C1.0818 223.806 0.0151367 218.473 0.0151367 213.14C0.0151367 207.806 1.0818 202.473 3.21514 197.14C5.34847 191.806 8.37069 187.184 12.2818 183.273L181.882 13.6731C186.148 9.40644 190.86 6.20644 196.015 4.07311C201.171 1.93977 206.593 0.873108 212.282 0.873108C217.971 0.873108 223.393 1.93977 228.548 4.07311C233.704 6.20644 238.415 9.40644 242.682 13.6731L412.282 183.273C416.193 187.184 419.215 191.806 421.348 197.14C423.482 202.473 424.548 207.806 424.548 213.14C424.548 218.473 423.482 223.806 421.348 229.14C419.215 234.473 416.193 239.095 412.282 243.006L242.148 413.14ZM212.282 366.74L365.882 213.14L212.282 59.5398L58.6818 213.14L212.282 366.74Z" fill="#050505"></path>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 277 121" id="detailedDataLeftTop">
+    <g clip-path="url(#clip0_6_85)">
+      <path d="M0 0H253V73C253 86.2548 242.255 97 229 97H0V0Z" fill="#050505"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 97H0V121C0 107.745 10.7452 97 24 97Z" fill="#050505"></path>
+    </g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M277 0H253V24C253 10.7452 263.745 0 277 0Z" fill="#050505"></path>
+    <defs>
+      <clipPath id="clip0_6_85">
+        <rect width="253" height="121" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 122" id="detailedDataRightBottom">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M98 24L122 24V0C122 13.2548 111.255 24 98 24Z" fill="#050505"></path>
+    <g clip-path="url(#clip0_6_94)">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 122H24L24 98C24 111.255 13.2548 122 0 122Z" fill="#050505"></path>
+      <path d="M24 48C24 34.7452 34.7452 24 48 24H122V122H24V48Z" fill="#050505"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_6_94">
+        <rect width="122" height="98" fill="white" transform="translate(0 24)"></rect>
+      </clipPath>
+    </defs>
   </symbol>
 
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="exit">

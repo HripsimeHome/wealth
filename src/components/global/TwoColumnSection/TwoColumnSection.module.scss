@@ -10,8 +10,13 @@
     flex-direction: column;
   }
 
+  &__reverse {
+    flex-direction: row-reverse;
+  }
+
   &__imgWrapper {
     flex: 1;
+    position: relative;
   }
 
   &__img {
@@ -19,10 +24,55 @@
     border-radius: 24px;
   }
 
+  //Corner images
+
+  &__leftTop,
+  &__rightTop,
+  &__leftBottom,
+  &__rightBottom {
+    position: absolute;
+    //width: 100%; // Adjust to control scaling with image
+    // height: auto;
+    svg {
+      //width: 100%;
+      // height: auto;
+    }
+  }
+
+  &__leftTop {
+    top: 0;
+    left: 0;
+    transform: translate(0%, -10%);
+    // top: 0;
+    // left: 0;
+  }
+
+  &__rightTop {
+    top: 0;
+    right: 0;
+    transform: translate(20%, -20%);
+  }
+
+  &__leftBottom {
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 17%);
+  }
+
+  &__rightBottom {
+    bottom: 0;
+    right: 0;
+    transform: translate(20%, 20%);
+  }
+
   &__content {
     flex: 1;
     flex-direction: column;
     gap: 3vw;
+  }
+
+  &__textWhite * {
+    color: $color-white !important;
   }
 
   &__sectionTitle {
@@ -45,10 +95,12 @@
 
   &__description {
     line-height: 1.7rem;
+    letter-spacing: 0.07vw;
     margin-bottom: 15px;
   }
 
-  &.reverse {
-    flex-direction: row-reverse;
+  &__textBtnBlock {
+    @include flexCol();
+    gap: 10px;
   }
 }

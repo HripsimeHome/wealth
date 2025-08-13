@@ -1,7 +1,6 @@
 import styles from "./ServicesContent.module.scss";
 import { useNavigate } from "react-router-dom";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
-import MainBtn from "../../layout/MainBtn/MainBtn";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath } from "../../../router/path";
@@ -15,7 +14,10 @@ import {
 
 import {
   identifyIcon,
+  cuttingEdgeTechLefBottomIcon,
   investIcon,
+  detailedDataLeftTopIcon,
+  detailedDataRightBottomIcon,
   timeBlackIcon,
   exitIcon,
   insightsIcon,
@@ -44,32 +46,37 @@ const ServicesContent = () => {
         <TwoColumnSection
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
+          alt="Cutting-edge tech and in-depth market"
           sectionTitle={<SectionTitle icon={identifyIcon} title="identify" />}
+          svgLeftBottom={cuttingEdgeTechLefBottomIcon}
           title="cutting-edge tech and in-depth market"
           titleThin="wknowledge"
           description="Receive actionable insights and make informed decisions based on expert analysis."
+          textWhite
           reverse
+          arrowButton={
+            <ArrowRotation
+              to={aboutPagePath}
+              circleClass={styles.servicesContent__circle}
+              arrowClass={styles.servicesContent__arrow}
+            />
+          }
         />
 
         <TwoColumnSection
           image={detailedDataImage}
           webpImage={detailedDatanWebpImage}
+          alt="Detailed data and experts"
+          svgLeftTop={detailedDataLeftTopIcon}
+          svgRightBottom={detailedDataRightBottomIcon}
           sectionTitle={<SectionTitle icon={investIcon} title="invest" />}
-          title="Detailed data and experts"
+          title="detailed data and experts"
           titleThin="View Points"
           description="Never miss a chance to capitalize on market movements and make informed investment decisions."
-          button={
-            <MainBtn onClick={() => navigate(aboutPagePath)}>view more</MainBtn>
-          }
+          buttonPath={aboutPagePath}
+          buttonLabel="view more"
+          textWhite
         />
-
-        <div className={styles.servicesContent__greyTheme}>
-          <ArrowRotation
-            to={aboutPagePath}
-            circleClass={styles.servicesContent__circle}
-            arrowClass={styles.servicesContent__arrow}
-          />
-        </div>
 
         <div className={styles.servicesContent__blocksContainer}>
           <div className={styles.servicesContent__blocksColumn}>
