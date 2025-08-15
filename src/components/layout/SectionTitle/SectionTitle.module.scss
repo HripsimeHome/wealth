@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .sectionTitle {
-  @include flexCol(start, center);
+  @include flexCol(start);
   gap: 5px;
 
   &__circle {

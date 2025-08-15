@@ -7,12 +7,12 @@ import Svg from "../../layout/Svg/Svg";
 const TwoColumnSection = ({
   image,
   webpImage,
-  svgLeftTop,
-  svgRightTop,
-  svgLeftBottom,
-  svgRightBottom,
+  imgLeftTopCorner,
+  imgRightTopCorner,
+  imgLeftBottomCorner,
+  imgRightBottomCorner,
   sectionTitle,
-  title,
+  title, // ["our team of experienced",  "analysts.""]
   titleThin,
   description,
   buttonLabel,
@@ -37,27 +37,27 @@ const TwoColumnSection = ({
           className={styles.twoColumnSection__img}
         />
 
-        {svgLeftTop && (
+        {imgLeftTopCorner && (
           <div className={styles.twoColumnSection__leftTop}>
-            <Svg id={svgLeftTop} />
+            <Svg id={imgLeftTopCorner} />
           </div>
         )}
 
-        {svgRightTop && (
+        {imgRightTopCorner && (
           <div className={styles.twoColumnSection__rightTop}>
-            <Svg id={svgRightTop} />
+            <Svg id={imgRightTopCorner} />
           </div>
         )}
 
-        {svgLeftBottom && (
+        {imgLeftBottomCorner && (
           <div className={styles.twoColumnSection__leftBottom}>
-            <Svg id={svgLeftBottom} />
+            <Svg id={imgLeftBottomCorner} />
           </div>
         )}
 
-        {svgRightBottom && (
+        {imgRightBottomCorner && (
           <div className={styles.twoColumnSection__rightBottom}>
-            <Svg id={svgRightBottom} />
+            <Svg id={imgRightBottomCorner} />
           </div>
         )}
       </div>
@@ -71,23 +71,27 @@ const TwoColumnSection = ({
         {sectionTitle && <>{sectionTitle}</>}
 
         <h2 className={styles.twoColumnSection__title}>
-          {title} &nbsp;
+          {title}&nbsp;
           <span className={styles.twoColumnSection__titleThin}>
             {titleThin}.
           </span>
         </h2>
-        <p className={styles.twoColumnSection__description}>{description}</p>
-        {buttonLabel && buttonPath && (
-          <MainBtn onClick={() => navigate(buttonPath)}>{buttonLabel}</MainBtn>
-        )}
 
         {arrowButton && (
           <div
             className={`
-          ${arrowButton ? styles.twoColumnSection__textBtnBlock : ""}
+          ${arrowButton ? styles.twoColumnSection__descriptionWrapper : ""}
           `}
           >
-            {arrowButton}
+            <p className={styles.twoColumnSection__description}>
+              {description}
+            </p>
+            <div>{arrowButton}</div>
+            {buttonLabel && buttonPath && (
+              <MainBtn onClick={() => navigate(buttonPath)}>
+                {buttonLabel}
+              </MainBtn>
+            )}
           </div>
         )}
       </div>

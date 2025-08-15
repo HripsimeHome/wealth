@@ -7,10 +7,10 @@
   height: 34px;
   // width: 2.8vw;
   // height: 2.8vw;
-  border-radius: 50px;
+  border-radius: 50%;
   cursor: pointer;
 
-  &:hover .arrowAnimation__arrow {
+  &:hover &__arrow {
     animation: arrowAnimation 0.5s ease-in-out;
   }
 

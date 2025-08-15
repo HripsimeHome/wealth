@@ -48,7 +48,7 @@ const ServicesContent = () => {
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
           sectionTitle={<SectionTitle icon={identifyIcon} title="identify" />}
-          svgLeftBottom={cuttingEdgeTechLefBottomIcon}
+          imgLeftBottomCorner={cuttingEdgeTechLefBottomIcon}
           title="cutting-edge tech and in-depth market"
           titleThin="wknowledge"
           description="Receive actionable insights and make informed decisions based on expert analysis."
@@ -67,8 +67,8 @@ const ServicesContent = () => {
           image={detailedDataImage}
           webpImage={detailedDatanWebpImage}
           alt="Detailed data and experts"
-          svgLeftTop={detailedDataLeftTopIcon}
-          svgRightBottom={detailedDataRightBottomIcon}
+          imgLeftTopCorner={detailedDataLeftTopIcon}
+          imgRightBottomCorner={detailedDataRightBottomIcon}
           sectionTitle={<SectionTitle icon={investIcon} title="invest" />}
           title="detailed data and experts"
           titleThin="View Points"

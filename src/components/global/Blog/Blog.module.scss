@@ -2,7 +2,24 @@
 @import "../../../styles/vars";
 
 .blog {
-  &__container {
-    //padding: 100px;
+  padding: 8% 11%;
+
+  &__cardContainer {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2.6vw;
+    margin: 50px auto;
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    @include mdScreenMedia {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

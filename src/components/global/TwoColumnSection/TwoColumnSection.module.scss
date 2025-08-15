@@ -93,14 +93,14 @@
     text-transform: capitalize;
   }
 
+  &__descriptionWrapper {
+    @include flexCol();
+    gap: 10px;
+  }
+
   &__description {
     line-height: 1.7rem;
     letter-spacing: 0.07vw;
     margin-bottom: 15px;
-  }
-
-  &__textBtnBlock {
-    @include flexCol();
-    gap: 10px;
   }
 }

@@ -1,5 +1,5 @@
 import styles from "./ContactsFAQ.module.scss";
-import Header from "../../global/Header/Header";
+import PageHeader from "../../global/PageHeader/PageHeader";
 import Accordion from "../../layout/Accordion/Accordion";
 import { investmentsIcon } from "../../../assets/svg";
 
@@ -35,7 +35,7 @@ const faqData = [
 const ContactsFAQ = () => {
   return (
     <section className={styles.contactFAQ}>
-      <Header
+      <PageHeader
         icon={investmentsIcon}
         sectionTitle="ask the team"
         title="FAQ"

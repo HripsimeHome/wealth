@@ -35,7 +35,7 @@ const Accordion = ({ data = [] }) => {
             </div>
             <div
               className={`${styles.accordion__content} ${
-                isOpen ? styles.accordion__contentOpen : ""
+                isOpen ? styles.accordion__content_open : ""
               }`}
             >
               {content}

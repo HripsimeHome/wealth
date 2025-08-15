@@ -2,8 +2,6 @@
 @import "../../../../styles/vars";
 
 .blogCard {
-  color: $color-white;
-
   &__cardContainer {
     max-width: 900px;
     display: grid;

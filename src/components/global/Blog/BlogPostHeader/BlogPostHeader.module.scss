@@ -1,0 +1,31 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.blogPostHeader {
+  @include flexCol(space-between);
+  color: $color-white;
+  border-bottom: 1px solid $color-white;
+  padding-bottom: 13px;
+
+  @include mdScreenMedia {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  &__title {
+    @include setFont(46px, 500, $color-white);
+  }
+
+  &__descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 0.13rem;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    @include setFont(sm, 400, $color-white);
+  }
+}

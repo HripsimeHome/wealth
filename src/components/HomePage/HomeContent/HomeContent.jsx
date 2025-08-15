@@ -1,8 +1,8 @@
 import styles from "./HomeContent.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
-import StatusCounter from "../StatusCounter/StatusCounter";
-import BlogHeader from "../../global/Blog/BlogHeader/BlogHeader";
+import StatusCounter from "../../layout/StatusCounter/StatusCounter";
+import BlogPostHeader from "../../global/Blog/BlogPostHeader/BlogPostHeader";
 import BlogCard from "../../global/Blog/BlogCard/BlogCard";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath, servicesPagePath } from "../../../router/path";
@@ -28,7 +28,8 @@ const HomeContent = () => {
         image={analystsImage}
         webpImage={analystsWebpImage}
         alt="Our team of experienced analysts."
-        svgLeftTop={analystsLeftTopIcon}
+        imgLeftTopCorner={analystsLeftTopIcon}
+        // sectionTitle={{icon:exitIcon, text: "experts"}}
         sectionTitle={<SectionTitle icon={exitIcon} title="experts" />}
         title="our team of experienced"
         titleThin="analysts"
@@ -41,7 +42,7 @@ const HomeContent = () => {
         image={tradeImage}
         webpImage={tradeWebpImage}
         alt="Quality trade"
-        svgLeftBottom={tradeLeftBottomIcon}
+        imgLeftBottomCorner={tradeLeftBottomIcon}
         sectionTitle={<SectionTitle icon={timeBlackIcon} title="real-time" />}
         title="quality trade alerts with"
         titleThin="wealth bento"
@@ -57,8 +58,30 @@ const HomeContent = () => {
       />
 
       <div className="containerBlack">
-        <StatusCounter />
-        <BlogHeader />
+        <StatusCounter
+          data={[
+            {
+              digit: "36",
+              title: "Customers",
+            },
+
+            {
+              digit: "28",
+              title: "Selections",
+            },
+
+            {
+              digit: "14",
+              title: "Analysts",
+            },
+
+            {
+              digit: "15",
+              title: "Global Assets",
+            },
+          ]}
+        />
+        <BlogPostHeader />
         <BlogCard limit={3} />
       </div>
     </section>
