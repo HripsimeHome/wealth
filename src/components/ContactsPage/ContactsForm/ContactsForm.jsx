@@ -1,17 +1,9 @@
 import styles from "./ContactsForm.module.scss";
-import PageHeader from "../../global/PageHeader/PageHeader";
 import MainInput from "../../layout/MainInput/MainInput";
-import { contactsIcon } from "../../../assets/svg";
 
 const ContactsForm = () => {
   return (
     <section className={styles.contactsForm}>
-      {/* <PageHeader
-        icon={contactsIcon}
-        sectionTitle="get in touch"
-        title="Contact"
-        subtitle="Contact us to discuss your project and find out how we can help you."
-      /> */}
       <form className={styles.contactsForm__form}>
         <label htmlFor="name">Name</label>
         <MainInput name="fullName" id="name" placeholder="e.g. John Doe" />

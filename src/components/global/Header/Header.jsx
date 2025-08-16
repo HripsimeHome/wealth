@@ -16,30 +16,29 @@ const Header = () => {
       icon: articlesIcon,
       sectionTitle: "articles",
       title: "Blog",
-      subtitle: "Lorem",
+      subtitle: "insightful articles paired with timely market updates",
     },
     "/services": {
       icon: investmentsIcon,
       sectionTitle: "Stock Analysis",
       title: "Services",
-      subtitle: "Quality research paired with real-time trade alerts",
+      subtitle: "quality research paired with real-time trade alerts",
     },
     "/contacts": {
       icon: contactsIcon,
       sectionTitle: "get in touch",
       title: "Contact",
-      subtitle:
-        "Contact us to discuss your project and find out how we can help you.",
+      subtitle: "contact us today for support and tailored assistance",
     },
   };
 
   const data = headers[pathname];
 
-  if (!data) return null; // если нет данных для этой страницы — ничего не рендерим
+  if (!data) return null;
 
   return (
     <div className={styles.header}>
-      <PageHeader {...data} /> {/* передаём всё разом */}
+      <PageHeader {...data} />
     </div>
   );
 };

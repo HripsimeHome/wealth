@@ -39,7 +39,7 @@ const ContactsFAQ = () => {
         icon={investmentsIcon}
         sectionTitle="ask the team"
         title="FAQ"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        subtitle="clear answers paired with step-by-step guidance for all"
       />
       <Accordion data={faqData} />
     </section>

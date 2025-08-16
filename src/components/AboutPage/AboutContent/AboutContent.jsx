@@ -47,8 +47,10 @@ const cardData = [
 
 const AboutContent = () => {
   return (
-    <section className={`${styles.aboutContent} containerBlack pTB`}>
-      <div className={`${styles.aboutContent__container} container`}>
+    <section className={`${styles.aboutContent} paddingYLg`}>
+      <div
+        className={`${styles.aboutContent__container} container containerBlack`}
+      >
         <div className={styles.aboutContent__statisticsContainer}>
           <span className={styles.aboutContent__statisticsCount}>114%</span>
           <span className={styles.aboutContent__statisticsText}>
@@ -57,7 +59,7 @@ const AboutContent = () => {
           </span>
         </div>
 
-        <div className={`${styles.aboutContent__cardsContainer} pTB`}>
+        <div className={`${styles.aboutContent__cardsContainer} paddingYLg`}>
           {cardData.map((card, i) => (
             <div
               key={i}

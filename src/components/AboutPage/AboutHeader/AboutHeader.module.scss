@@ -2,4 +2,6 @@
 @import "../../../styles/vars";
 
 .aboutHeader {
+  @include flexCol();
+  flex-direction: column;
 }

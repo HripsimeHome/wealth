@@ -4,7 +4,7 @@ import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 const PageHeader = ({ icon, sectionTitle, title, subtitle }) => {
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.header__titleContainer}>
         <SectionTitle icon={icon} title={sectionTitle} />
         <h1 className={styles.header__title}>{title}</h1>
       </div>

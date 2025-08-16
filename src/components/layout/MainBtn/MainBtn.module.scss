@@ -6,17 +6,18 @@
   gap: 10px;
   min-width: 150px;
   @include button($color-primary, none);
-  @include setFont(15px, 300, $color-secondary);
+  @include setFont(14px, 300, $color-secondary);
   white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.07vw;
   border-radius: 50px;
   transition: $transition;
-  padding: 5px 10px 5px 25px;
+  padding: 3px 6px 3px 33px;
 
   &_secondaryBg {
-    background: $color-secondary;
     color: $color-white;
+    background: $color-secondary;
   }
 
   &_circleSecondary {
