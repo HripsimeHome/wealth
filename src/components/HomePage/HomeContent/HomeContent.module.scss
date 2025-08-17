@@ -2,6 +2,10 @@
 @import "../../../styles/vars";
 
 .homeContent {
+  &__test {
+    padding: 8% 11%;
+  }
+
   &__circle {
     background-color: $color-secondary;
   }

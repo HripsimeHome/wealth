@@ -1,11 +1,12 @@
 import styles from "./Blog.module.scss";
-import BlogPostHeader from "./BlogPostHeader/BlogPostHeader";
+import BlogHeader from "./BlogHeader/BlogHeader";
 import BlogCard from "./BlogCard/BlogCard";
 
 const Blog = () => {
   return (
     <section className={`${styles.blog} containerBlack`}>
-      <BlogPostHeader />
+      <BlogHeader />
+
       <div className={styles.blog__cardContainer}>
         <BlogCard />
       </div>

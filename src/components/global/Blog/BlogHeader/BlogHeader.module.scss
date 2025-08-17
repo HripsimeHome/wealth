@@ -1,7 +1,7 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
-.blogPostHeader {
+.blogHeader {
   @include flexCol(space-between);
   color: $color-white;
   border-bottom: 1px solid $color-white;
@@ -15,17 +15,15 @@
 
   &__title {
     @include setFont(46px, 500, $color-white);
+    flex: 2;
   }
 
   &__descriptionContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    letter-spacing: 0.13rem;
-  }
-
-  &__subtitle {
-    text-transform: uppercase;
+    flex: 1.5;
     @include setFont(sm, 400, $color-white);
+    letter-spacing: 0.13rem;
   }
 }

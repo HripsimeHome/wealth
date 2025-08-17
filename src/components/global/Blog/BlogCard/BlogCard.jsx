@@ -17,60 +17,92 @@ import {
 
 const postData = [
   {
-    image: "",
-    webpImage: "",
-    avatar: "",
-    name: "",
-    category: "",
-    data: "",
-    title: "",
+    image: investingStartersImage,
+    webpImage: investingStartersWebpImage,
+    avatar: avatarImage,
+    authorName: "David Ross",
+    category: "investing",
+    date: "june 10",
+    title: "Investing Starters Advice 101",
+  },
+  {
+    image: moneyImage,
+    webpImage: moneyWebpImage,
+    avatar: avatarImage,
+    authorName: "Sarah Mitchell",
+    category: "budgeting",
+    date: "july 20",
+    title: "How Much Money Should I Save?",
+  },
+  {
+    image: investingImage,
+    webpImage: investingWebpImage,
+    avatar: avatarImage,
+    authorName: "Maria Carter",
+    category: "investing",
+    date: "aug 12",
+    title: "How Should I Get Started With Investing?",
+  },
+  {
+    image: portfolioImage,
+    webpImage: portfolioWebpImage,
+    avatar: avatarImage,
+    authorName: "John Smith",
+    category: "strategies",
+    date: "aug 16",
+    title: "How to Diversify Your Portfolio",
   },
 ];
 
 const BlogCard = () => {
   return (
-    <div className={styles.blogCard__cardContainer}>
-      <Link to={contactsPagePath}>
-        <div className={styles.blogCard__card}>
-          <div className={styles.blogCard__imgWrapper}>
-            <ImageWebp
-              src={investingImage}
-              srcSet={investingWebpImage}
-              alt="Investing Starters"
-              className={styles.blogCard__img}
-            />
-            <span className={styles.blogCard__more}>+</span>
-          </div>
-
-          <div className={styles.blogCard__infoBlock}>
-            <div className={styles.blogCard__author}>
-              <span>
-                <img
-                  src={avatarImage}
-                  alt="Blogger avatar"
-                  className={styles.blogCard__avatar}
+    <>
+      {postData.map(
+        (
+          { image, webpImage, avatar, authorName, category, data, title },
+          index
+        ) => (
+          <Link to={contactsPagePath} key={index}>
+            <div className={styles.blogCard}>
+              <div className={styles.blogCard__imgWrapper}>
+                <ImageWebp
+                  src={image}
+                  srcSet={webpImage}
+                  alt={title}
+                  className={styles.blogCard__img}
                 />
-              </span>
+                <span className={styles.blogCard__more}>+</span>
+              </div>
 
-              <span className={styles.blogCard__name}>
-                david ross
-                <hr className={styles.blogCard__line} />
-              </span>
+              <div className={styles.blogCard__infoBlock}>
+                <div className={styles.blogCard__authorContainer}>
+                  <span>
+                    <img
+                      src={avatar}
+                      alt={authorName}
+                      className={styles.blogCard__avatar}
+                    />
+                  </span>
+
+                  <span className={styles.blogCard__authorName}>
+                    {authorName}
+                    <hr className={styles.blogCard__line} />
+                  </span>
+                </div>
+
+                <div className={styles.blogCard__details}>
+                  <span className={styles.blogCard__category}>{category}</span>
+                  <span className={styles.blogCard__data}>{data}</span>
+                </div>
+              </div>
+              {/* infoBlock */}
+
+              <h2 className={styles.blogCard__title}>{title}</h2>
             </div>
-
-            <div className={styles.blogCard__blogInfo}>
-              <span className={styles.blogCard__category}>investing</span>
-              <span className={styles.blogCard__data}>Aug 11</span>
-            </div>
-          </div>
-          {/* info */}
-
-          <h2 className={styles.blogCard__title}>
-            Investing Starters Advice 101
-          </h2>
-        </div>
-      </Link>
-    </div>
+          </Link>
+        )
+      )}
+    </>
   );
 };
 

@@ -1,5 +1,62 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
 
 .blogSingle {
+  padding-left: 10%;
+  padding-right: 10%;
+
+  &__header {
+    @include flexCol();
+    flex-direction: column;
+    gap: 1vw;
+    text-align: center;
+    margin-top: 65px;
+  }
+
+  &__category {
+    color: $color-secondary;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 24px;
+    padding: 7px 12px;
+  }
+
+  &__title {
+    @include setFont(2.5rem, 500);
+    letter-spacing: -0.0625rem;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+
+  &__authorName {
+    color: $color-secondary;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 24px;
+    margin-top: 20px;
+  }
+
+  &__content {
+    padding-left: 15%;
+    padding-right: 15%;
+
+    @include lgScreenMedia {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  &__text {
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+  }
 }

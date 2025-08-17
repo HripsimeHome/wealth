@@ -2,7 +2,7 @@ import styles from "./HomeContent.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import StatusCounter from "../../layout/StatusCounter/StatusCounter";
-import BlogPostHeader from "../../global/Blog/BlogPostHeader/BlogPostHeader";
+import BlogHeader from "../../global/Blog/BlogHeader/BlogHeader";
 import BlogCard from "../../global/Blog/BlogCard/BlogCard";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath, servicesPagePath } from "../../../router/path";
@@ -57,7 +57,7 @@ const HomeContent = () => {
         reverse
       />
 
-      <div className="containerBlack">
+      <div className={`${styles.homeContent__test} containerBlack`}>
         <StatusCounter
           data={[
             {
@@ -81,7 +81,7 @@ const HomeContent = () => {
             },
           ]}
         />
-        <BlogPostHeader />
+        <BlogHeader />
         <BlogCard limit={3} />
       </div>
     </section>
