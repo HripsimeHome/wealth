@@ -47,10 +47,9 @@ const ServicesContent = () => {
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
-          sectionTitle={<SectionTitle icon={identifyIcon} title="identify" />}
+          sectionTitle={{ icon: identifyIcon, text: "identify" }}
           imgLeftBottomCorner={cuttingEdgeTechLefBottomIcon}
-          title="cutting-edge tech and in-depth market"
-          titleThin="wknowledge"
+          title={["cutting-edge tech and in-depth market", "wknowledge"]}
           description="Receive actionable insights and make informed decisions based on expert analysis."
           textWhite
           reverse
@@ -69,9 +68,8 @@ const ServicesContent = () => {
           alt="Detailed data and experts"
           imgLeftTopCorner={detailedDataLeftTopIcon}
           imgRightBottomCorner={detailedDataRightBottomIcon}
-          sectionTitle={<SectionTitle icon={investIcon} title="invest" />}
-          title="detailed data and experts"
-          titleThin="View Points"
+          sectionTitle={{ icon: investIcon, text: "invest" }}
+          title={["detailed data and experts", "view Ppoints"]}
           description="Never miss a chance to capitalize on market movements and make informed investment decisions."
           buttonPath={aboutPagePath}
           buttonLabel="view more"

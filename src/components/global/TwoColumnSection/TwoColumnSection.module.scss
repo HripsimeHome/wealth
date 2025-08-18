@@ -10,7 +10,7 @@
     flex-direction: column;
   }
 
-  &__reverse {
+  &_reverse {
     flex-direction: row-reverse;
   }
 
@@ -43,8 +43,6 @@
     top: 0;
     left: 0;
     transform: translate(0%, -10%);
-    // top: 0;
-    // left: 0;
   }
 
   &__rightTop {
@@ -69,10 +67,15 @@
     flex: 1;
     flex-direction: column;
     gap: 3vw;
-  }
 
-  &__textWhite * {
-    color: $color-white !important;
+    &_textWhite {
+      .twoColumnSection__title,
+      .twoColumnSection__titleThin,
+      .twoColumnSection__description,
+      .twoColumnSection__sectionTitle {
+        color: $color-white;
+      }
+    }
   }
 
   &__sectionTitle {
@@ -94,13 +97,14 @@
   }
 
   &__descriptionWrapper {
-    @include flexCol();
+    display: flex;
+    align-items: center;
     gap: 10px;
+    margin-bottom: 15px;
   }
 
   &__description {
     line-height: 1.7rem;
     letter-spacing: 0.07vw;
-    margin-bottom: 15px;
   }
 }

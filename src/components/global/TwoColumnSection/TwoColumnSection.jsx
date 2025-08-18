@@ -1,6 +1,7 @@
 import styles from "./TwoColumnSection.module.scss";
 import { useNavigate } from "react-router-dom";
 import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
+import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import MainBtn from "../../layout/MainBtn/MainBtn";
 import Svg from "../../layout/Svg/Svg";
 
@@ -12,11 +13,11 @@ const TwoColumnSection = ({
   imgLeftBottomCorner,
   imgRightBottomCorner,
   sectionTitle,
-  title, // ["our team of experienced",  "analysts.""]
-  titleThin,
+  title = ["", ""],
   description,
   buttonLabel,
   buttonPath,
+  secondaryBg = false,
   arrowButton,
   textWhite,
   reverse = false,
@@ -26,7 +27,7 @@ const TwoColumnSection = ({
     <section
       className={`
         ${styles.twoColumnSection} 
-        ${reverse ? styles.twoColumnSection__reverse : ""} 
+        ${reverse ? styles.twoColumnSection_reverse : ""} 
        container
       `}
     >
@@ -65,34 +66,38 @@ const TwoColumnSection = ({
       <div
         className={`
         ${styles.twoColumnSection__content}
-        ${textWhite ? styles.twoColumnSection__textWhite : ""}
+        ${textWhite ? styles.twoColumnSection__content_textWhite : ""}
         `}
       >
-        {sectionTitle && <>{sectionTitle}</>}
+        {sectionTitle?.icon && sectionTitle?.text && (
+          <SectionTitle
+            icon={sectionTitle.icon}
+            text={sectionTitle.text}
+            whiteText={textWhite}
+          />
+        )}
 
         <h2 className={styles.twoColumnSection__title}>
-          {title}&nbsp;
+          {title[0]}&nbsp;
           <span className={styles.twoColumnSection__titleThin}>
-            {titleThin}.
+            {title[1]}.
           </span>
         </h2>
 
-        {arrowButton && (
-          <div
-            className={`
-          ${arrowButton ? styles.twoColumnSection__descriptionWrapper : ""}
-          `}
+        {/* Description with arrowButton */}
+        <div className={styles.twoColumnSection__descriptionWrapper}>
+          <p className={styles.twoColumnSection__description}>{description}</p>
+          {arrowButton && <div>{arrowButton}</div>}
+        </div>
+
+        {/* MainBtn below the description wrapper */}
+        {buttonLabel && buttonPath && (
+          <MainBtn
+            onClick={() => navigate(buttonPath)}
+            secondaryBg={secondaryBg}
           >
-            <p className={styles.twoColumnSection__description}>
-              {description}
-            </p>
-            <div>{arrowButton}</div>
-            {buttonLabel && buttonPath && (
-              <MainBtn onClick={() => navigate(buttonPath)}>
-                {buttonLabel}
-              </MainBtn>
-            )}
-          </div>
+            {buttonLabel}
+          </MainBtn>
         )}
       </div>
     </section>

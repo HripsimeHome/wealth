@@ -6,17 +6,17 @@ const ServicesFooter = () => {
       <StatusCounter
         data={[
           {
-            digit: "36",
+            digit: "36K",
             title: "Customers",
           },
 
           {
-            digit: "28",
+            digit: "24",
             title: "Selections",
           },
 
           {
-            digit: "14",
+            digit: "12",
             title: "Analysts",
           },
 

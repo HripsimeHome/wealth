@@ -19,7 +19,7 @@ const HomeHeader = () => {
     <section className={`${styles.homeHeader} pB container`}>
       {/* Left block */}
       <div className={styles.homeHeader__leftBlock}>
-        <SectionTitle icon={investmentsIcon} title="investments" />
+        <SectionTitle icon={investmentsIcon} text="investments" />
         <h1 className={styles.homeHeader__title}>
           grow
           <br />

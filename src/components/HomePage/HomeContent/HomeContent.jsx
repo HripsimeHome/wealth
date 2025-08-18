@@ -1,5 +1,4 @@
 import styles from "./HomeContent.module.scss";
-import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import StatusCounter from "../../layout/StatusCounter/StatusCounter";
 import BlogHeader from "../../global/Blog/BlogHeader/BlogHeader";
@@ -29,13 +28,12 @@ const HomeContent = () => {
         webpImage={analystsWebpImage}
         alt="Our team of experienced analysts."
         imgLeftTopCorner={analystsLeftTopIcon}
-        // sectionTitle={{icon:exitIcon, text: "experts"}}
-        sectionTitle={<SectionTitle icon={exitIcon} title="experts" />}
-        title="our team of experienced"
-        titleThin="analysts"
+        sectionTitle={{ icon: exitIcon, text: "experts" }}
+        title={["Our team of experienced", "analysts"]}
         description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
         buttonPath={aboutPagePath}
         buttonLabel="explore"
+        secondaryBg
       />
 
       <TwoColumnSection
@@ -43,9 +41,8 @@ const HomeContent = () => {
         webpImage={tradeWebpImage}
         alt="Quality trade"
         imgLeftBottomCorner={tradeLeftBottomIcon}
-        sectionTitle={<SectionTitle icon={timeBlackIcon} title="real-time" />}
-        title="quality trade alerts with"
-        titleThin="wealth bento"
+        sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
+        title={["quality trade alerts with", "wealth bento"]}
         description="Never miss a chance to capitalize on market movements and make informed decisions."
         arrowButton={
           <ArrowRotation
@@ -61,7 +58,7 @@ const HomeContent = () => {
         <StatusCounter
           data={[
             {
-              digit: "36",
+              digit: "36K",
               title: "Customers",
             },
 
