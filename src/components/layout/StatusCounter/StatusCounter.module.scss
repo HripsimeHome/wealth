@@ -12,6 +12,10 @@
     @include flexCol();
     flex-direction: column;
     gap: 5px;
+
+    &_textWhite {
+      color: $color-white;
+    }
   }
 
   &__digit {

@@ -56,6 +56,7 @@ const HomeContent = () => {
 
       <div className={`${styles.homeContent__test} containerBlack`}>
         <StatusCounter
+          textWhite
           data={[
             {
               digit: "36K",

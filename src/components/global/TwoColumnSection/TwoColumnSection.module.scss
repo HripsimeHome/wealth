@@ -71,8 +71,7 @@
     &_textWhite {
       .twoColumnSection__title,
       .twoColumnSection__titleThin,
-      .twoColumnSection__description,
-      .twoColumnSection__sectionTitle {
+      .twoColumnSection__description {
         color: $color-white;
       }
     }
@@ -99,7 +98,7 @@
   &__descriptionWrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 70px;
     margin-bottom: 15px;
   }
 

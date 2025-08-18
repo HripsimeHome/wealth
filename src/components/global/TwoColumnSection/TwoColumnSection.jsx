@@ -73,7 +73,7 @@ const TwoColumnSection = ({
           <SectionTitle
             icon={sectionTitle.icon}
             text={sectionTitle.text}
-            whiteText={textWhite}
+            textWhite={textWhite}
           />
         )}
 
