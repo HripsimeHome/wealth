@@ -1,4 +1,3 @@
-import styles from "./Header.module.scss";
 import PageHeader from "../../global/PageHeader/PageHeader";
 import { useLocation } from "react-router-dom";
 import {
@@ -37,9 +36,9 @@ const Header = () => {
   if (!data) return null;
 
   return (
-    <div className={styles.header}>
+    <>
       <PageHeader {...data} />
-    </div>
+    </>
   );
 };
 

@@ -8,7 +8,8 @@
   &__form {
     label {
       display: block;
-      margin-bottom: 5px;
+      @include setFont(xsm, 300);
+      margin-bottom: 8px;
     }
 
     input,

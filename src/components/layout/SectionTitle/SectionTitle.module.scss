@@ -3,9 +3,14 @@
 
 .sectionTitle {
   @include flexCol(start);
+  display: flex;
   gap: 5px;
 
-  &__circle {
+  @include lgScreenMedia {
+    justify-content: center;
+  }
+
+  &__iconWrapper {
     @include flexCol();
     width: 35px;
     height: 35px;
@@ -18,7 +23,7 @@
     height: 20px;
   }
 
-  &__title {
+  &__titleText {
     @include setFont(14px, 400, $color-secondary);
     text-transform: uppercase;
   }

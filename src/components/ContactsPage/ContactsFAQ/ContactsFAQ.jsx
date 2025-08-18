@@ -5,8 +5,7 @@ import { investmentsIcon } from "../../../assets/svg";
 
 const faqData = [
   {
-    title:
-      "What is investing? What is dfdf df df d finvesting? What is investing? What is investing? What is investyu tyu tyu ting? What is s investing? What is investing?",
+    title: "What is investing?",
     content:
       "Investing is the act of allocating money or resources with the expectation of generating a profit or return over time. It involves purchasing assets—such as stocks, real estate, or businesses—that are expected to increase in value or produce income. The goal of investing is to grow wealth, achieve financial goals, or secure long-term financial stability.",
   },

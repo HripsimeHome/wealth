@@ -23,13 +23,16 @@ const Accordion = ({ data = [] }) => {
             aria-expanded={isOpen}
           >
             <div className={styles.accordion__header}>
-              <span className={styles.accordion__title}>{title}</span>
+              <h3 className={styles.accordion__title}>{title}</h3>
               <span className={styles.accordion__toggle}>
-                <span className={styles.accordion__horizontal}></span>
+                <span className={styles.accordion__line}></span>
                 <span
-                  className={`${styles.accordion__vertical} ${
-                    isOpen ? styles.accordion__rotate : ""
-                  }`}
+                  className={`
+                    ${
+                      isOpen
+                        ? styles.accordion__line
+                        : styles.accordion__line_rotate
+                    }`}
                 ></span>
               </span>
             </div>
