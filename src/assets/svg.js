@@ -20,7 +20,10 @@ export const companyIcon = "company";
 export const hardworkIcon = "hardwork";
 export const researchIcon = "research";
 export const veteransIcon = "veterans";
+export const JaneLeftTopIcon = "JaneLeftTop";
 export const JaneRightBottomIcon = "JaneRightBottom";
+export const JacobRightTopIcon = "JacobRightTop";
+export const JacobLeftBottomIcon = "JacobLeftBottom";
 
 // Services
 export const identifyIcon = "identify";
@@ -34,3 +37,8 @@ export const articlesIcon = "articles";
 
 // Contacts
 export const contactsIcon = "contacts";
+
+// Social icons
+export const youtubeIcon = "youtube";
+export const instagramIcon = "instagram";
+export const tiktokIcon = "tiktok";

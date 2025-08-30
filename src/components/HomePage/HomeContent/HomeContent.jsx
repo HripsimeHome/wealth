@@ -22,7 +22,11 @@ import {
 
 const HomeContent = () => {
   return (
-    <section className={styles.homeContent}>
+    <section
+      className={`
+      ${styles.homeContent} container
+      `}
+    >
       <TwoColumnSection
         image={analystsImage}
         webpImage={analystsWebpImage}

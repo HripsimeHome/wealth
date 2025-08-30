@@ -27,8 +27,7 @@ const TwoColumnSection = ({
     <section
       className={`
         ${styles.twoColumnSection} 
-        ${reverse ? styles.twoColumnSection_reverse : ""} 
-       container
+        ${reverse ? styles.twoColumnSection_reverse : ""}        
       `}
     >
       <div className={styles.twoColumnSection__imgWrapper}>

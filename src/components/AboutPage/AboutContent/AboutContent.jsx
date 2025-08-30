@@ -1,5 +1,6 @@
 // AboutContent.jsx
 import styles from "./AboutContent.module.scss";
+import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
@@ -15,7 +16,10 @@ import {
   researchIcon,
   innovationIcon,
   veteransIcon,
+  JaneLeftTopIcon,
   JaneRightBottomIcon,
+  JacobRightTopIcon,
+  JacobLeftBottomIcon,
 } from "../../../assets/svg";
 
 const cardData = [
@@ -74,38 +78,46 @@ const AboutContent = () => {
           ))}
         </div>
 
-        <div className={styles.aboutContent__staffContainer}>
-          <div className={styles.aboutContent__staffImgContainer}>
-            <ImageWebp
-              src={JaneImage}
-              srcSet={JaneWebpImage}
-              alt="Jane Doe"
-              className={styles.aboutContent__staffImg}
-            />
-            <div className={styles.aboutContent__staff1RightBottom}>
-              <Svg id={JaneRightBottomIcon} />
-            </div>
-          </div>
+        <TwoColumnSection
+          image={JaneImage}
+          webpImage={JaneWebpImage}
+          alt="Staff"
+          imgLeftTopCorner={JaneLeftTopIcon}
+          imgRightBottomCorner={JaneRightBottomIcon}
+          title="Jane Doe"
+          description={
+            <>
+              <p>
+                {" "}
+                With over 15 years of experience as a stock analyst on Wall
+                Street, Jane has solidified her reputation as a seasoned
+                professional.
+              </p>
+              <p>
+                Her insights, honed during the post-financial crisis, have
+                consistently garnered attention and respect.
+              </p>
+              <p>
+                Since 2015, Jane has been a prominent figure at stock
+                conferences and in the media, sharing her bold predictions and
+                in-depth analyses.
+              </p>
+            </>
+          }
+          textWhite
+        />
 
-          <div>
-            <h2 className={styles.aboutContent__staffTitle}>Jane Doe</h2>
-            <br />
-            <span className={styles.aboutContent__staffText}>
-              With over 15 years of experience as a stock analyst on Wall
-              Street, Jane has solidified her reputation as a seasoned
-              professional.
-              <br />
-              <br />
-              Her insights, honed during the post-financial crisis, have
-              consistently garnered attention and respect.
-              <br />
-              <br />
-              Since 2015, Jane has been a prominent figure at stock conferences
-              and in the media, sharing her bold predictions and in-depth
-              analyses.
-            </span>
-          </div>
-        </div>
+        <TwoColumnSection
+          image={JacobImage}
+          webpImage={JacobWebpImage}
+          alt="Staff"
+          imgRightTopCorner={JacobRightTopIcon}
+          imgLeftBottomCorner={JacobLeftBottomIcon}
+          title={"Jacob Smith"}
+          //description="Never miss a chance to capitalize on market movements and make informed decisions."
+          textWhite
+          reverse
+        />
       </div>
     </section>
   );

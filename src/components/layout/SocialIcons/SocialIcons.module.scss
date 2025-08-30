@@ -3,17 +3,18 @@
 
 .socialIcons {
   display: flex;
+  gap: 15px;
 
   a {
     height: 44px;
   }
 
   &__icon {
-    @include svg(44px, black, 44px, black);
-
+    @include svg(25px, white, 25px, white);
+    // width: 25px;
+    // height: 25px;
     &:hover,
     &:active {
-      stroke: $color-primary;
       fill: $color-primary;
       cursor: pointer;
     }
