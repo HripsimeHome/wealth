@@ -10,15 +10,32 @@
   border-radius: 50%;
   cursor: pointer;
 
-  &:hover &__arrow {
+  &:hover &__icon {
     animation: arrowAnimation 0.5s ease-in-out;
   }
 
-  &__arrow {
+  &__icon {
     width: 16px;
     height: 16px;
     transform: rotate(-45deg);
     transition: $transition;
+  }
+
+  /* variant */
+  &_secondaryCircle {
+    background-color: $color-secondary;
+
+    .arrowAnimation__icon {
+      fill: $color-white;
+    }
+  }
+
+  &_primaryCircle {
+    background-color: $color-primary;
+
+    .arrowAnimation__icon {
+      fill: $color-secondary;
+    }
   }
 }
 

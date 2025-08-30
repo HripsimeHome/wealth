@@ -31,9 +31,9 @@ const HomeContent = () => {
         sectionTitle={{ icon: exitIcon, text: "experts" }}
         title={["Our team of experienced", "analysts"]}
         description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
-        buttonPath={aboutPagePath}
-        buttonLabel="explore"
-        secondaryBg
+        btnPath={aboutPagePath}
+        btnLabel="explore"
+        btnSecondaryBg
       />
 
       <TwoColumnSection
@@ -44,13 +44,7 @@ const HomeContent = () => {
         sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
         title={["quality trade alerts with", "wealth bento"]}
         description="Never miss a chance to capitalize on market movements and make informed decisions."
-        arrowButton={
-          <ArrowRotation
-            to={servicesPagePath}
-            circleClass={styles.homeContent__circle}
-            arrowClass={styles.homeContent__arrow}
-          />
-        }
+        arrowButton={<ArrowRotation to={servicesPagePath} />}
         reverse
       />
 

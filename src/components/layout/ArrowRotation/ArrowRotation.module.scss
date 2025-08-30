@@ -5,15 +5,48 @@
   @include flexCol();
   width: 34px;
   height: 34px;
-  border-radius: 50px;
+  border-radius: 50%;
 
-  &:hover &__arrow {
-    transform: rotate(-45deg);
-  }
-
-  &__arrow {
+  &__icon {
     width: 16px;
     height: 16px;
     transition: $transition;
   }
+
+  &:hover &__icon {
+    transform: rotate(-45deg);
+  }
+
+  /* варианты */
+  &_secondaryCircle {
+    background-color: $color-secondary;
+
+    .arrowRotation__icon {
+      fill: $color-white;
+    }
+  }
+
+  &_greyCircle {
+    background-color: $color-lightGrey;
+
+    .arrowRotation__icon {
+      fill: $color-secondary;
+    }
+  }
+
+  // &__secondaryCircle {
+  //   background-color: $color-secondary;
+
+  //   &_icon {
+  //     fill: $color-white;
+  //   }
+  // }
+
+  // &__greyCircle {
+  //   background-color: $color-lightGrey;
+
+  //   &__icon {
+  //     fill: $color-secondary;
+  //   }
+  // }
 }

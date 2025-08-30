@@ -15,9 +15,9 @@ const TwoColumnSection = ({
   sectionTitle,
   title = ["", ""],
   description,
-  buttonLabel,
-  buttonPath,
-  secondaryBg = false,
+  btnLabel,
+  btnPath,
+  btnSecondaryBg = false,
   arrowButton,
   textWhite,
   reverse = false,
@@ -91,12 +91,12 @@ const TwoColumnSection = ({
         </div>
 
         {/* MainBtn below the description wrapper */}
-        {buttonLabel && buttonPath && (
+        {btnLabel && btnPath && (
           <MainBtn
-            onClick={() => navigate(buttonPath)}
-            secondaryBg={secondaryBg}
+            onClick={() => navigate(btnPath)}
+            btnSecondaryBg={btnSecondaryBg}
           >
-            {buttonLabel}
+            {btnLabel}
           </MainBtn>
         )}
       </div>

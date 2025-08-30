@@ -15,25 +15,9 @@
   transition: $transition;
   padding: 3px 6px 3px 33px;
 
-  &_secondaryBg {
+  &_btnSecondaryBg {
     color: $color-white;
     background: $color-secondary;
-  }
-
-  &_circleSecondary {
-    background: $color-secondary;
-  }
-
-  &_arrowSecondary {
-    fill: $color-white;
-  }
-
-  &_circlePrimary {
-    background: $color-primary;
-  }
-
-  &_arrowPrimary {
-    fill: $color-secondary;
   }
 
   &__btnText {

@@ -6,6 +6,7 @@ import {
   servicesPagePath,
   blogPagePath,
   contactsPagePath,
+  testPagePath,
 } from "../router/path";
 
 export const headerMenuItems = [
@@ -28,5 +29,9 @@ export const headerMenuItems = [
   {
     text: "Contacts",
     link: contactsPagePath,
+  },
+  {
+    //text: "Test",
+    //link: testPagePath,
   },
 ];

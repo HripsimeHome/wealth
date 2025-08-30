@@ -12,7 +12,7 @@ const AboutHeader = () => {
         title="about us"
         subtitle="we are a research site that manages a portfolio in real-time."
       />
-      <MainBtn secondaryBg>explore</MainBtn>
+      <MainBtn btnSecondaryBg>explore</MainBtn>
     </section>
   );
 };

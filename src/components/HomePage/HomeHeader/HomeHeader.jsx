@@ -67,7 +67,7 @@ const HomeHeader = () => {
           <ArrowAnimation
             to={aboutPagePath}
             circleClass={styles.homeHeader__circle}
-            arrowClass={styles.homeHeader__arrow}
+            arrowClass={styles.homeHeader__icon}
           />
         </div>
 

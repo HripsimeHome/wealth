@@ -54,11 +54,7 @@ const ServicesContent = () => {
           textWhite
           reverse
           arrowButton={
-            <ArrowRotation
-              to={aboutPagePath}
-              circleClass={styles.servicesContent__circle}
-              arrowClass={styles.servicesContent__arrow}
-            />
+            <ArrowRotation to={aboutPagePath} variant="greyCircle" />
           }
         />
 
@@ -71,8 +67,8 @@ const ServicesContent = () => {
           sectionTitle={{ icon: investIcon, text: "invest" }}
           title={["detailed data and experts", "view Ppoints"]}
           description="Never miss a chance to capitalize on market movements and make informed investment decisions."
-          buttonPath={aboutPagePath}
-          buttonLabel="view more"
+          btnPath={aboutPagePath}
+          btnLabel="view more"
           textWhite
         />
 

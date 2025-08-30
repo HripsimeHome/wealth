@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 import Svg from "../../layout/Svg/Svg";
 import { arrowHorizontalIcon } from "../../../assets/svg";
 
-const ArrowAnimation = ({ to = "#", circleClass, arrowClass }) => {
+const ArrowAnimation = ({ to = "#", variant = "secondaryCircle" }) => {
   return (
-    <div className={`${styles.arrowAnimation} ${circleClass}`}>
+    <div
+      className={`
+    ${styles.arrowAnimation}
+    ${styles[`arrowAnimation_${variant}`]}   
+    `}
+    >
       <Link to={to}>
-        <Svg
-          id={arrowHorizontalIcon}
-          className={`${styles.arrowAnimation__arrow} ${arrowClass}`}
-        />
+        <Svg id={arrowHorizontalIcon} className={styles.arrowAnimation__icon} />
       </Link>
     </div>
   );
