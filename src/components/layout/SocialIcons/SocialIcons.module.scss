@@ -5,14 +5,9 @@
   display: flex;
   gap: 15px;
 
-  a {
-    height: 44px;
-  }
-
   &__icon {
-    @include svg(25px, white, 25px, white);
-    // width: 25px;
-    // height: 25px;
+    @include svg(25px, $color-white);
+
     &:hover,
     &:active {
       fill: $color-primary;

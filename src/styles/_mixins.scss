@@ -160,17 +160,17 @@ $font-sizes: (
   object-fit: contain;
 }
 
-@mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
+@mixin svg($width, $fill: none, $height: $width, $stroke: none) {
   width: $width;
   height: $height;
-  fill: $color;
+  fill: $fill;
   stroke: $stroke;
 }
 
 // Buttons
 @mixin button($bg: transparent, $border: none) {
-  border: $border;
   background: $bg;
+  border: $border;
   cursor: pointer;
 }
 

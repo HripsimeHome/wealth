@@ -1,0 +1,76 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.aboutStatistic {
+  &__valueContainer {
+    @include flexCol;
+    gap: 23px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include lgScreenMedia {
+      flex-direction: column;
+      max-width: 450px;
+      text-align: center;
+    }
+  }
+
+  &__value {
+    @include setFont(120px, 600, $color-white);
+  }
+
+  &__description {
+    @include setFont(xsm, 300, $color-white);
+    text-transform: uppercase;
+  }
+
+  // Card
+  &__cardsContainer {
+    @include flexCol;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  &__card {
+    @include flexCol(space-between, start);
+    flex-direction: column;
+    max-width: 270px;
+    width: 100%;
+    min-height: 270px;
+    text-transform: uppercase;
+    border-radius: 24px;
+    padding: 40px;
+    // if no class matched
+    background-color: $color-lightGrey;
+
+    &_lightGrey {
+      background-color: $color-lightGrey;
+    }
+
+    &_darkGrey {
+      background-color: $color-darkGrey;
+    }
+
+    &_primary {
+      background-color: $color-primary;
+    }
+
+    &_secondary {
+      background-color: $color-secondary;
+    }
+  }
+
+  &__cardIcon {
+    width: 42px;
+    height: 42px;
+  }
+
+  &__cardTitle {
+    @include setFont(35px, 500, $color-secondary);
+  }
+
+  &__cardSubtitle {
+    @include setFont(12px, 400, $color-secondary);
+    letter-spacing: 1px;
+  }
+}

@@ -7,7 +7,6 @@ const socialIconsData = [
   {
     icon: youtubeIcon,
     alt: "YouTube",
-    title: "",
     link: "https://youtube.com/@mamnunagency?si=nbS2rhZMimU_iyJP",
   },
   {
@@ -23,7 +22,7 @@ const socialIconsData = [
   },
 ];
 
-function SocialIcons() {
+const SocialIcons = () => {
   return (
     <div className={styles.socialIcons}>
       {socialIconsData.map(({ icon, alt, link }, index) => (
@@ -39,6 +38,6 @@ function SocialIcons() {
       ))}
     </div>
   );
-}
+};
 
 export default SocialIcons;

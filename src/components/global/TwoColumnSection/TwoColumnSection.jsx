@@ -20,9 +20,12 @@ const TwoColumnSection = ({
   btnSecondaryBg = false,
   arrowButton,
   textWhite,
+  socialIcons,
   reverse = false,
 }) => {
   const navigate = useNavigate();
+  const isArray = Array.isArray(description);
+
   return (
     <section
       className={`
@@ -75,19 +78,42 @@ const TwoColumnSection = ({
             textWhite={textWhite}
           />
         )}
-
         <h2 className={styles.twoColumnSection__title}>
-          {title[0]}&nbsp;
-          <span className={styles.twoColumnSection__titleThin}>
-            {title[1]}.
-          </span>
+          {Array.isArray(title) ? (
+            <>
+              {title[0]}&nbsp;
+              <span className={styles.twoColumnSection__titleThin}>
+                {title[1]}.
+              </span>
+            </>
+          ) : (
+            title
+          )}
         </h2>
 
         {/* Description with arrowButton */}
-        <div className={styles.twoColumnSection__descriptionWrapper}>
-          <p className={styles.twoColumnSection__description}>{description}</p>
+        <div
+          className={`${styles.twoColumnSection__descriptionWrapper} ${
+            isArray
+              ? styles["twoColumnSection__descriptionWrapper_column"]
+              : styles["twoColumnSection__descriptionWrapper_row"]
+          }`}
+        >
+          {isArray ? (
+            description.map((paragraph, i) => (
+              <p key={i} className={styles.twoColumnSection__description}>
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className={styles.twoColumnSection__description}>
+              {description}
+            </p>
+          )}
           {arrowButton && <div>{arrowButton}</div>}
         </div>
+
+        {socialIcons && <div>{socialIcons}</div>}
 
         {/* MainBtn below the description wrapper */}
         {btnLabel && btnPath && (
