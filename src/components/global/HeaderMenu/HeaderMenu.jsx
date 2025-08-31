@@ -16,7 +16,7 @@ const HeaderMenu = () => {
           src={logoImage}
           srcSet={logoWebpImage}
           alt="Wealth Bento"
-          className={styles.headerMenu__logoImg}
+          className={styles.headerMenu__logo}
         />
       </Link>
 
