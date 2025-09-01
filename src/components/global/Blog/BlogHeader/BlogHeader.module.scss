@@ -23,7 +23,7 @@
     flex-direction: column;
     gap: 20px;
     flex: 1.5;
-    @include setFont(sm, 400, $color-white);
+    @include setFont(sm, 300, $color-white);
     letter-spacing: 1px;
   }
 }

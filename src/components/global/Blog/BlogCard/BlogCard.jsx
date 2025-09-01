@@ -71,7 +71,7 @@ const BlogCard = () => {
                   alt={title}
                   className={styles.blogCard__img}
                 />
-                <span className={styles.blogCard__more}>+</span>
+                <div className={styles.blogCard__more}>+</div>
               </div>
 
               <div className={styles.blogCard__infoBlock}>

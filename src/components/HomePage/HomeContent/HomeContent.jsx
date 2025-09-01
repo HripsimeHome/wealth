@@ -51,7 +51,9 @@ const HomeContent = () => {
         />
       </div>
 
-      <div className={`${styles.homeContent__test} containerBlackTopRounded`}>
+      <div
+        className={`${styles.homeContent__wrapper} containerBlackTopRounded`}
+      >
         <StatusCounter
           textWhite
           data={[

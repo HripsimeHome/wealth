@@ -1,8 +1,9 @@
+import styles from "./ServicesFooter.module.scss";
 import StatusCounter from "../../layout/StatusCounter/StatusCounter";
 
 const ServicesFooter = () => {
   return (
-    <>
+    <section className={styles.servicesFooter}>
       <StatusCounter
         data={[
           {
@@ -26,7 +27,7 @@ const ServicesFooter = () => {
           },
         ]}
       />
-    </>
+    </section>
   );
 };
 
