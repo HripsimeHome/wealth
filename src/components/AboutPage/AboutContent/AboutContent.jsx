@@ -5,7 +5,9 @@ import AboutStaff from "./AboutStaff/AboutStaff";
 
 const AboutContent = () => {
   return (
-    <section className={`${styles.aboutContent} containerBlack paddingYLg`}>
+    <section
+      className={`${styles.aboutContent} containerBlackRounded paddingYLg`}
+    >
       <AboutStatistic />
       <AboutStaff />
     </section>

@@ -1,7 +1,5 @@
 import styles from "./ServicesContent.module.scss";
-import { useNavigate } from "react-router-dom";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
-import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath } from "../../../router/path";
 
@@ -25,9 +23,8 @@ import {
 } from "../../../assets/svg";
 
 const ServicesContent = () => {
-  const navigate = useNavigate();
   return (
-    <section className={`${styles.servicesContent} containerBlack`}>
+    <section className={`${styles.servicesContent} containerBlackRounded`}>
       {process.env.NODE_ENV !== "development" && (
         <video
           autoPlay

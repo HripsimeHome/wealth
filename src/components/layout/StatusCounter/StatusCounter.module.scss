@@ -8,7 +8,11 @@
   justify-content: space-around;
   align-items: center;
 
-  &__col {
+  @include lgScreenMedia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__column {
     @include flexCol();
     flex-direction: column;
     gap: 5px;

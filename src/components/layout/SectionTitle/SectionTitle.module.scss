@@ -4,7 +4,7 @@
 .sectionTitle {
   @include flexCol(start);
   display: flex;
-  gap: 5px;
+  gap: 7px;
 
   @include lgScreenMedia {
     justify-content: center;

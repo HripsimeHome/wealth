@@ -24,6 +24,6 @@
     gap: 20px;
     flex: 1.5;
     @include setFont(sm, 400, $color-white);
-    letter-spacing: 0.13rem;
+    letter-spacing: 1px;
   }
 }

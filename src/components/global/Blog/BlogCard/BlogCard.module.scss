@@ -3,21 +3,14 @@
 
 .blogCard {
   &__imgWrapper {
-    border-radius: 20px;
-    // min-width: 25vw;
-    // max-width: 25vw;
-    // min-height: 25vw;
-    // max-height: 25vw;
     position: relative;
-    overflow: hidden;
   }
 
   &__img {
-    // min-width: 22.5rem;
-    // max-width: 22.5rem;
-    // min-height: 22.5rem;
-    // max-height: 22.5rem;
     max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 20px;
   }
 
   &__more {
@@ -30,13 +23,13 @@
     border-radius: 100%;
     @include flexCol();
     @include setFont(20px, $color-secondary);
+  }
 
-    &:hover {
-      color: $color-white;
-      background-color: $color-secondary;
-      transition: $transition;
-      cursor: pointer;
-    }
+  &:hover &__more {
+    color: $color-white;
+    background-color: $color-secondary;
+    transition: $transition;
+    cursor: pointer;
   }
 
   &__infoBlock {
@@ -87,10 +80,9 @@
   }
 
   &__title {
-    // font-size: 2.78vw;
-    font-size: 32px;
-    font-weight: 500;
     text-align: left;
+    min-height: 50px;
+    @include setFont(xxl, 500, $color-white);
 
     @include mdScreenMedia {
       text-align: center;

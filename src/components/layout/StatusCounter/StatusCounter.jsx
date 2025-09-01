@@ -7,8 +7,8 @@ const StatusCounter = ({ data, textWhite = false }) => {
         <div
           key={index}
           className={`
-            ${styles.statusCounter__col} 
-            ${textWhite ? styles.statusCounter__col_textWhite : ""}
+            ${styles.statusCounter__column} 
+            ${textWhite ? styles.statusCounter__column_textWhite : ""}
           `}
         >
           <span className={styles.statusCounter__digit}>{digit}</span>

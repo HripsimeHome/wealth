@@ -4,7 +4,7 @@ import BlogCard from "./BlogCard/BlogCard";
 
 const Blog = () => {
   return (
-    <section className={`${styles.blog} containerBlack`}>
+    <section className={`${styles.blog} containerBlackTopRounded`}>
       <BlogHeader />
 
       <div className={styles.blog__cardContainer}>
