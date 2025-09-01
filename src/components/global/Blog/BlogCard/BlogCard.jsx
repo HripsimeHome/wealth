@@ -1,6 +1,5 @@
 import styles from "./BlogCard.module.scss";
 import { Link } from "react-router-dom";
-import { contactsPagePath } from "../../../../router/path";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 import {
@@ -17,6 +16,7 @@ import {
 
 const postData = [
   {
+    id: "investing-starters",
     image: investingStartersImage,
     webpImage: investingStartersWebpImage,
     avatar: avatarImage,
@@ -26,6 +26,7 @@ const postData = [
     title: "Investing Starters Advice 101",
   },
   {
+    id: "how-much-money",
     image: moneyImage,
     webpImage: moneyWebpImage,
     avatar: avatarImage,
@@ -35,6 +36,7 @@ const postData = [
     title: "How Much Money Should I Save?",
   },
   {
+    id: "How Should I Get Started",
     image: investingImage,
     webpImage: investingWebpImage,
     avatar: avatarImage,
@@ -44,6 +46,7 @@ const postData = [
     title: "How Should I Get Started With Investing?",
   },
   {
+    id: "How to Diversify",
     image: portfolioImage,
     webpImage: portfolioWebpImage,
     avatar: avatarImage,
@@ -59,10 +62,10 @@ const BlogCard = () => {
     <>
       {postData.map(
         (
-          { image, webpImage, avatar, authorName, category, data, title },
+          { id, image, webpImage, avatar, authorName, category, data, title },
           index
         ) => (
-          <Link to={contactsPagePath} key={index}>
+          <Link to={`/blog/${id}`} key={index}>
             <div className={styles.blogCard}>
               <div className={styles.blogCard__imgWrapper}>
                 <ImageWebp

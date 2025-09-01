@@ -1,4 +1,6 @@
 import styles from "./BlogSingle.module.scss";
+import { useParams } from "react-router-dom";
+//import { postData } from "../BlogCard/BlogCard";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 import { avatarImage, portfolioImage } from "../../../../assets/images";
@@ -37,6 +39,10 @@ import { avatarImage, portfolioImage } from "../../../../assets/images";
 // ]
 
 const BlogSingle = () => {
+  // const { id } = useParams();
+  // const article = postData.find((post) => post.id === id);
+  // if (!article) return <p>Статья не найдена</p>;
+
   return (
     <section className={styles.blogSingle}>
       <div className={styles.blogSingle__header}>

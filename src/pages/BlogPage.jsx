@@ -7,7 +7,7 @@ const BlogPage = () => {
     <>
       {/* <BlogSingle /> */}
       <Blog />
-      {/* <Outlet /> */}
+      <Outlet />
     </>
   );
 };

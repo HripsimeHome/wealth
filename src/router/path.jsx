@@ -2,6 +2,7 @@ import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import ServicesPage from "../pages/ServicesPage";
 import BlogPage from "../pages/BlogPage";
+import BlogSingle from "../components/global/Blog/BlogSIngle/BlogSingle";
 import ContactsPage from "../pages/ContactsPage";
 import TestPage from "../pages/TestPage";
 //import { Navigate } from "TestPage-router-dom";
@@ -33,6 +34,18 @@ export const routes = [
     path: blogPagePath,
     component: <BlogPage />,
   },
+
+  {
+    path: "/blog",
+    component: <BlogPage />,
+    children: [
+      {
+        path: "id",
+        component: <BlogSingle />,
+      },
+    ],
+  },
+
   {
     path: contactsPagePath,
     component: <ContactsPage />,
