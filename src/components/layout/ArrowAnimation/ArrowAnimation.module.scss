@@ -5,8 +5,6 @@
   @include flexCol();
   width: 34px;
   height: 34px;
-  // width: 2.8vw;
-  // height: 2.8vw;
   border-radius: 50%;
   cursor: pointer;
 
@@ -23,19 +21,19 @@
 
   /* variant */
   &_secondaryCircle {
-    background-color: $color-secondary;
+    background-color: $color-primary;
+  }
 
-    .arrowAnimation__icon {
-      fill: $color-white;
-    }
+  &_secondaryCircle &__icon {
+    fill: $color-secondary;
   }
 
   &_primaryCircle {
-    background-color: $color-primary;
+    background-color: $color-secondary;
+  }
 
-    .arrowAnimation__icon {
-      fill: $color-secondary;
-    }
+  &_primaryCircle &__icon {
+    fill: $color-white;
   }
 }
 

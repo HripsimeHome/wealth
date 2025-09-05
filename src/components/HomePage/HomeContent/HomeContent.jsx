@@ -1,8 +1,6 @@
 import styles from "./HomeContent.module.scss";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import StatusCounter from "../../layout/StatusCounter/StatusCounter";
-import BlogHeader from "../../global/Blog/BlogHeader/BlogHeader";
-import BlogCard from "../../global/Blog/BlogCard/BlogCard";
 import Blog from "../../global/Blog/Blog";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath, servicesPagePath } from "../../../router/path";
@@ -78,8 +76,7 @@ const HomeContent = () => {
             },
           ]}
         />
-        {/* <BlogHeader />
-        <BlogCard limit={3} /> */}
+        {/*  <BlogCard limit={3} /> */}
         <Blog />
       </div>
     </section>

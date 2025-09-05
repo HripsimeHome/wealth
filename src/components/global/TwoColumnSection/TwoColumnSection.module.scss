@@ -5,6 +5,11 @@
   @include flexCol();
   gap: 5vw;
   margin: 100px 0;
+  --content-color: #{$color-secondary};
+
+  &_textWhite {
+    --content-color: #{$color-white};
+  }
 
   @include lgScreenMedia {
     flex-direction: column;
@@ -67,14 +72,6 @@
     flex: 1;
     flex-direction: column;
     gap: 3vw;
-
-    &_textWhite {
-      .twoColumnSection__title,
-      .twoColumnSection__titleThin,
-      .twoColumnSection__description {
-        color: $color-white;
-      }
-    }
   }
 
   &__sectionTitle {
@@ -82,7 +79,7 @@
   }
 
   &__title {
-    @include setFont(3.5rem, 500);
+    @include setFont(3.5rem, 500, var(--content-color));
     line-height: 4rem;
     letter-spacing: -0.06rem;
     text-transform: capitalize;
@@ -102,13 +99,14 @@
       display: flex;
       column-gap: 70px;
     }
-    
+
     &_column {
       display: block;
     }
   }
 
   &__description {
+    color: var(--content-color);
     line-height: 1.7rem;
     letter-spacing: 0.07vw;
     margin-bottom: 20px;

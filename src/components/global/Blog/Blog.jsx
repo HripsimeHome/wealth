@@ -1,14 +1,14 @@
 import styles from "./Blog.module.scss";
 import BlogHeader from "./BlogHeader/BlogHeader";
-import BlogCard from "./BlogCard/BlogCard";
+import BlogCardList from "./BlogCardList/BlogCardList";
 
-const Blog = () => {
+const Blog = ({ posts }) => {
   return (
-    <section className={`${styles.blog} containerBlackTopRounded`}>
+    <section className={styles.blog}>
       <BlogHeader />
 
       <div className={styles.blog__cardContainer}>
-        <BlogCard />
+        <BlogCardList posts={posts} />
       </div>
     </section>
   );

@@ -30,20 +30,15 @@ export const routes = [
     path: servicesPagePath,
     component: <ServicesPage />,
   },
-  {
-    path: blogPagePath,
-    component: <BlogPage />,
-  },
 
   {
     path: "/blog",
     component: <BlogPage />,
-    children: [
-      {
-        path: "id",
-        component: <BlogSingle />,
-      },
-    ],
+  },
+
+  {
+    path: "/blog/:id",
+    component: <BlogPage />,
   },
 
   {

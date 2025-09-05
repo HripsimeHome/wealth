@@ -1,7 +1,7 @@
 import styles from "./SectionTitle.module.scss";
 import Svg from "../../layout/Svg/Svg";
 
-const SectionTitle = ({ icon, text, textWhite = false }) => {
+const SectionTitle = ({ icon, text, textWhite }) => {
   return (
     <div className={styles.sectionTitle}>
       <span className={styles.sectionTitle__iconWrapper}>
@@ -10,10 +10,7 @@ const SectionTitle = ({ icon, text, textWhite = false }) => {
       <span
         className={`
           ${styles.sectionTitle__text} 
-          ${
-            textWhite ? styles.sectionTitle__textWhite : ""
-            // whiteText ? styles.sectionTitle__text_white : ""
-          }`}
+          ${textWhite ? styles.sectionTitle__text_white : ""}`}
       >
         {text}
       </span>

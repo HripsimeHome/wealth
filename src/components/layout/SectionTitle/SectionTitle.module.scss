@@ -15,7 +15,7 @@
     width: 35px;
     height: 35px;
     background-color: $color-primary;
-    border-radius: 50px;
+    border-radius: 50%;
   }
 
   &__icon {
@@ -27,18 +27,8 @@
     @include setFont(14px, 400);
     text-transform: uppercase;
 
-    // &.sectionTitle__text_white {
-    //   color: $color-white;
-    // }
-
-    // &.sectionTitle__text {
-    //   &_white {
-    //     color: $color-white;
-    //   }
-    // }
-  }
-
-  &__textWhite {
-    color: $color-white;
+    &_white {
+      color: $color-white;
+    }
   }
 }

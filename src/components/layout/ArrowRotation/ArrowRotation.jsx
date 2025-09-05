@@ -44,4 +44,21 @@ const ArrowRotation = ({ to = "#", variant = "secondaryCircle" }) => {
 //   );
 // };
 
+// <div
+//   className={`
+//     ${styles.arrowRotation}
+//     ${
+//       styles[
+//         `arrowRotation_${
+//           isSecondaryVariant ? "secondaryCircle" : "greyCircle"
+//         }
+//         `
+//       ]
+//     }`}
+// >
+//   <Link to={to}>
+//     <Svg id={arrowHorizontalIcon} className={styles.arrowRotation__icon} />
+//   </Link>
+// </div>
+
 export default ArrowRotation;

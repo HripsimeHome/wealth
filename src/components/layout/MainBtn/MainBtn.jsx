@@ -12,9 +12,7 @@ const MainBtn = memo(({ btnSecondaryBg, children, ...attributes }) => {
       {...attributes}
     >
       <span className={styles.mainBtn__btnText}>{children}</span>
-      <ArrowAnimation
-        variant={btnSecondaryBg ? "primaryCircle" : "secondaryCircle"}
-      />
+      <ArrowAnimation isSecondaryVariant={btnSecondaryBg} />
     </button>
   );
 });

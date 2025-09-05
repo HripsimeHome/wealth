@@ -5,6 +5,12 @@
   padding-left: 10%;
   padding-right: 10%;
 
+  &__back {
+    position: fixed;
+    top: 100px;
+    left: 65px;
+  }
+
   &__header {
     @include flexCol();
     flex-direction: column;
@@ -45,7 +51,7 @@
     margin-top: 20px;
   }
 
-  &__content {
+  &__contentContainer {
     padding-left: 15%;
     padding-right: 15%;
 
@@ -58,5 +64,11 @@
   &__text {
     margin-top: 1vw;
     margin-bottom: 3vw;
+  }
+
+  &__subtext {
+    border-left: 5px solid $color-secondary;
+    margin-bottom: 3vw;
+    padding: 10px 0 10px 20px;
   }
 }

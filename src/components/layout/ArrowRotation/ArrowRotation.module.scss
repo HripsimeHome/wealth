@@ -20,33 +20,17 @@
   /* варианты */
   &_secondaryCircle {
     background-color: $color-secondary;
+  }
 
-    .arrowRotation__icon {
-      fill: $color-white;
-    }
+  &_secondaryCircle &__icon {
+    fill: $color-white;
   }
 
   &_greyCircle {
     background-color: $color-lightGrey;
-
-    .arrowRotation__icon {
-      fill: $color-secondary;
-    }
   }
 
-  // &__secondaryCircle {
-  //   background-color: $color-secondary;
-
-  //   &_icon {
-  //     fill: $color-white;
-  //   }
-  // }
-
-  // &__greyCircle {
-  //   background-color: $color-lightGrey;
-
-  //   &__icon {
-  //     fill: $color-secondary;
-  //   }
-  // }
+  &_greyCircle &__icon {
+    background-color: $color-lightGrey;
+  }
 }

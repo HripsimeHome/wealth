@@ -1,0 +1,159 @@
+[
+  {
+    "id": "investing-starters",
+    "title": "Investing Starters Advice 101",
+    "description": "Benefits and steps to take when investing & saving.",
+    "image": "/images/blog/investingStarters.jpg",
+    "webpImage": "/images/blog/investingStarters.webp",
+    "avatar": "/images/blog/David.jpg",
+    "authorName": "David Ross",
+    "category": "investing",
+    "date": "june 10",
+    "content": [
+      {
+        "heading": "Set Clear Financial Goals",
+        "text": "Before diving into investing, it’s important to define your financial objectives. Are you saving for retirement, a down payment on a house, or building a college fund for your kids? Your goals will determine the type of investments that suit you best."
+      },
+      {
+        "heading": "Build an Emergency Fund",
+        "text": "Investing is not a substitute for having liquid savings. Before committing any money to investments, make sure you have an emergency fund. This fund should cover 3-6 months' worth of living expenses and be stored in an easily accessible account like a high-yield savings account."
+      },
+      {
+        "heading": "Understand Your Risk Tolerance",
+        "text": "Every investment carries some level of risk. Understanding your personal risk tolerance—how much volatility you’re comfortable with—will guide you toward investments that align with your comfort level. Stocks, for instance, offer higher potential returns but come with higher risk."
+      },
+      {
+        "heading": "Learn the Basics of Different Investment Types",
+        "text": "Mutual Funds/ETFs: These funds pool money from many investors to buy a diversified portfolio of stocks or bonds, offering exposure to many companies with less individual risk. Investing in property for rental income or capital appreciation over time."
+      },
+      {
+        "heading": "Continue Learning and Adjusting",
+        "text": "The world of investing is constantly evolving. Stay informed by reading investment books, listening to podcasts, or following reputable financial news sources. As your financial situation and goals change, you may need to adjust your investment strategy accordingly.",
+        "subтext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis interdum posuere. Morbi id magna at arcu tempus ornare. Fusce mauris purus, rhoncus a sollicitudin sit amet, placerat vitae nisl. Morbi feugiat est in accumsan facilisis."
+      },
+      {
+        "heading": "Conclusion:",
+        "text": "Getting started with investing doesn’t have to be complicated. By setting clear goals, understanding your risk tolerance, and staying informed, you can begin building wealth over time. Start small, diversify your portfolio, and, most importantly, be patient. Investing is a long-term game, and with consistency, your efforts will pay off."
+      }
+    ]
+  },
+
+  {
+    "id": "how-much-money",
+    "title": "How Much Money Should I Save?",
+    "description": "Saving money is one of the most important in achieving financial security.",
+    "image": "/images/blog/money.jpg",
+    "webpImage": "/images/blog/money.webp",
+    "avatar": "/images/blog/Martin.jpg",
+    "authorName": "Sarah Mitchell",
+    "category": "budgeting",
+    "date": "july 20",
+
+    "content": [
+      {
+        "heading": "Spread Investments Across Asset Classes",
+        "text": "Different asset classes—such as stocks, bonds, real estate, and commodities—have different levels of risk and return. By spreading your money across multiple asset classes, you minimize the impact of volatility in any one area."
+      },
+      {
+        "heading": "Diversify Within Each Asset Classes",
+        "text": "Buy stocks from different sectors (e.g., technology, healthcare, finance) and countries. Consider a mix of government and corporate bonds, as well as bonds with different maturity dates. By diversifying within asset classes, you can protect your portfolio from major losses in any one area."
+      },
+      {
+        "heading": "Consider Geographic Diversification",
+        "text": "Investing only in your home country might limit your growth potential. Global markets often behave differently, so investing in international markets can enhance your portfolio’s performance. Gain exposure to foreign markets. These markets can offer higher growth potential but come with higher risk."
+      },
+      {
+        "heading": "Invest in Mutual Funds or ETFs",
+        "text": "Mutual funds and exchange-traded funds (ETFs) are ideal for diversification, especially for beginners. These funds pool money from many investors to buy a diversified basket of stocks, bonds, or other assets. This gives you instant exposure to a wide range of investments with a single purchase.‍"
+      },
+      {
+        "heading": "Stay Informed About Market Trends",
+        "text": "Design is a universal language that transcends borders. It has the ability to tell stories, evoke emotions, and communicate complex ideas. Infographics, for example, simplify intricate data and make it accessible to a broad audience. Visual storytelling through design has the power to educate, inspire, and provoke thought.",
+        "subтext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis interdum posuere. Morbi id magna at arcu tempus ornare. Fusce mauris purus, rhoncus a sollicitudin sit amet, placerat vitae nisl. Morbi feugiat est in accumsan facilisis."
+      },
+      {
+        "heading": "Conclusion:",
+        "text": "Diversification is a fundamental strategy to reduce risk and optimize your investment returns. By spreading your investments across different asset classes, sectors, and regions, you create a more resilient portfolio that can withstand market fluctuations. Remember, the goal of diversification isn’t to guarantee gains but to ensure that your entire portfolio doesn’t suffer due to a single poor-performing investment."
+      }
+    ]
+  },
+  {
+    "id": "get-started",
+    "title": "How Should I Get Started With Investing?",
+    "description": "Understanding your goals to build a solid financial foundation for the future.",
+    "image": "/images/blog/investing.jpg",
+    "webpImage": "/images/blog/investing.webp",
+    "avatar": "/images/blog/Jhon.jpg",
+    "authorName": "Maria Carter",
+    "category": "investing",
+    "date": "aug 12",
+
+    "content": [
+      {
+        "heading": "Set Clear Financial Goals",
+        "text": "Before diving into investing, it’s important to define your financial objectives. Are you saving for retirement, a down payment on a house, or building a college fund for your kids? Your goals will determine the type of investments that suit you best."
+      },
+      {
+        "heading": "Build an Emergency Fund",
+        "text": "Investing is not a substitute for having liquid savings. Before committing any money to investments, make sure you have an emergency fund. This fund should cover 3-6 months' worth of living expenses and be stored in an easily accessible account like a high-yield savings account."
+      },
+      {
+        "heading": "Understand Your Risk Tolerance",
+        "text": "Every investment carries some level of risk. Understanding your personal risk tolerance—how much volatility you’re comfortable with—will guide you toward investments that align with your comfort level. Stocks, for instance, offer higher potential returns but come with higher risk."
+      },
+      {
+        "heading": "Learn the Basics of Different Investment Types",
+        "text": "Mutual Funds/ETFs: These funds pool money from many investors to buy a diversified portfolio of stocks or bonds, offering exposure to many companies with less individual risk. Investing in property for rental income or capital appreciation over time."
+      },
+      {
+        "heading": "Continue Learning and Adjusting",
+        "text": "The world of investing is constantly evolving. Stay informed by reading investment books, listening to podcasts, or following reputable financial news sources. As your financial situation and goals change, you may need to adjust your investment strategy accordingly.",
+        "subтext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis interdum posuere. Morbi id magna at arcu tempus ornare. Fusce mauris purus, rhoncus a sollicitudin sit amet, placerat vitae nisl. Morbi feugiat est in accumsan facilisis."
+      },
+      {
+        "heading": "Conclusion:",
+        "text": "Getting started with investing doesn’t have to be complicated. By setting clear goals, understanding your risk tolerance, and staying informed, you can begin building wealth over time. Start small, diversify your portfolio, and, most importantly, be patient. Investing is a long-term game, and with consistency, your efforts will pay off."
+      }
+    ]
+  },
+
+  {
+    "id": "diversify",
+    "title": "How to Diversify Your Portfolio",
+    "description": "Spreading your investments across different assets.",
+    "image": "/images/blog/portfolio.jpg",
+    "webpImage": "/images/blog/portfolio.webp",
+    "avatar": "/images/blog/Maria.jpg",
+    "authorName": "John Smith",
+    "category": "strategies",
+    "date": "aug 16",
+
+    "content": [
+      {
+        "heading": "Spread Investments Across Asset Classes",
+        "text": "Different asset classes—such as stocks, bonds, real estate, and commodities—have different levels of risk and return. By spreading your money across multiple asset classes, you minimize the impact of volatility in any one area."
+      },
+      {
+        "heading": "Diversify Within Each Asset Classes",
+        "text": "Buy stocks from different sectors (e.g., technology, healthcare, finance) and countries. Consider a mix of government and corporate bonds, as well as bonds with different maturity dates. By diversifying within asset classes, you can protect your portfolio from major losses in any one area."
+      },
+      {
+        "heading": "Consider Geographic Diversification",
+        "text": "Investing only in your home country might limit your growth potential. Global markets often behave differently, so investing in international markets can enhance your portfolio’s performance. Gain exposure to foreign markets. These markets can offer higher growth potential but come with higher risk."
+      },
+      {
+        "heading": "Invest in Mutual Funds or ETFs",
+        "text": "Mutual funds and exchange-traded funds (ETFs) are ideal for diversification, especially for beginners. These funds pool money from many investors to buy a diversified basket of stocks, bonds, or other assets. This gives you instant exposure to a wide range of investments with a single purchase.‍"
+      },
+      {
+        "heading": "Stay Informed About Market Trends",
+        "text": "Design is a universal language that transcends borders. It has the ability to tell stories, evoke emotions, and communicate complex ideas. Infographics, for example, simplify intricate data and make it accessible to a broad audience. Visual storytelling through design has the power to educate, inspire, and provoke thought.",
+        "subтext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis interdum posuere. Morbi id magna at arcu tempus ornare. Fusce mauris purus, rhoncus a sollicitudin sit amet, placerat vitae nisl. Morbi feugiat est in accumsan facilisis.‍"
+      },
+      {
+        "heading": "Conclusion:",
+        "text": "Diversification is a fundamental strategy to reduce risk and optimize your investment returns. By spreading your investments across different asset classes, sectors, and regions, you create a more resilient portfolio that can withstand market fluctuations. Remember, the goal of diversification isn’t to guarantee gains but to ensure that your entire portfolio doesn’t suffer due to a single poor-performing investment."
+      }
+    ]
+  }
+]

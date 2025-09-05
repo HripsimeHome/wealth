@@ -30,7 +30,9 @@ const TwoColumnSection = ({
     <section
       className={`
         ${styles.twoColumnSection} 
-        ${reverse ? styles.twoColumnSection_reverse : ""}        
+        ${reverse ? styles.twoColumnSection_reverse : ""}  
+        ${textWhite ? styles.twoColumnSection_textWhite : ""}
+
       `}
     >
       <div className={styles.twoColumnSection__imgWrapper}>
@@ -68,7 +70,6 @@ const TwoColumnSection = ({
       <div
         className={`
         ${styles.twoColumnSection__content}
-        ${textWhite ? styles.twoColumnSection__content_textWhite : ""}
         `}
       >
         {sectionTitle?.icon && sectionTitle?.text && (

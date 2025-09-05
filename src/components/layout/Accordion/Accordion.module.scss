@@ -43,7 +43,6 @@
     height: 2px;
 
     &_rotate {
-      @extend .accordion__line;
       transform: rotate(90deg);
     }
   }

@@ -27,12 +27,9 @@ const Accordion = ({ data = [] }) => {
               <span className={styles.accordion__toggle}>
                 <span className={styles.accordion__line}></span>
                 <span
-                  className={`
-                    ${
-                      isOpen
-                        ? styles.accordion__line
-                        : styles.accordion__line_rotate
-                    }`}
+                  className={`${styles.accordion__line} ${
+                    !isOpen ? styles.accordion__line_rotate : ""
+                  }`}
                 ></span>
               </span>
             </div>
