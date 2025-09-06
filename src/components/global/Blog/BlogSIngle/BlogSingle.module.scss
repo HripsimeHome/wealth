@@ -44,6 +44,11 @@
     text-transform: uppercase;
   }
 
+  &__date {
+    @include setFont(base, 400, $color-secondary);
+    text-transform: capitalize;
+  }
+
   &__img {
     max-width: 800px;
     width: 100%;

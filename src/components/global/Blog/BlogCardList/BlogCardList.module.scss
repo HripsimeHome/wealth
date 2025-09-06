@@ -1,7 +1,7 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
-.blogCard {
+.blogCardList {
   &__imgWrapper {
     position: relative;
   }
@@ -69,7 +69,7 @@
   }
 
   &__category {
-    color: $color-secondary;
+    @include setFont(sm, 400, $color-secondary);
     background-color: $color-primary;
     text-transform: uppercase;
     text-align: center;
@@ -78,6 +78,7 @@
   }
 
   &__date {
+    @include setFont(xsm, 300, $color-white);
     text-transform: uppercase;
   }
 

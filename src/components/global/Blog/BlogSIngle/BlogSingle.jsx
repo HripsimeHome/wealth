@@ -1,4 +1,5 @@
 import styles from "./BlogSingle.module.scss";
+import { formatDate } from "../../../../utils/formatDate";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 const BlogSingle = ({ article, onBack }) => {
@@ -36,7 +37,9 @@ const BlogSingle = ({ article, onBack }) => {
           className={styles.blogSingle__avatar}
         />
         <span className={styles.blogSingle__authorName}>{authorName}</span>
-        <span>{date}</span>
+        <span className={styles.blogSingle__date}>
+          {formatDate(date, "long")}
+        </span>
 
         <ImageWebp
           src={image}
@@ -47,11 +50,11 @@ const BlogSingle = ({ article, onBack }) => {
       </div>
 
       <div className={`${styles.blogSingle__contentContainer} paddingYLg`}>
-        {content.map(({ heading, text, subтext }, idx) => (
-          <div key={idx}>
+        {content.map(({ heading, text, subtext }, index) => (
+          <div key={index}>
             <h2 className={styles.blogSingle__heading}>{heading}</h2>
             <p className={styles.blogSingle__text}>{text}</p>
-            {subтext && <p className={styles.blogSingle__subtext}>{subтext}</p>}
+            {subtext && <p className={styles.blogSingle__subtext}>{subtext}</p>}
           </div>
         ))}
       </div>
