@@ -1,12 +1,11 @@
 import { useState, useEffect, useMemo } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Blog from "../components/global/Blog/Blog";
 import BlogSingle from "../components/global/Blog/BlogSIngle/BlogSingle";
 
 const BlogPage = () => {
   const [posts, setPosts] = useState([]);
   const { id } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/data/blogData.json")
@@ -16,19 +15,19 @@ const BlogPage = () => {
 
         return res.json();
       })
-      .then((data) => setPosts(data))
+      .then((data) => setPosts(Array.isArray(data) ? data : []))
       .catch((err) => console.error("Error loading blogData.json:", err));
   }, []);
 
   // if (!posts || posts.length === 0) return <p>Loading posts...</p>;
   // Аналогичо этому
-  if (!posts?.length) return <p>Loading posts...</p>;
+  if (!posts.length) return <p>Loading posts...</p>;
 
   if (id) {
     const article = posts.find((post) => post.id === id);
     if (!article) return <p>Статья не найдена</p>;
 
-    return <BlogSingle article={article} onBack={() => navigate(-1)} />;
+    return <BlogSingle article={article} />;
   }
 
   return (

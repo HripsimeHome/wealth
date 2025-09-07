@@ -1,8 +1,11 @@
 import styles from "./BlogSingle.module.scss";
+import { useNavigate } from "react-router-dom";
 import { formatDate } from "../../../../utils/formatDate";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 const BlogSingle = ({ article, onBack }) => {
+  const navigate = useNavigate();
+
   if (!article) return <p>Статья не найдена</p>;
 
   const {
@@ -21,7 +24,7 @@ const BlogSingle = ({ article, onBack }) => {
     <section className={styles.blogSingle}>
       <button
         className={` ${styles.blogSingle__back} btnPrimary`}
-        onClick={onBack}
+        onCLick={() => navigate(-1)}
       >
         Back to all posts
       </button>
@@ -38,7 +41,7 @@ const BlogSingle = ({ article, onBack }) => {
         />
         <span className={styles.blogSingle__authorName}>{authorName}</span>
         <span className={styles.blogSingle__date}>
-          {formatDate(date, "long")}
+          {formatDate(date, true)}
         </span>
 
         <ImageWebp

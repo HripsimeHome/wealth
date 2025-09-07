@@ -108,7 +108,8 @@ $font-sizes: (
 @mixin setFont(
   $size-key-or-value,
   $weight,
-  $color: $color-secondary,
+  //$color: $color-secondary,
+  $color: inherit,
   //$line-height: normal,
   $useMedia: true
 ) {

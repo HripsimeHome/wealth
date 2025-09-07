@@ -3,25 +3,18 @@ import { Link } from "react-router-dom";
 import Svg from "../../layout/Svg/Svg";
 import { arrowHorizontalIcon } from "../../../assets/svg";
 
-// const ArrowRotation = ({ to = "#", circleClass, arrowClass }) => {
-//   return (
-//     <div className={`${styles.arrowRotation} ${circleClass}`}>
-//       <Link to={to}>
-//         <Svg
-//           id={arrowHorizontalIcon}
-//           className={`${styles.arrowRotation__icon} ${arrowClass}`}
-//         />
-//       </Link>
-//     </div>
-//   );
-// };
-
-const ArrowRotation = ({ to = "#", variant = "secondaryCircle" }) => {
+const ArrowRotation = ({ to = "#", isSecondaryCircle }) => {
   return (
     <div
       className={`
         ${styles.arrowRotation} 
-        ${styles[`arrowRotation_${variant}`]}`}
+        ${
+          styles[
+            `arrowRotation_${
+              isSecondaryCircle ? "secondaryCircle" : "greyCircle"
+            }`
+          ]
+        }`}
     >
       <Link to={to}>
         <Svg id={arrowHorizontalIcon} className={styles.arrowRotation__icon} />
@@ -29,36 +22,5 @@ const ArrowRotation = ({ to = "#", variant = "secondaryCircle" }) => {
     </div>
   );
 };
-
-// const ArrowRotation = ({ to = "#", variant = "secondaryCircle" }) => {
-//   return (
-//     <div
-//       className={`
-//         ${styles.arrowRotation}
-//         ${styles[`arrowRotation__${variant}`]}`}
-//     >
-//       <Link to={to}>
-//         <Svg id={arrowHorizontalIcon} className={styles.arrowRotation__icon} />
-//       </Link>
-//     </div>
-//   );
-// };
-
-// <div
-//   className={`
-//     ${styles.arrowRotation}
-//     ${
-//       styles[
-//         `arrowRotation_${
-//           isSecondaryVariant ? "secondaryCircle" : "greyCircle"
-//         }
-//         `
-//       ]
-//     }`}
-// >
-//   <Link to={to}>
-//     <Svg id={arrowHorizontalIcon} className={styles.arrowRotation__icon} />
-//   </Link>
-// </div>
 
 export default ArrowRotation;

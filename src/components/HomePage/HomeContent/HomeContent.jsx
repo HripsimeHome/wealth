@@ -19,7 +19,7 @@ import {
   tradeLeftBottomIcon,
 } from "../../../assets/svg";
 
-const HomeContent = () => {
+const HomeContent = ({ posts = [] }) => {
   return (
     <section className={styles.homeContent}>
       <div className="container">
@@ -44,7 +44,9 @@ const HomeContent = () => {
           sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
           title={["quality trade alerts with", "wealth bento"]}
           description="Never miss a chance to capitalize on market movements and make informed decisions."
-          arrowButton={<ArrowRotation to={servicesPagePath} />}
+          arrowButton={
+            <ArrowRotation to={servicesPagePath} isSecondaryCircle />
+          }
           reverse
         />
       </div>
@@ -77,7 +79,7 @@ const HomeContent = () => {
           ]}
         />
         {/*  <BlogCard limit={3} /> */}
-        <Blog />
+        <Blog posts={posts} />
       </div>
     </section>
   );

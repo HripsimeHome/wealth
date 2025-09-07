@@ -54,7 +54,7 @@ const BlogCardList = ({ posts = [] }) => {
                     </span>
                     <span className={styles.blogCardList__date}>
                       {" "}
-                      {formatDate(date, "short")}
+                      {formatDate(date, false)}
                     </span>
                   </div>
                 </div>
