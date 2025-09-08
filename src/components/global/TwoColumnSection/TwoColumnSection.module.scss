@@ -5,10 +5,12 @@
   @include flexCol();
   gap: 5vw;
   margin: 100px 0;
-  --content-color: #{$color-secondary};
+  //--content-color: #{$color-secondary};
 
   &_textWhite {
-    --content-color: #{$color-white};
+    // --content-color: #{$color-white};
+    // color: var(--content-color);
+    color: $color-white;
   }
 
   @include lgScreenMedia {
@@ -79,7 +81,8 @@
   }
 
   &__title {
-    @include setFont(3.5rem, 500, var(--content-color));
+    // @include setFont(3.5rem, 500, var(--content-color));
+    @include setFont(3.5rem, 500);
     line-height: 4rem;
     letter-spacing: -0.06rem;
     text-transform: capitalize;
@@ -108,7 +111,7 @@
   }
 
   &__description {
-    color: var(--content-color);
+    // color: var(--content-color);
     line-height: 1.7rem;
     letter-spacing: 0.07vw;
   }

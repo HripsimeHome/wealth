@@ -3,16 +3,16 @@ import Svg from "../../layout/Svg/Svg";
 
 import { youtubeIcon, instagramIcon, tiktokIcon } from "../../../assets/svg";
 
-const socialIconsData = [
+const socialIcons = [
   {
     icon: youtubeIcon,
     alt: "YouTube",
-    link: "https://youtube.com/@mamnunagency?si=nbS2rhZMimU_iyJP",
+    link: "https://youtube.com",
   },
   {
     icon: instagramIcon,
     alt: "Instagram",
-    link: "https://www.instagram.com/mamnunagency?igsh=bzk0dGt4anhqbTlw",
+    link: "https://www.instagram.com",
   },
 
   {
@@ -25,7 +25,7 @@ const socialIconsData = [
 const SocialIcons = () => {
   return (
     <div className={styles.socialIcons}>
-      {socialIconsData.map(({ icon, alt, link }, index) => (
+      {socialIcons.map(({ icon, alt, link }, index) => (
         <a
           key={index}
           href={link}

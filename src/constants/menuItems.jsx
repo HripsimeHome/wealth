@@ -1,13 +1,14 @@
-// Application Header
-
 import {
   homePagePath,
   aboutPagePath,
   servicesPagePath,
   blogPagePath,
   contactsPagePath,
-  testPagePath,
+  privacyPolicyPagePath,
+  termsPagePath,
 } from "../router/path";
+
+// Header menu
 
 export const headerMenuItems = [
   {
@@ -30,8 +31,47 @@ export const headerMenuItems = [
     text: "Contacts",
     link: contactsPagePath,
   },
+];
+
+// Footer menu
+export const footerMenu = [
   {
-    //text: "Test",
-    //link: testPagePath,
+    title: "Main",
+    list: [
+      {
+        text: "Home",
+        path: homePagePath,
+      },
+      {
+        text: "About",
+        path: aboutPagePath,
+      },
+      {
+        text: "Services",
+        path: servicesPagePath,
+      },
+      {
+        text: "Blog",
+        path: blogPagePath,
+      },
+    ],
+  },
+
+  {
+    title: "Pages",
+    list: [
+      {
+        text: "Contacts",
+        path: contactsPagePath,
+      },
+      {
+        text: "Privacy Policy",
+        path: privacyPolicyPagePath,
+      },
+      {
+        text: "Terms &amp; Conditions",
+        path: termsPagePath,
+      },
+    ],
   },
 ];
