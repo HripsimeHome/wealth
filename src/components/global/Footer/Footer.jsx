@@ -1,7 +1,7 @@
 import styles from "./Footer.module.scss";
 import { Link } from "react-router-dom";
-import FooterMenu from "./FooterMenu/FooterMenu";
 import SocialIcons from "../../layout/SocialIcons/SocialIcons";
+import FooterMenu from "./FooterMenu/FooterMenu";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
 import { homePagePath } from "../../../router/path";
@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <div className={styles.footer__container}>
+        <div className={styles.footer__topCcontainer}>
           <div className={styles.footer__companyBlock}>
             <Link to={homePagePath}>
               <ImageWebp
@@ -27,12 +27,10 @@ const Footer = () => {
             <spn className={styles.footer__companyInfo}>
               Navigate the Markets, Secure Your Future.
             </spn>
-          </div>
+          </div>{" "}
           {/* companyBlock */}
-
           <FooterMenu />
         </div>
-        {/* container */}
 
         <div className={styles.footer__bottomContainer}>
           <p className={styles.footer__copyright}>

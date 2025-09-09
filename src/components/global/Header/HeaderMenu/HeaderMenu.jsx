@@ -1,25 +1,11 @@
 import styles from "./HeaderMenu.module.scss";
 //import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import ImageWebp from "../../layout/ImageWebp/ImageWebp";
-
-import { headerMenu } from "../../../constants/menuItems";
-import { logoImage, logoWebpImage } from "../../../assets/images";
-
-import { homePagePath } from "../../../router/path";
+import { NavLink } from "react-router-dom";
+import { headerMenu } from "../../../../constants/menuItems";
 
 const HeaderMenu = () => {
   return (
     <div className={styles.headerMenu}>
-      <Link to={homePagePath}>
-        <ImageWebp
-          src={logoImage}
-          srcSet={logoWebpImage}
-          alt="Wealth Bento"
-          className={styles.headerMenu__logo}
-        />
-      </Link>
-
       <nav>
         <ul className={styles.headerMenu__list}>
           {headerMenu.map(({ text, path }, index) => (

@@ -2,7 +2,7 @@
 @import "../../../../styles/vars";
 
 .footerMenu {
-  &__menuContainer {
+  &__container {
     display: flex;
     gap: 80px;
 
@@ -16,20 +16,20 @@
     }
   }
 
-  &__menuTitle {
+  &__title {
     @include setFont(md, 500, $color-white);
     margin-bottom: 15px;
   }
 
-  &__menuList {
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     list-style-type: none;
   }
 
-  &__menuLink {
-    @include setFont(base, 300);
+  &__link {
+    @include setFont(base, 300, $color-white);
     text-decoration: none;
 
     &:hover {

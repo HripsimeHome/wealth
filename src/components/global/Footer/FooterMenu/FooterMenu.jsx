@@ -4,19 +4,19 @@ import { footerMenu } from "../../../../constants/menuItems";
 
 const FooterMenu = () => {
   return (
-    <section className={styles.footerMenu__menuContainer}>
+    <section className={styles.footerMenu__container}>
       {footerMenu.map(({ title, list }) => (
         <div key={title}>
-          <h3 className={styles.footerMenu__menuTitle}>{title}</h3>
+          <h3 className={styles.footerMenu__title}>{title}</h3>
           <nav>
-            <ul className={styles.footerMenu__menuList}>
+            <ul className={styles.footerMenu__list}>
               {list.map(({ text, path }) => (
                 <li key={text}>
                   <NavLink
                     to={path}
                     className={({ isActive }) =>
-                      `${styles.footerMenu__menuLink} 
-                        ${isActive ? styles.footerMenu__menuLink_active : ""}`
+                      `${styles.footerMenu__link} 
+                        ${isActive ? styles.footerMenu__link_active : ""}`
                     }
                   >
                     {text}

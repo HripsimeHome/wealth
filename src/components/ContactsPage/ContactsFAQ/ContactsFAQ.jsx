@@ -1,5 +1,5 @@
 import styles from "./ContactsFAQ.module.scss";
-import PageHeader from "../../global/PageHeader/PageHeader";
+import PageHeader from "../../global/PageHeadingWrapper/PageHeadingSmall/PageHeadingSmall";
 import Accordion from "../../layout/Accordion/Accordion";
 import { investmentsIcon } from "../../../assets/svg";
 

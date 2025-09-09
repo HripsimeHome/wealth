@@ -1,12 +1,12 @@
 import styles from "./AboutHeader.module.scss";
-import PageHeaderBig from "../../global/PageHeaderBig/PageHeaderBig";
+import PageHeadingBig from "../../global/PageHeadingWrapper/PageHeadingBig/PageHeadingBig";
 import MainBtn from "../../layout/MainBtn/MainBtn";
 import { companyIcon } from "../../../assets/svg";
 
 const AboutHeader = () => {
   return (
     <section className={styles.aboutHeader}>
-      <PageHeaderBig
+      <PageHeadingBig
         icon={companyIcon}
         sectionTitle="wealth bento"
         title="about us"

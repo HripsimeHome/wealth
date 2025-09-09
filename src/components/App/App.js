@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AppRouter from "../../router/AppRouter";
-import { scrollTop } from "../../utils/scrollTop";
-import HeaderMenu from "../global/HeaderMenu/HeaderMenu";
+
+import PageHeadingWrapper from "../global/PageHeadingWrapper/PageHeadingWrapper";
 import Header from "../global/Header/Header";
 //import Subscription from "../global/Subscription/Subscription";
 import Footer from "../global/Footer/Footer";
+import { scrollTop } from "../../utils/scrollTop";
 
 function App() {
   const location = useLocation();
@@ -16,8 +17,8 @@ function App() {
 
   return (
     <>
-      <HeaderMenu />
       <Header />
+      <PageHeadingWrapper />
       <AppRouter />
       {/* <Subscription /> */}
       <Footer />

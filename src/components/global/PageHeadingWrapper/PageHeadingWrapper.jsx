@@ -1,0 +1,45 @@
+import PageHeadingSmall from "./PageHeadingSmall/PageHeadingSmall";
+import { useLocation } from "react-router-dom";
+import {
+  articlesIcon,
+  investmentsIcon,
+  contactsIcon,
+} from "../../../assets/svg";
+
+const PageHeading = () => {
+  const { pathname } = useLocation();
+
+  // Данные для заголовков прямо в компоненте
+  const headers = {
+    "/blog": {
+      icon: articlesIcon,
+      sectionTitle: "articles",
+      title: "Blog",
+      subtitle: "insightful articles paired with timely market updates",
+    },
+    "/services": {
+      icon: investmentsIcon,
+      sectionTitle: "Stock Analysis",
+      title: "Services",
+      subtitle: "quality research paired with real-time trade alerts",
+    },
+    "/contacts": {
+      icon: contactsIcon,
+      sectionTitle: "get in touch",
+      title: "Contact",
+      subtitle: "contact us today for support and tailored assistance",
+    },
+  };
+
+  const data = headers[pathname];
+
+  if (!data) return null;
+
+  return (
+    <>
+      <PageHeadingSmall {...data} />
+    </>
+  );
+};
+
+export default PageHeading;

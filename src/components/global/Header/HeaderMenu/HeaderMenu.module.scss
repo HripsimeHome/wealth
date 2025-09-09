@@ -1,44 +1,7 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
 
 .headerMenu {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  @include flexCol(space-between, center);
-  transition: $transition;
-  background-color: $color-lightGrey;
-  padding: 32px 4.5rem 15px;
-
-  @include lgScreenMedia {
-    padding: 20px 0;
-  }
-
-  @include smScreenMedia {
-    padding: 15px 0;
-  }
-
-  // &__container {
-  //   max-width: 100%;
-  //   width: 100%;
-  //   padding-left: 20px;
-  //   padding-right: 20px;
-  //   @include flexCol(space-between, center);
-  // }
-
-  &__logo {
-    width: 110px;
-
-    @include lgScreenMedia {
-      width: 65px;
-    }
-
-    @include smScreenMedia {
-      width: 48px;
-    }
-  }
-
   &__menuContainer {
     @include mdScreenMedia {
       //gap: 24px;
