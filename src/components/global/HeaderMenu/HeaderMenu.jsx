@@ -3,7 +3,7 @@ import styles from "./HeaderMenu.module.scss";
 import { Link, NavLink } from "react-router-dom";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 
-import { headerMenuItems } from "../../../constants/menuItems";
+import { headerMenu } from "../../../constants/menuItems";
 import { logoImage, logoWebpImage } from "../../../assets/images";
 
 import { homePagePath } from "../../../router/path";
@@ -20,24 +20,28 @@ const HeaderMenu = () => {
         />
       </Link>
 
-      <nav
-        className={`
-            ${styles.headerMenu__menu}
-            `}
-      >
-        {headerMenuItems.map(({ text, link }, index) => (
-          <NavLink
-            to={link}
-            key={index}
-            className={({ isActive }) =>
-              isActive
-                ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                : styles.headerMenu__menuLink
-            }
-          >
-            {text}
-          </NavLink>
-        ))}
+      <nav>
+        <ul className={styles.headerMenu__list}>
+          {headerMenu.map(({ text, path }, index) => (
+            <li key={index}>
+              <NavLink
+                to={path}
+                className={({ isActive }) =>
+                  `${styles.headerMenu__link}
+                   ${isActive ? styles.headerMenu__link_active : ""}
+                 `
+                }
+              >
+                {/* className={({ isActive }) =>
+                  isActive
+                    ? `${styles["headerMenu__link"]} ${styles["headerMenu__link--active"]}`
+                    : styles["headerMenu__link"]
+                } */}
+                {text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </nav>
     </div>
   );

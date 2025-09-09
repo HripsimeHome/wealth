@@ -39,10 +39,7 @@
     }
   }
 
-  &__menu {
-    display: flex;
-    gap: 35px;
-
+  &__menuContainer {
     @include mdScreenMedia {
       //gap: 24px;
     }
@@ -69,9 +66,14 @@
     }
   }
 
-  &__menuLink {
+  &__list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+  }
+
+  &__link {
     @include setFont(15px, 300, $color-secondary);
-    display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
 
@@ -79,9 +81,10 @@
       // font-size: 16px;
     }
 
-    &:hover,
-    &_active {
-      // color: $color-white;
+    &:hover {
+      text-decoration: underline;
+      transition: $transitionEaseOut;
+      cursor: pointer;
     }
 
     &_active {

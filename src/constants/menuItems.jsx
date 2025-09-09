@@ -10,26 +10,26 @@ import {
 
 // Header menu
 
-export const headerMenuItems = [
+export const headerMenu = [
   {
     text: "Home",
-    link: homePagePath,
+    path: homePagePath,
   },
   {
     text: "About Us",
-    link: aboutPagePath,
+    path: aboutPagePath,
   },
   {
     text: "Services",
-    link: servicesPagePath,
+    path: servicesPagePath,
   },
   {
     text: "Blog",
-    link: blogPagePath,
+    path: blogPagePath,
   },
   {
     text: "Contacts",
-    link: contactsPagePath,
+    path: contactsPagePath,
   },
 ];
 

@@ -1,0 +1,49 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.footerMenu {
+  &__menuContainer {
+    display: flex;
+    gap: 80px;
+
+    @include lgScreenMedia {
+      gap: 40px;
+    }
+
+    @include mdScreenMedia {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__menuTitle {
+    @include setFont(md, 500, $color-white);
+    margin-bottom: 15px;
+  }
+
+  &__menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+  }
+
+  &__menuLink {
+    @include setFont(base, 300);
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+      transition: $transitionEaseOut;
+      cursor: pointer;
+    }
+
+    &_active {
+      color: $color-primary;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}
