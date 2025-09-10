@@ -5,8 +5,11 @@ export const timeBlackIcon = "timeBlack";
 export const arrowHorizontalIcon = "arrowHorizontal";
 
 export const exitIcon = "exit";
+// Header
+export const burgerIcon = "burger";
+export const crossIcon = "cross";
 
-//Home
+// Home
 
 export const spinnerIcon = "spinner";
 export const innovationIcon = "innovation";

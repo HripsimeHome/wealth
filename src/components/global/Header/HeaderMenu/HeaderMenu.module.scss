@@ -2,47 +2,69 @@
 @import "../../../../styles/vars";
 
 .headerMenu {
-  &__menuContainer {
-    @include mdScreenMedia {
-      //gap: 24px;
+  //  position: relative;
+
+  &__logo {
+    filter: invert(1);
+    width: 110px;
+
+    @include lgScreenMedia {
+      width: 65px;
     }
 
     @include smScreenMedia {
+      width: 48px;
+    }
+  }
+
+  /* Меню */
+  &__nav {
+    display: flex;
+    gap: 20px;
+
+    @include smScreenMedia {
       display: none;
-      // gap: 30px;
     }
 
     &_open {
-      display: flex;
+      @include flexCol(flex-start, flex-start);
       flex-direction: column;
-      align-items: flex-start;
       position: fixed;
-      height: 100vh;
       top: 0;
       right: 0;
-      z-index: 3;
-      max-width: 193px;
+      height: 100vh;
+      max-width: 220px;
       width: 100%;
       background-color: $color-secondary;
-      padding-top: 100px;
-      padding-left: 20px;
+      padding: 100px 20px 20px;
+      z-index: 3;
+    }
+  }
+
+  &__nav_open &__link {
+    color: $color-white;
+    text-decoration: none;
+
+    &_active {
+      color: $color-primary;
     }
   }
 
   &__list {
     display: flex;
     gap: 20px;
-    list-style-type: none;
+    list-style: none;
+
+    @include smScreenMedia {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &__link {
     @include setFont(15px, 300, $color-secondary);
     text-transform: uppercase;
     text-decoration: none;
-
-    @include mdScreenMedia {
-      // font-size: 16px;
-    }
 
     &:hover {
       text-decoration: underline;
@@ -52,34 +74,28 @@
 
     &_active {
       text-decoration: underline;
-
-      &:hover {
-        cursor: default;
-      }
+      cursor: default;
     }
   }
 
   &__btnBurger {
     background: none;
-    display: none;
     border: none;
+    display: none;
 
     @include smScreenMedia {
       display: block;
     }
   }
 
-  &__burgerIcon {
-    @include svg(27px, $color-white);
+  &__iconBurger {
+    @include svg(27px, $color-secondary);
+    // fill: $color-secondary;
 
     &:hover {
-      fill: $color-primary;
-      cursor: pointer;
+      fill: $color-darkGrey;
       transition: $transition;
-    }
-
-    @include smScreenMedia {
-      @include svg(24px, $color-white);
+      cursor: pointer;
     }
   }
 
@@ -90,10 +106,10 @@
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 10;
+    z-index: 4;
   }
 
-  &__crossIcon {
+  &__iconCross {
     @include svg(40px, $color-white);
 
     &:hover {
@@ -104,17 +120,10 @@
 
   &__overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.7);
     z-index: 2;
-  }
-
-  @include smScreenMedia {
-    &__dropdown {
-      display: none;
-    }
   }
 }
