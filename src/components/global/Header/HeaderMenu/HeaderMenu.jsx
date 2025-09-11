@@ -34,6 +34,9 @@ const HeaderMenu = () => {
       >
         {isMenuOpen && (
           <>
+            <button className={styles.headerMenu__btnClose} onClick={closeMenu}>
+              <Svg id={crossIcon} className={styles.headerMenu__iconCross} />
+            </button>
             {/* <Link to={homePagePath}>
               <ImageWebp
                 src={logoImage}
@@ -42,10 +45,6 @@ const HeaderMenu = () => {
                 className={styles.headerMenu__logo}
               />
             </Link> */}
-
-            <button className={styles.headerMenu__btnClose} onClick={closeMenu}>
-              <Svg id={crossIcon} className={styles.headerMenu__iconCross} />
-            </button>
           </>
         )}
 
@@ -55,9 +54,8 @@ const HeaderMenu = () => {
               <NavLink
                 to={path}
                 className={({ isActive }) =>
-                  `${styles.headerMenu__link} ${
-                    isActive ? styles.headerMenu__link_active : ""
-                  }`
+                  `${styles.headerMenu__link}
+                   ${isActive ? styles.headerMenu__link_active : ""}`
                 }
                 onClick={closeMenu}
               >
