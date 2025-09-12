@@ -18,7 +18,6 @@ const HeaderMenu = () => {
 
   return (
     <div className={styles.headerMenu}>
-      {/* Бургер-кнопка (видна только на мобилке) */}
       <button
         className={styles.headerMenu__btnBurger}
         onClick={toggleMenu}
@@ -28,24 +27,15 @@ const HeaderMenu = () => {
       </button>
 
       <nav
-        className={`${styles.headerMenu__nav} ${
-          isMenuOpen ? styles.headerMenu__nav_open : ""
-        }`}
+        className={`
+        ${styles.headerMenu__nav}
+        ${isMenuOpen ? styles.headerMenu__navOpen : ""}
+        `}
       >
         {isMenuOpen && (
-          <>
-            <button className={styles.headerMenu__btnClose} onClick={closeMenu}>
-              <Svg id={crossIcon} className={styles.headerMenu__iconCross} />
-            </button>
-            {/* <Link to={homePagePath}>
-              <ImageWebp
-                src={logoImage}
-                srcSet={logoWebpImage}
-                alt="Wealth Bento"
-                className={styles.headerMenu__logo}
-              />
-            </Link> */}
-          </>
+          <button className={styles.headerMenu__btnClose} onClick={closeMenu}>
+            <Svg id={crossIcon} className={styles.headerMenu__iconCross} />
+          </button>
         )}
 
         <ul className={styles.headerMenu__list}>
@@ -55,7 +45,10 @@ const HeaderMenu = () => {
                 to={path}
                 className={({ isActive }) =>
                   `${styles.headerMenu__link}
-                   ${isActive ? styles.headerMenu__link_active : ""}`
+                  ${
+                    isActive ? styles.headerMenu__link_active : ""
+                  }                  
+                 `
                 }
                 onClick={closeMenu}
               >
@@ -65,8 +58,6 @@ const HeaderMenu = () => {
           ))}
         </ul>
       </nav>
-
-      {/* Overlay для моб. меню */}
       {isMenuOpen && (
         <div className={styles.headerMenu__overlay} onClick={closeMenu} />
       )}
