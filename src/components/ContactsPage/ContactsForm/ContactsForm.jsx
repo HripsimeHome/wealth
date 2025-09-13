@@ -1,5 +1,6 @@
 import styles from "./ContactsForm.module.scss";
 import MainInput from "../../layout/MainInput/MainInput";
+import Select from "../../layout/Select/Select";
 
 const ContactsForm = () => {
   return (
@@ -18,6 +19,8 @@ const ContactsForm = () => {
 
         <label htmlFor="phone">Phone Number</label>
         <MainInput name="phone" id="phone" placeholder="(123) - 456 - 789" />
+
+        <Select />
 
         <label htmlFor="message">Your Message</label>
         <MainInput

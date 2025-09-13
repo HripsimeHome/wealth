@@ -2,40 +2,81 @@
 @import "../../../styles/vars";
 
 .subscription {
+  width: 100%;
+  height: 300px;
   position: relative;
-  min-height: 300px;
-  color: $color-white;
   background-color: $color-primary;
-  //margin-top: 240px;
 
   &__container {
-    @include flexCol;
-    color: $color-secondary;
+    width: 800px;
+    min-height: 480px;
+    position: absolute;
+    top: -300px; // блок выходит вверх на 200px
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1.11vw 2.22vw rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    z-index: 2;
+
+    // Фон и размеры картинки
+    @include bgWebp(
+      "../../../assets/images/subscription/subscription.jpg",
+      "../../../assets/images/subscription/subscription.webp"
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; // <--- важно
   }
 
   &__contentWrapper {
-    @include flexCol;
-    max-width: 850px;
-    min-height: 500px;
-    width: 100%;
-    position: absolute;
-    transform: translateY(-50%);
-    border-radius: 24px;
-    margin: 0 auto;
-    // @include bgWebp(
-    //   "../../../assets/images/subscription/subscription.jpg",
-    //   "../../../assets/images/subscription/subscription.webp"
-    // );
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
-    box-shadow: 0 1.11vw 2.22vw #0000001a;
+    //width: 100%;
   }
 
   &__content {
-    @include flexCol;
-
+    display: flex;
     flex-direction: column;
     max-width: 640px;
+    text-align: center;
+    margin: 0 auto;
   }
 }
+
+// .subscription {
+//   position: relative;
+//   min-height: 300px;
+//   color: $color-white;
+//   background-color: $color-primary;
+//   //margin-top: 240px;
+
+//   &__container {
+//     @include flexCol;
+//     color: $color-secondary;
+//   }
+
+//   &__contentWrapper {
+//     @include flexCol;
+//     max-width: 850px;
+//     min-height: 500px;
+//     width: 100%;
+//     position: absolute;
+//     transform: translateY(-50%);
+//     border-radius: 24px;
+//     margin: 0 auto;
+//     @include bgWebp(
+//       "../../../assets/images/subscription/subscription.jpg",
+//       "../../../assets/images/subscription/subscription.webp"
+//     );
+//     background-repeat: no-repeat;
+//     background-position: top center;
+//     background-size: contain;
+//     box-shadow: 0 1.11vw 2.22vw #0000001a;
+//   }
+
+//   &__content {
+//     @include flexCol;
+
+//     flex-direction: column;
+//     max-width: 640px;
+//   }
+// }

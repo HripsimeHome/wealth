@@ -1,0 +1,10 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.testState {
+  &__blockContainer {
+    @include flexCol(start);
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+}
