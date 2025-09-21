@@ -29,7 +29,7 @@ const HeaderMenu = () => {
       <nav
         className={`
         ${styles.headerMenu__nav}
-        ${isMenuOpen ? styles.headerMenu__navOpen : ""}
+        ${isMenuOpen ? styles.headerMenu__nav_open : ""}
         `}
       >
         {isMenuOpen && (

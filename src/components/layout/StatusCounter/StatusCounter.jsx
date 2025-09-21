@@ -1,17 +1,23 @@
 import styles from "./StatusCounter.module.scss";
+import AnimatedCounter from "./AnimatedCounter/AnimatedCounter";
 
-const StatusCounter = ({ data, textWhite = false }) => {
+const StatusCounter = ({ data, isTextWhite }) => {
   return (
     <div className={styles.statusCounter}>
       {data.map(({ digit, title }, index) => (
         <div
           key={index}
           className={`
-            ${styles.statusCounter__column} 
-            ${textWhite ? styles.statusCounter__column_textWhite : ""}
-          `}
+            ${styles.statusCounter__column}
+            ${
+              styles[
+                `statusCounter__column_${
+                  isTextWhite ? "textWhite" : "textSecondary"
+                }`
+              ]
+            }`}
         >
-          <span className={styles.statusCounter__digit}>{digit}</span>
+          <AnimatedCounter digit={digit} />
           <span>{title}</span>
         </div>
       ))}

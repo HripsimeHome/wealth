@@ -16,8 +16,7 @@
   }
 
   &__btnBurger {
-    background: none;
-    border: none;
+    @include button();
     display: none;
 
     @include smScreenMedia {
@@ -39,10 +38,8 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
     z-index: 3;
+    @include button();
   }
 
   &__iconCross {
@@ -76,7 +73,7 @@
   }
 
   // отдельный модификатор для "открытого" состояния
-  &__navOpen {
+  &__nav_open {
     @include smScreenMedia {
       transform: translateX(0);
     }

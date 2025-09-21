@@ -55,20 +55,20 @@ const HomeContent = ({ posts = [] }) => {
         className={`${styles.homeContent__wrapper} containerBlackTopRounded`}
       >
         <StatusCounter
-          textWhite
+          isTextWhite
           data={[
             {
-              digit: "36K",
+              digit: "638K",
               title: "Customers",
             },
 
             {
-              digit: "28",
+              digit: "18M",
               title: "Selections",
             },
 
             {
-              digit: "14",
+              digit: "340",
               title: "Analysts",
             },
 

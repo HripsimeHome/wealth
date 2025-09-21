@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { formatDate } from "../../../../utils/formatDate";
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
-const BlogSingle = ({ article, onBack }) => {
+const BlogSingle = ({ article }) => {
   const navigate = useNavigate();
 
   if (!article) return <p>Статья не найдена</p>;

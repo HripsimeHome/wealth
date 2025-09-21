@@ -7,35 +7,45 @@ import Subscription from "../global/Subscription/Subscription";
 import Footer from "../global/Footer/Footer";
 import { scrollTop } from "../../utils/scrollTop";
 
-import { testPagePath } from "../../router/path";
+import {
+  testPagePath,
+  homePagePath,
+  aboutPagePath,
+  servicesPagePath,
+} from "../../router/path";
 
 function App() {
   const location = useLocation();
   const isTestPage = location.pathname === testPagePath;
+
+  const showSubscription = [
+    homePagePath,
+    aboutPagePath,
+    servicesPagePath,
+  ].includes(location.pathname);
 
   useEffect(() => {
     scrollTop();
   }, [location.pathname]);
 
   return (
+    // <>
+    //   {!isTestPage && (
+    //     <>
+    //       <Header />
+    //       <PageHeadingWrapper />
+    //       <Subscription />
+    //       <Footer />
+    //     </>
+    //   )}
+    //   <AppRouter />
+    // </>
     <>
-      {/* {!isTestPage && (
-        <>
-          <Header />
-          <PageHeadingWrapper />
-          <Subscription />
-          <Footer />
-        </>
-      )}
-      <AppRouter /> */}
-
-      <>
-        <Header />
-        <PageHeadingWrapper />
-        <AppRouter />
-        <Subscription />
-        <Footer />
-      </>
+      <Header />
+      <PageHeadingWrapper />
+      <AppRouter />
+      {showSubscription && <Subscription />}
+      <Footer />
     </>
   );
 }

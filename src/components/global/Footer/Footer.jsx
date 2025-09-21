@@ -24,10 +24,10 @@ const Footer = () => {
 
             <SocialIcons />
 
-            <spn className={styles.footer__companyInfo}>
+            <span className={styles.footer__companyInfo}>
               Navigate the Markets, Secure Your Future.
-            </spn>
-          </div>{" "}
+            </span>
+          </div>
           {/* companyBlock */}
           <FooterMenu />
         </div>
