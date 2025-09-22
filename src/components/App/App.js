@@ -44,7 +44,7 @@ function App() {
       <Header />
       <PageHeadingWrapper />
       <AppRouter />
-      {showSubscription && <Subscription />}
+      {/* {showSubscription && <Subscription />} */}
       <Footer />
     </>
   );

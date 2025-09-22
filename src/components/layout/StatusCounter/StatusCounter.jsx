@@ -4,7 +4,7 @@ import AnimatedCounter from "./AnimatedCounter/AnimatedCounter";
 const StatusCounter = ({ data, isTextWhite }) => {
   return (
     <div className={styles.statusCounter}>
-      {data.map(({ digit, title }, index) => (
+      {data.map(({ number, suffix, title }, index) => (
         <div
           key={index}
           className={`
@@ -17,7 +17,7 @@ const StatusCounter = ({ data, isTextWhite }) => {
               ]
             }`}
         >
-          <AnimatedCounter digit={digit} />
+          <AnimatedCounter number={number} suffix={suffix} />
           <span>{title}</span>
         </div>
       ))}

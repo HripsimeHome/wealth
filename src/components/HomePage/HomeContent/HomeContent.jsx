@@ -58,22 +58,26 @@ const HomeContent = ({ posts = [] }) => {
           isTextWhite
           data={[
             {
-              digit: "638K",
+              number: "638",
+              suffix: "K",
               title: "Customers",
             },
 
             {
-              digit: "18M",
+              number: "18",
+              suffix: "M",
               title: "Selections",
             },
 
             {
-              digit: "340",
+              number: "340",
+              suffix: "",
               title: "Analysts",
             },
 
             {
-              digit: "15",
+              number: "15",
+              suffix: "",
               title: "Global Assets",
             },
           ]}
