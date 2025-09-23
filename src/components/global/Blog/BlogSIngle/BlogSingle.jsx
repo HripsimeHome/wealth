@@ -24,7 +24,7 @@ const BlogSingle = ({ article }) => {
     <section className={styles.blogSingle}>
       <button
         className={` ${styles.blogSingle__back} btnPrimary`}
-        onCLick={() => navigate(-1)}
+        onClick={() => navigate(-1)}
       >
         Back to all posts
       </button>
