@@ -1,4 +1,5 @@
 import styles from "./AboutStatistic.module.scss";
+import AboutStatisticTabs from "./AboutStatisticTabs/AboutStatisticTabs";
 import Svg from "../../../layout/Svg/Svg";
 
 import {
@@ -61,6 +62,7 @@ const AboutStatistic = () => {
           </div>
         ))}
       </div>
+      <AboutStatisticTabs />
     </section>
   );
 };

@@ -1,8 +1,7 @@
 import styles from "./ServicesContent.module.scss";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
-import ServicesQuality from "./ServicesQuality/ServicesQuality";
+import ServicesCategories from "../ServicesContent/ServicesCategories/ServicesCategories";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
-import ServicesAlerts from "./ServicesAlerts/ServicesAlerts";
 import { aboutPagePath } from "../../../router/path";
 
 import {
@@ -69,9 +68,8 @@ const ServicesContent = () => {
           btnLabel="view more"
           textWhite
         />
-        <ServicesQuality />
+        <ServicesCategories />
         <br /> <br />
-        <ServicesAlerts />
       </div>
     </section>
   );

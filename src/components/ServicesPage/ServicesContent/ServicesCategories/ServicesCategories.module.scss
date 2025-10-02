@@ -1,7 +1,7 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
-.servicesQuality {
+.servicesCategories {
   &__blocksContainer {
     @include flexCol(center, start);
     gap: 10px;

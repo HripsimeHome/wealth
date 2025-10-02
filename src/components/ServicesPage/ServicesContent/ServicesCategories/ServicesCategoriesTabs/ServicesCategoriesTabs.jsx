@@ -1,6 +1,5 @@
-import styles from "./ServicesAlerts.module.scss";
-import Tabs from "../../../layout/Tabs/Tabs";
-import { investIcon, companyIcon } from "../../../../assets/svg";
+import TabsGroups from "../../../../layout/TabsGroups/TabsGroups";
+import { investIcon, companyIcon } from "../../../../../assets/svg";
 
 const tabLabels = [
   "Spy",
@@ -48,12 +47,12 @@ const tabContent = [
   ],
 ];
 
-const ServicesAlerts = () => {
+const ServicesCategoriesTabs = () => {
   return (
-    <section className={styles.servicesAlerts}>
-      <Tabs tabLabels={tabLabels} tabContent={tabContent} />
-    </section>
+    <>
+      <TabsGroups tabLabels={tabLabels} tabContent={tabContent} />
+    </>
   );
 };
 
-export default ServicesAlerts;
+export default ServicesCategoriesTabs;

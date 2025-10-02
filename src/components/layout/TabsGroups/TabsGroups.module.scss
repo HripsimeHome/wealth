@@ -1,7 +1,7 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.tabs {
+.tabsGroups {
   min-height: 400px;
   color: $color-darkGrey;
 
@@ -67,10 +67,10 @@
 
   &__content {
     display: flex;
-    flex-direction: column;
     width: 100%;
+    border-bottom: 1px solid $color-white;
     padding: 25px 0;
-    gap: 20px;
+    gap: 30px;
 
     @include mdScreenMedia {
       flex-direction: column;
@@ -81,6 +81,25 @@
     @include smScreenMedia {
       gap: 5px;
       padding: 10px 0;
+    }
+  }
+
+  &__titleBlock {
+    display: flex;
+    align-items: center;
+    flex: 6;
+    gap: 15px;
+
+    @include mdScreenMedia {
+      flex: 1;
+    }
+  }
+
+  &__icon {
+    @include svg(30px, $color-primary);
+
+    @include mdScreenMedia {
+      height: 20px;
     }
   }
 
@@ -100,7 +119,7 @@
 
   &__description {
     flex: 4;
-    @include setFont(18px, 4300, $color-white);
+    @include setFont(18px, 300, $color-white);
     text-align: justify;
     line-height: 30px;
 
