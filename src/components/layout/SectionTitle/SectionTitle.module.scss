@@ -19,8 +19,7 @@
   }
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    @include svg(20px, $color-secondary);
   }
 
   &__text {

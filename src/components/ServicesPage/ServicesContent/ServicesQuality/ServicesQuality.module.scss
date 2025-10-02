@@ -1,0 +1,20 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.servicesQuality {
+  &__blocksContainer {
+    @include flexCol(center, start);
+    gap: 10px;
+  }
+
+  &__blocksColumn {
+    display: flex;
+    flex-direction: column;
+    // gap: 10px;
+    color: white;
+  }
+
+  &__blocksRow {
+    display: flex;
+  }
+}

@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const AnimatedCounter = ({ number, suffix }) => {
   const [value, setValue] = useState(0);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
-
+  // ref → специальный реф, который нужно привязать к DOM-элементу. inView → булевое значение (true или false), которое показывает, находится ли элемент в зоне видимости (например, хотя бы на 50% внутри viewport при threshold: 0.5).
   useEffect(() => {
     if (!inView) return;
 

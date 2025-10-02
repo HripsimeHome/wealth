@@ -6,7 +6,8 @@ import BlogPage from "../pages/BlogPage";
 import ContactsPage from "../pages/ContactsPage";
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
 import TermsPage from "../pages/TermsPage";
-import TestPage from "../pages/TestPage";
+import TestStatePage from "../pages/TestStatePage";
+import TestRefPage from "../pages/TestRefPage";
 
 //import { Navigate } from "TestPage-router-dom";
 
@@ -19,7 +20,8 @@ export const contactsPagePath = "/contacts";
 export const privacyPolicyPagePath = "/privacy";
 export const termsPagePath = "/terms";
 
-export const testPagePath = "/test";
+export const testStatePagePath = "/test-state";
+export const testRefPagePath = "/test-ref";
 
 // Routes
 export const routes = [
@@ -60,7 +62,11 @@ export const routes = [
     component: <TermsPage />,
   },
   {
-    path: testPagePath,
-    component: <TestPage />,
+    path: testStatePagePath,
+    component: <TestStatePage />,
+  },
+  {
+    path: testRefPagePath,
+    component: <TestRefPage />,
   },
 ];

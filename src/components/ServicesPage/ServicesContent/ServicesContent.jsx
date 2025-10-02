@@ -1,6 +1,8 @@
 import styles from "./ServicesContent.module.scss";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
+import ServicesQuality from "./ServicesQuality/ServicesQuality";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
+import ServicesAlerts from "./ServicesAlerts/ServicesAlerts";
 import { aboutPagePath } from "../../../router/path";
 
 import {
@@ -54,7 +56,6 @@ const ServicesContent = () => {
             <ArrowRotation to={aboutPagePath} variant="greyCircle" />
           }
         />
-
         <TwoColumnSection
           image={detailedDataImage}
           webpImage={detailedDatanWebpImage}
@@ -68,27 +69,9 @@ const ServicesContent = () => {
           btnLabel="view more"
           textWhite
         />
-
-        <div className={styles.servicesContent__blocksContainer}>
-          <div className={styles.servicesContent__blocksColumn}>
-            <div className={styles.servicesContent__blocksRow}>
-              <div>spy</div>
-              <div>trade alerts</div>
-            </div>
-            <div>quality insights</div>
-          </div>
-          {/* First column */}
-
-          <div className={styles.servicesContent__blocksColumn}>
-            <div>entry &amp; exit</div>
-            <div className={styles.servicesContent__blocksRow}>
-              <div>x2</div>
-              <div>stockss</div>
-            </div>
-          </div>
-          {/* Second column */}
-        </div>
-        {/* blocksContainer */}
+        <ServicesQuality />
+        <br /> <br />
+        <ServicesAlerts />
       </div>
     </section>
   );

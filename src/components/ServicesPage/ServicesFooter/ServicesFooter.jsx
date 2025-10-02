@@ -4,33 +4,35 @@ import StatusCounter from "../../layout/StatusCounter/StatusCounter";
 const ServicesFooter = () => {
   return (
     <section className={styles.servicesFooter}>
-      <StatusCounter
-        data={[
-          {
-            number: "540",
-            suffix: "K",
-            title: "Customers",
-          },
+      {process.env.NODE_ENV !== "development" && (
+        <StatusCounter
+          data={[
+            {
+              number: "540",
+              suffix: "K",
+              title: "Customers",
+            },
 
-          {
-            number: "22",
-            suffix: "M",
-            title: "Selections",
-          },
+            {
+              number: "22",
+              suffix: "M",
+              title: "Selections",
+            },
 
-          {
-            number: "125",
-            suffix: "",
-            title: "Analysts",
-          },
+            {
+              number: "125",
+              suffix: "",
+              title: "Analysts",
+            },
 
-          {
-            number: "19",
-            suffix: "",
-            title: "Global Assets",
-          },
-        ]}
-      />
+            {
+              number: "19",
+              suffix: "",
+              title: "Global Assets",
+            },
+          ]}
+        />
+      )}
     </section>
   );
 };

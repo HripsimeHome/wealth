@@ -5,10 +5,12 @@ import Header from "../global/Header/Header";
 import PageHeadingWrapper from "../global/PageHeadingWrapper/PageHeadingWrapper";
 import Subscription from "../global/Subscription/Subscription";
 import Footer from "../global/Footer/Footer";
+//import Modal from "../layout/Modal/Modal";
 import { scrollTop } from "../../utils/scrollTop";
 
 import {
-  testPagePath,
+  testStatePagePath,
+  testRefPagePath,
   homePagePath,
   aboutPagePath,
   servicesPagePath,
@@ -16,7 +18,8 @@ import {
 
 function App() {
   const location = useLocation();
-  const isTestPage = location.pathname === testPagePath;
+  const isTestStatePage = location.pathname === testStatePagePath;
+  const isTestRefPage = location.pathname === testRefPagePath;
 
   const showSubscription = [
     homePagePath,
@@ -30,7 +33,7 @@ function App() {
 
   return (
     // <>
-    //   {!isTestPage && (
+    //   {!isTestStatePage && (
     //     <>
     //       <Header />
     //       <PageHeadingWrapper />
@@ -42,6 +45,7 @@ function App() {
     // </>
     <>
       <Header />
+      {/* <Modal /> */}
       <PageHeadingWrapper />
       <AppRouter />
       {/* {showSubscription && <Subscription />} */}

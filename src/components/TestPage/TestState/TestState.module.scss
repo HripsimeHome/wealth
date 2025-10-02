@@ -7,4 +7,39 @@
     gap: 30px;
     margin-bottom: 30px;
   }
+
+  &__coloredBox {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+
+    &_primary {
+      background-color: $color-primary;
+    }
+
+    &_secondary {
+      background-color: $color-secondary;
+    }
+
+    &_orange {
+      background-color: orange;
+    }
+
+    &_blue {
+      background-color: blue;
+    }
+
+    &_green {
+      background-color: green;
+    }
+  }
+
+  //Tab
+
+  &__tabContent {
+    color: $color-secondary;
+    background-color: $color-white;
+  }
 }

@@ -1,5 +1,5 @@
 import styles from "./TestState.module.scss";
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const TestState = () => {
   const [count, setCount] = useState(0);
@@ -145,6 +145,45 @@ const TestState = () => {
   //   return () => clearInterval(id);
   // }, []);
 
+  // Пример: дна кнопка → один инпут появляется на экране.
+
+  const [showInput, setShowInput] = useState(false);
+  const showInputRef = useRef(null);
+
+  const handleButtonClick = () => {
+    setShowInput(true);
+  };
+
+  useEffect(() => {
+    if (showInput) {
+      // На первом рендере showInput = false → input ещё нет в DOM. Поэтому .focus() будет вызывать ошибку. Нужно проверять, что элемент существует.
+      showInputRef.current.focus();
+    }
+  }, [showInput]);
+
+  // Пример: Смена текста по кнопке
+
+  const [isVisibleText, setIsVisibleText] = useState(false);
+  const handleHiddenText = () => {
+    setIsVisibleText((prev) => !prev);
+  };
+
+  // Пример: Кнопка показывает/скрывает текст "Hello World!".
+
+  const [isVisibleGreeting, setIsVisibleGreeting] = useState(false);
+
+  const handleGreetingText = () => {
+    setIsVisibleGreeting((prev) => !prev);
+  };
+
+  // Пример: Кнопки переключают цвет.
+  const [colorChanging, setColorChanging] = useState("primary");
+
+  // Пример:  Tabs (вкладки)
+
+  // const [activeTab, setActiveTab] = useState("first")
+  // const handleActiveTab = () => setActiveTab(());
+
   return (
     <section className={`${styles.testState} container paddingYLg`}>
       {/* Два отдельных счётчика. */}
@@ -216,6 +255,60 @@ const TestState = () => {
       <p>{/* Осталось <strong>{timer} </strong>секунд */}</p>
       <br />
       {/* <h2>{visible ? "👀 Я мигаю" : ""}</h2> */}
+      <br />
+      <div>
+        <button className="btnPrimary" onClick={handleButtonClick}>
+          CLick to see input
+        </button>
+        <br />
+        <br />
+        {showInput && <input type="text" ref={showInputRef} />}
+      </div>
+      <br />
+      <br />
+      {isVisibleText ? "Hello" : "Show the text"}&nbsp;
+      <button className="btnPrimary" onClick={handleHiddenText}>
+        Click
+      </button>
+      <br />
+      <br />
+      {isVisibleGreeting ? <p>Hello!</p> : ""}
+      <button className="btnPrimary" onClick={handleGreetingText}>
+        {isVisibleGreeting ? "Hide" : "Show"}
+      </button>
+      <br />
+      <br />
+      {/* <div
+        style={{
+          width: "130px",
+          height: "130px",
+          backgroundColor: colorChanging,
+          marginBottom: "16px",
+          borderRadius: "10px",
+        }
+      ></div> */}
+      <button onClick={() => setColorChanging("primary")}>Primary</button>&nbsp;
+      <button onClick={() => setColorChanging("secondary")}>Secondary</button>
+      &nbsp;
+      <button onClick={() => setColorChanging("orange")}>Orange</button>&nbsp;
+      <button onClick={() => setColorChanging("blue")}>Blue</button>&nbsp;
+      <button onClick={() => setColorChanging("green")}>Green</button>
+      <div
+        className={`
+          ${styles.testState__coloredBox} 
+          ${styles[`testState__coloredBox_${colorChanging}`]}`}
+      >
+        {colorChanging}
+      </div>
+      <br />
+      <br />
+      <p>Tab example</p>
+      <div className={styles.testState__tabContent}>
+        <div className={styles.testState__tabTitle}></div>
+      </div>
+      {/* <buttom onClick={}>First</buttom>
+       <buttom onClick={}>Second</buttom>
+        <buttom onClick={}>Third</buttom> */}
     </section>
   );
 };
