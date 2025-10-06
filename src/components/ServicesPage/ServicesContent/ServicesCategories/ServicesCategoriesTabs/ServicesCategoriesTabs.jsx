@@ -25,14 +25,16 @@ const tabContent = [
     {
       icon: investIcon,
       title: "Third Spy",
-      description: "",
+      description:
+        "Receive actionable insights and make informed decisions based on expert analysis.",
     },
   ],
   [
     {
       icon: companyIcon,
       title: "First trade",
-      description: "",
+      description:
+        "Receive actionable insights and make informed decisions based on expert analysis.",
     },
     {
       icon: companyIcon,

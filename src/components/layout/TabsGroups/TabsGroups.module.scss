@@ -7,7 +7,7 @@
 
   &:hover {
     // color: $color-white;
-    cursor: pointer;
+    // cursor: pointer;
     transition: $transitionEaseOut;
   }
 
@@ -33,6 +33,10 @@
 
   &__label {
     @include setFont(24px, 400, $color-lightGrey);
+    &:hover {
+      // color: $color-white;
+      cursor: pointer;
+    }
 
     @include lgScreenMedia {
       font-size: 18px;
@@ -49,6 +53,7 @@
       color: $color-primary;
       transition: color 0.9s ease, border-color 09.3s ease;
       padding-bottom: 6px;
+      cursor: default;
 
       // &::after {
       //   content: "";

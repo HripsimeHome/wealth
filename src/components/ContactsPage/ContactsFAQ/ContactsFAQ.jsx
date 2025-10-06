@@ -1,6 +1,10 @@
-import styles from "./ContactsFAQ.module.scss";
 import PageHeader from "../../global/PageHeadingWrapper/PageHeadingSmall/PageHeadingSmall";
 import Accordion from "../../layout/Accordion/Accordion";
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+
 import { investmentsIcon } from "../../../assets/svg";
 
 const faqData = [
@@ -32,15 +36,24 @@ const faqData = [
 ];
 
 const ContactsFAQ = () => {
+  const { ref: accordionRef, inView: isAccordionInView } = useAnimationInView({
+    threshold: 0.5,
+  });
   return (
-    <section className={styles.contactFAQ}>
+    <section ref={accordionRef}>
       <PageHeader
         icon={investmentsIcon}
         sectionTitle="ask the team"
         title="FAQ"
         subtitle="clear answers paired with step-by-step guidance for all"
       />
-      <Accordion data={faqData} />
+      <TransitionProvider
+        inProp={isAccordionInView}
+        delay={700}
+        style={TransitionStyleTypes.bottom}
+      >
+        <Accordion data={faqData} />
+      </TransitionProvider>
     </section>
   );
 };

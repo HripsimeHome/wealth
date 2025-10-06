@@ -1,5 +1,6 @@
 import styles from "./TestState.module.scss";
 import { useState, useRef, useEffect } from "react";
+import TodoList from "./TodoList";
 
 const TestState = () => {
   const [count, setCount] = useState(0);
@@ -177,12 +178,19 @@ const TestState = () => {
   };
 
   // Пример: Кнопки переключают цвет.
-  const [colorChanging, setColorChanging] = useState("primary");
+  const [colorChanging, setColorChanging] = useState("orange");
 
   // Пример:  Tabs (вкладки)
 
   // const [activeTab, setActiveTab] = useState("first")
   // const handleActiveTab = () => setActiveTab(());
+
+  // *****************
+  //  Основные операции с массивом в state
+
+  //Добавить в конец
+
+  const [items, setItems] = useState(["a", "b", "c", "d"]);
 
   return (
     <section className={`${styles.testState} container paddingYLg`}>
@@ -247,9 +255,9 @@ const TestState = () => {
       </div>
       <br />
       <br />
-      <h2>SetInterval example - результат смотреть в консоли</h2>
+      {/* <h2>SetInterval example - результат смотреть в консоли</h2>
       <p>Number: {number}</p>
-      <p>Status: {status}</p>
+      <p>Status: {status}</p> */}
       <br />
       <br />
       <p>{/* Осталось <strong>{timer} </strong>секунд */}</p>
@@ -258,7 +266,7 @@ const TestState = () => {
       <br />
       <div>
         <button className="btnPrimary" onClick={handleButtonClick}>
-          CLick to see input
+          Click to see input
         </button>
         <br />
         <br />
@@ -306,9 +314,36 @@ const TestState = () => {
       <div className={styles.testState__tabContent}>
         <div className={styles.testState__tabTitle}></div>
       </div>
-      {/* <buttom onClick={}>First</buttom>
-       <buttom onClick={}>Second</buttom>
-        <buttom onClick={}>Third</buttom> */}
+      <br />
+      <br />
+      <h2>Array: {JSON.stringify(items)}</h2>
+      <button
+        className="btnPrimary"
+        onClick={() => setItems(["New", ...items])}
+      >
+        1. Add item before
+      </button>
+      <br />
+      <br />
+      <button
+        className="btnPrimary"
+        onClick={() => setItems([...items, "New"])}
+      >
+        2. Add item to the end
+      </button>
+      <br />
+      <br />
+      <button
+        className="btnPrimary"
+        onClick={() =>
+          setItems([...items.slice(0, 2), "Новый", ...items.slice(2)])
+        }
+      >
+        Put in the center to index 2
+      </button>
+      <br />
+      <br />
+      <TodoList />
     </section>
   );
 };
