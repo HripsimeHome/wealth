@@ -30,7 +30,7 @@ const Footer = () => {
         <div ref={topContainerRef}>
           <TransitionProvider
             inProp={isTopContainerInView}
-            delay={750}
+            delay={400}
             style={TransitionStyleTypes.bottom}
             className={styles.footer__topCcontainer}
           >
@@ -58,7 +58,7 @@ const Footer = () => {
         <div ref={bottomContainerRef}>
           <TransitionProvider
             inProp={isBottomContainerInView}
-            delay={900}
+            delay={500}
             style={TransitionStyleTypes.bottom}
             className={styles.footer__bottomContainer}
           >

@@ -1,12 +1,20 @@
 import PageHeadingSmall from "./PageHeadingSmall/PageHeadingSmall";
 import { useLocation } from "react-router-dom";
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 import {
   articlesIcon,
   investmentsIcon,
   contactsIcon,
 } from "../../../assets/svg";
 
-const PageHeading = () => {
+const PageHeadingWrapper = () => {
+  const { ref, inView } = useAnimationInView({
+    threshold: 0.1,
+    //triggerOnce: false,
+  });
   const { pathname } = useLocation();
 
   // Данные для заголовков прямо в компоненте
@@ -36,10 +44,16 @@ const PageHeading = () => {
   if (!data) return null;
 
   return (
-    <>
-      <PageHeadingSmall {...data} />
-    </>
+    <div ref={ref}>
+      <TransitionProvider
+        inProp={inView}
+        delay={100}
+        style={TransitionStyleTypes.zoomIn}
+      >
+        <PageHeadingSmall {...data} />
+      </TransitionProvider>
+    </div>
   );
 };
 
-export default PageHeading;
+export default PageHeadingWrapper;
