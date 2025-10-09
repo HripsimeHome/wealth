@@ -3,14 +3,13 @@
 export const timeWhiteIcon = "timeWhite";
 export const timeBlackIcon = "timeBlack";
 export const arrowHorizontalIcon = "arrowHorizontal";
-
 export const exitIcon = "exit";
+
 // Header
 export const burgerIcon = "burger";
 export const crossIcon = "cross";
 
 // Home
-
 export const spinnerIcon = "spinner";
 export const innovationIcon = "innovation";
 export const investmentsIcon = "investments";
@@ -29,14 +28,15 @@ export const JacobRightTopIcon = "JacobRightTop";
 export const JacobLeftBottomIcon = "JacobLeftBottom";
 
 // Services
-export const identifyIcon = "identify";
+export const searchIcon = "search";
 export const cuttingEdgeTechLefBottomIcon = "cuttingEdgeTechLefBottom";
 export const investIcon = "invest";
 export const detailedDataLeftTopIcon = "detailedDataLeftTop";
 export const detailedDataRightBottomIcon = "detailedDataRightBottom";
-export const insightsIcon = "insights";
-export const stocksIcon = "stocks";
+
+export const arrowTopCircleIcon = "arrowTopCircle";
 export const articlesIcon = "articles";
+export const plusCircleIcon = "plusCircle";
 
 // Contacts
 export const contactsIcon = "contacts";

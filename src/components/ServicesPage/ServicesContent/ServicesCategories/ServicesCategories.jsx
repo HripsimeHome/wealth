@@ -1,27 +1,75 @@
 import styles from "./ServicesCategories.module.scss";
+import clsx from "clsx";
 import ServicesCategoriesTabs from "./ServicesCategoriesTabs/ServicesCategoriesTabs";
+import Svg from "../../../layout/Svg/Svg";
+
+import {
+  timeBlackIcon,
+  arrowTopCircleIcon,
+  plusCircleIcon,
+} from "../../../../assets/svg";
+
+//  <Svg id={timeBlackIcon} />
+//             <Svg id={arrowTopCircleIcon} />
+//             <Svg id={plusCircleIcon} />
 
 const ServicesCategories = () => {
   return (
     <section className={styles.servicesCategories}>
-      <div className={styles.servicesCategories__blocksContainer}>
-        <div className={styles.servicesCategories__blocksColumn}>
-          <div className={styles.servicesCategories__blocksRow}>
-            <div>spy</div>
-            <div>trade alerts</div>
-          </div>
-          <div>quality insights</div>
+      <div className={styles.servicesCategories__categoryContainer}>
+        <div
+          className={clsx(
+            styles.servicesCategories__category,
+            styles.servicesCategories__categorySpy
+          )}
+        >
+          Spy
         </div>
-        {/* First column */}
 
-        <div className={styles.servicesCategories__blocksColumn}>
-          <div>entry &amp; exit</div>
-          <div className={styles.servicesCategories__blocksRow}>
-            <div>x2</div>
-            <div>stockss</div>
-          </div>
+        <div
+          className={clsx(
+            styles.servicesCategories__category,
+            styles.servicesCategories__categoryTrade
+          )}
+        >
+          trade
         </div>
-        {/* Second column */}
+
+        <div
+          className={clsx(
+            styles.servicesCategories__category,
+            styles.servicesCategories__categoryEntry
+          )}
+        >
+          entry
+        </div>
+
+        <div
+          className={clsx(
+            styles.servicesCategories__category,
+            styles.servicesCategories__categoryInsights
+          )}
+        >
+          Insights
+        </div>
+
+        <div
+          className={clsx(
+            styles.servicesCategories__category,
+            styles.servicesCategories__categoryQualityX2
+          )}
+        >
+          qualityX2
+        </div>
+
+        <div
+          className={clsx(
+            styles.servicesCategories__category,
+            styles.servicesCategories__categoryStocks
+          )}
+        >
+          stocks
+        </div>
       </div>
       <ServicesCategoriesTabs />
     </section>

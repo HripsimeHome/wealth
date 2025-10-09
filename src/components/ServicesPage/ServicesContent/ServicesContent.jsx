@@ -12,7 +12,7 @@ import {
 } from "../../../assets/images";
 
 import {
-  identifyIcon,
+  searchIcon,
   cuttingEdgeTechLefBottomIcon,
   investIcon,
   detailedDataLeftTopIcon,
@@ -45,7 +45,7 @@ const ServicesContent = () => {
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
-          sectionTitle={{ icon: identifyIcon, text: "identify" }}
+          sectionTitle={{ icon: searchIcon, text: "identify" }}
           imgLeftBottomCorner={cuttingEdgeTechLefBottomIcon}
           title={["cutting-edge tech and in-depth market", "wknowledge"]}
           description="Receive actionable insights and make informed decisions based on expert analysis."

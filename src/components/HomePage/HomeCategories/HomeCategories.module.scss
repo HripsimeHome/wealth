@@ -1,0 +1,87 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.homeCategories {
+  padding: 0 10%;
+
+  @include lgScreenMedia {
+    padding: 0 5%;
+  }
+  @include smScreenMedia {
+    padding: 0;
+  }
+
+  &__categoryContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px 200px;
+
+    grid-template-areas:
+      "spy spy return capture"
+      "spy spy realtime realtime";
+
+    @include lgScreenMedia {
+      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-areas:
+        "spy spy"
+        "return capture"
+        "realtime realtime";
+    }
+
+    @include smScreenMedia {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "spy"
+        "return"
+        "capture"
+        "realtime";
+    }
+  }
+
+  &__category {
+    border-radius: 24px;
+    //padding: 20px;
+    font-size: 20px;
+    padding: 3.3vw;
+  }
+
+  &__categorySpy {
+    grid-area: spy;
+    color: $color-secondary;
+    background-color: $color-primary;
+  }
+
+  &__spyContainer {
+    @include flexCol(space-between, start);
+    flex-direction: column;
+  }
+
+  &__categoryReturn {
+    grid-area: return;
+    color: $color-secondary;
+    background-color: $color-white;
+  }
+
+  &__categoryCapture {
+    grid-area: capture;
+    color: $color-secondary;
+    background-color: $color-white;
+  }
+
+  &__categoryRealtime {
+    grid-area: realtime;
+    color: $color-white;
+    background-color: $color-secondary;
+  }
+
+  &__arrowTopCircleIcon,
+  &__timeWhiteIcon {
+    @include svg(30px, $color-secondary);
+  }
+
+  &__investmentsIcon {
+    @include svg(230px, $color-secondary);
+  }
+}
