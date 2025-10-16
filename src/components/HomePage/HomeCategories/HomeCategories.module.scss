@@ -2,19 +2,22 @@
 @import "../../../styles/vars";
 
 .homeCategories {
-  padding: 0 10%;
+  padding: 0 12%;
 
   @include lgScreenMedia {
     padding: 0 5%;
   }
+
   @include smScreenMedia {
     padding: 0;
   }
 
   &__categoryContainer {
     display: grid;
-    gap: 20px;
+    gap: 15px;
     grid-template-columns: repeat(4, 1fr);
+
+    // @include grid(4,2, 15px);
     grid-auto-rows: 200px 200px;
 
     grid-template-areas:
@@ -43,42 +46,107 @@
   &__category {
     border-radius: 24px;
     //padding: 20px;
-    font-size: 20px;
-    padding: 3.3vw;
+    padding: 2vw;
   }
+
+  // Category Spy
 
   &__categorySpy {
     grid-area: spy;
+    @include flexCol(space-between, start);
+    flex-direction: column;
     color: $color-secondary;
     background-color: $color-primary;
   }
 
   &__spyContainer {
-    @include flexCol(space-between, start);
+    @include flexCol();
+  }
+
+  &__sizeContainer {
+    @include flexCol(start, start);
     flex-direction: column;
   }
 
+  &__size {
+    @include setFont(60px, 500);
+    color: $color-secondary;
+  }
+
+  &__title {
+    @include setFont(70px, 500);
+    text-transform: uppercase;
+    color: $color-primary; /* fill color */
+    text-shadow: 1px 0 $color-secondary, -1px 0 $color-secondary,
+      0 1px $color-secondary, 0 -1px $color-secondary;
+  }
+
+  &__text {
+    @include setFont(xsm, 300);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  // Category Return
+
   &__categoryReturn {
     grid-area: return;
+    @include flexCol(space-between, start);
+    flex-direction: column;
     color: $color-secondary;
     background-color: $color-white;
+  }
+
+  &__number {
+    @include setFont(60px, 700);
+  }
+
+  &__percent {
+    @include setFont(38px, 500);
+    vertical-align: top;
   }
 
   &__categoryCapture {
     grid-area: capture;
+    @include flexCol(space-between, start);
+    flex-direction: column;
+    position: relative;
     color: $color-secondary;
     background-color: $color-white;
   }
 
+  &__gains {
+    @include setFont(38px, 500);
+  }
+
   &__categoryRealtime {
     grid-area: realtime;
+    @include flexCol(space-between, start);
+    flex-direction: column;
+    position: relative;
     color: $color-white;
     background-color: $color-secondary;
+  }
+
+  &__realimeTitle {
+    @include setFont(35px, 300);
+    text-transform: uppercase;
+    color: $color-secondary;
+    text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
+      0 -1px $color-white;
+  }
+
+  &__realimeText {
+    @include setFont(xsm, 300);
+    text-transform: uppercase;
   }
 
   &__arrowTopCircleIcon,
   &__timeWhiteIcon {
     @include svg(30px, $color-secondary);
+    position: absolute;
+    top: 2vw;
+    right: 2.3vw;
   }
 
   &__investmentsIcon {

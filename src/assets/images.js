@@ -2,6 +2,18 @@ import logoImage from "./images/logo.webp";
 import logoWebpImage from "./images/logo.webp";
 
 // Home
+import loadImage from "./images/home/brands/load.png";
+import loadWebpImage from "./images/home/brands/load.webp";
+
+import chainImage from "./images/home/brands/chain.png";
+import chainWebpImage from "./images/home/brands/chain.webp";
+
+import scaleImage from "./images/home/brands/scale.png";
+import scaleWebpImage from "./images/home/brands/scale.webp";
+
+import traceImage from "./images/home/brands/trace.png";
+import traceWebpImage from "./images/home/brands/trace.webp";
+
 import stocksImage from "./images/home/stocks.jpg";
 import stocksWebpImage from "./images/home/stocks.webp";
 
@@ -47,6 +59,14 @@ export {
   logoWebpImage,
 
   // Home
+  loadImage,
+  loadWebpImage,
+  chainImage,
+  chainWebpImage,
+  scaleImage,
+  scaleWebpImage,
+  traceImage,
+  traceWebpImage,
   stocksImage,
   stocksWebpImage,
   analystsImage,

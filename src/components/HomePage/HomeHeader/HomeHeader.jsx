@@ -16,7 +16,7 @@ import {
 
 const HomeHeader = () => {
   return (
-    <section className={`${styles.homeHeader} pB container`}>
+    <section className={`${styles.homeHeader}  container pB`}>
       {/* Left block */}
       <div className={styles.homeHeader__leftBlock}>
         <SectionTitle icon={investmentsIcon} text="investments" />
@@ -31,7 +31,7 @@ const HomeHeader = () => {
           </span>
         </h1>
 
-        <div className={styles.homeHeader__blockContainer}>
+        <div className={styles.homeHeader__promoContainer}>
           <div className={styles.homeHeader__stocksBlock}>
             <span>- QUALITY -</span>
             <div className={styles.homeHeader__stocks}>
@@ -43,7 +43,10 @@ const HomeHeader = () => {
             </div>
           </div>
 
-          <div className={styles.homeHeader__customersBlock}>36K+</div>
+          <div className={styles.homeHeader__customersBlock}>
+            <span className={styles.homeHeader__number}>36K+</span>
+            CUSTOMERS
+          </div>
         </div>
       </div>
       {/* /Left block */}

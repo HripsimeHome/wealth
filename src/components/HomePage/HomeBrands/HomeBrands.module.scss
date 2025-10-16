@@ -1,0 +1,35 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.homeBrands {
+  @include grid(4, 1, 20px);
+  padding: 0 5%;
+
+  @include mdScreenMedia {
+    @include grid(2, 1, 10px);
+  }
+
+  &__img {
+    max-width: 40%;
+    object-fit: contain;
+    display: block;
+    align-self: center;
+    justify-self: center;
+
+    @include lgScreenMedia {
+      max-width: 70%;
+    }
+
+    @include mdScreenMedia {
+      max-width: 60%;
+    }
+
+    @include smScreenMedia {
+      max-width: 55%;
+    }
+
+    @include xsmScreenMedia {
+      max-width: 80%;
+    }
+  }
+}

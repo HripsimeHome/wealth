@@ -45,13 +45,13 @@ const PageHeadingWrapper = () => {
 
   return (
     <div ref={ref}>
-      <TransitionProvider
+      {/* <TransitionProvider
         inProp={inView}
         delay={100}
         style={TransitionStyleTypes.zoomIn}
-      >
-        <PageHeadingSmall {...data} />
-      </TransitionProvider>
+      > */}
+      <PageHeadingSmall {...data} />
+      {/* </TransitionProvider> */}
     </div>
   );
 };
