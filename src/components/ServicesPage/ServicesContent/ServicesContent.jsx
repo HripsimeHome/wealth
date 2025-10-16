@@ -25,7 +25,7 @@ import {
 
 const ServicesContent = () => {
   return (
-    <section className={`${styles.servicesContent} containerBlackRounded`}>
+    <section className={`${styles.servicesContent} containerBlackRounded pB`}>
       {process.env.NODE_ENV !== "development" && (
         <video
           autoPlay

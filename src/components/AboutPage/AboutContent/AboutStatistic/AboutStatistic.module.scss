@@ -21,6 +21,7 @@
 
   &__description {
     @include setFont(xsm, 300, $color-white);
+    line-height: 20px;
     text-transform: uppercase;
   }
 

@@ -5,8 +5,9 @@ import Svg from "../../../layout/Svg/Svg";
 
 import {
   timeBlackIcon,
-  arrowTopCircleIcon,
+  exitIcon,
   plusCircleIcon,
+  arrowTopCircleIcon,
 } from "../../../../assets/svg";
 
 //  <Svg id={timeBlackIcon} />
@@ -16,7 +17,7 @@ import {
 const ServicesCategories = () => {
   return (
     <section className={styles.servicesCategories}>
-      <div className={styles.servicesCategories__categoryContainer}>
+      <div className={clsx(styles.servicesCategories__categoryContainer, "pB")}>
         <div
           className={clsx(
             styles.servicesCategories__category,

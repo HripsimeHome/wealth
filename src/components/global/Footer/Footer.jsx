@@ -22,7 +22,7 @@ const Footer = () => {
   const { ref: bottomContainerRef, inView: isBottomContainerInView } =
     useAnimationInView({
       threshold: 0.5,
-      triggerOnce: false,
+      // triggerOnce: false,
     });
   return (
     <footer className={styles.footer}>

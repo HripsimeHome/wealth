@@ -40,7 +40,7 @@ const ContactsFAQ = () => {
     threshold: 0.5,
   });
   return (
-    <section ref={accordionRef}>
+    <section ref={accordionRef} className="container">
       <PageHeader
         icon={investmentsIcon}
         sectionTitle="ask the team"

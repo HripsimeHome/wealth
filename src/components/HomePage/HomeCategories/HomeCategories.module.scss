@@ -9,7 +9,7 @@
   }
 
   @include smScreenMedia {
-    padding: 0;
+    // padding: 0;
   }
 
   &__categoryContainer {
@@ -33,7 +33,7 @@
         "realtime realtime";
     }
 
-    @include smScreenMedia {
+    @include xsmScreenMedia {
       grid-template-columns: repeat(1, 1fr);
       grid-template-areas:
         "spy"
