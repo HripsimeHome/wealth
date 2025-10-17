@@ -15,10 +15,18 @@
     text-align: center;
   }
 
+  @include smScreenMedia {
+    gap: 25px;
+  }
+
   &__title {
-    @include setFont(100px, 600, $color-secondary);
+    @include setFont(8vw, 600, $color-secondary);
     text-transform: uppercase;
-    line-height: 4.5rem;
+    line-height: 8vw;
+
+    @include mdScreenMedia {
+      font-size: 10vw;
+    }
   }
 
   &__subtitle {
