@@ -2,13 +2,9 @@
 @import "../../../styles/vars";
 
 .sectionTitle {
-  @include flexCol(start);
   display: flex;
+  align-items: center;
   gap: 7px;
-
-  @include lgScreenMedia {
-    justify-content: center;
-  }
 
   &__iconWrapper {
     @include flexCol();

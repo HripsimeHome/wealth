@@ -3,8 +3,12 @@
 @import "../../../styles/mixins";
 
 .aboutContent {
-  margin: 100px 0;
+  margin: 10vw 0;
   padding-inline: 10%;
+
+  @include smScreenMedia {
+    padding-inline: 5%;
+  }
 
   &__staffContainer {
     @include flexCol;

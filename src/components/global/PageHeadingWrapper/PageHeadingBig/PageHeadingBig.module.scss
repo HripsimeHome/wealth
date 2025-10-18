@@ -6,26 +6,27 @@
   flex-direction: column;
   max-width: 550px;
   width: 100%;
-  gap: 30px;
+  gap: 15px;
   text-align: center;
   margin: 65px auto 35px;
 
   @include lgScreenMedia {
     flex-direction: column;
     text-align: center;
+    margin: 35px auto 20px;
   }
 
   @include smScreenMedia {
-    gap: 25px;
+    margin-block: 20px;
   }
 
   &__title {
-    @include setFont(8vw, 600, $color-secondary);
+    @include setFont(90px, 600, $color-secondary);
     text-transform: uppercase;
     line-height: 8vw;
 
-    @include mdScreenMedia {
-      font-size: 10vw;
+    @include lgScreenMedia {
+      font-size: 8vw;
     }
   }
 
@@ -35,5 +36,9 @@
     text-transform: uppercase;
     line-height: 20px;
     letter-spacing: 2px;
+
+    @include xsmScreenMedia {
+      max-width: 255px;
+    }
   }
 }

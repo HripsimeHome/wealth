@@ -2,13 +2,17 @@
 @import "../../../../styles/vars";
 
 .blogSingle {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-inline: 10%;
 
   &__back {
     position: fixed;
-    top: 100px;
+    top: 90px;
     left: 65px;
+
+    @include lgScreenMedia {
+      top: 60px;
+      left: 20px;
+    }
   }
 
   &__header {
@@ -31,6 +35,18 @@
   &__title {
     @include setFont(2.5rem, 500);
     letter-spacing: -0.0625rem;
+
+    @include lgScreenMedia {
+      font-size: 1.5rem;
+    }
+
+    @include smScreenMedia {
+      font-size: 1.2rem;
+    }
+
+    @include xsmScreenMedia {
+      font-size: 1rem;
+    }
   }
 
   &__avatar {

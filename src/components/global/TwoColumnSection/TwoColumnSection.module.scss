@@ -87,6 +87,11 @@
     letter-spacing: -0.06rem;
     text-transform: capitalize;
     margin: 15px 0;
+
+    @include lgScreenMedia {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
   }
 
   &__titleThin {

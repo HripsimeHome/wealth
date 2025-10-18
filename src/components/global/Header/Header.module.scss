@@ -21,6 +21,7 @@
 
   &__logo {
     width: 110px;
+    border: none;
 
     @include lgScreenMedia {
       width: 65px;

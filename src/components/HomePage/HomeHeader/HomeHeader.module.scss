@@ -5,10 +5,22 @@
   @include flexCol(start, start);
   gap: 50px;
 
+  @include lgScreenMedia {
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+  }
+
   &__leftBlock {
     display: flex;
     flex-direction: column;
+
     gap: 30px;
+
+    @include lgScreenMedia {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -36,6 +48,7 @@
   &__promoContainer {
     @include grid(2, 1, 20px);
     grid-template-rows: 135px;
+    width: 100%;
   }
 
   &__stocksBlock {

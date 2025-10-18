@@ -17,17 +17,18 @@
     gap: 50px;
     border-bottom: 1px solid $color-primary;
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     @include mdScreenMedia {
       gap: 25px;
+      margin-bottom: 20px;
       padding-bottom: 20px;
     }
 
     @include smScreenMedia {
-      padding-bottom: 15px;
       flex-direction: column;
       gap: 15px;
+      padding-bottom: 15px;
     }
   }
 
@@ -69,13 +70,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 25px 0;
     gap: 20px;
 
     @include mdScreenMedia {
       flex-direction: column;
       gap: 10px;
-      padding: 20px 0;
     }
 
     @include smScreenMedia {
@@ -100,7 +99,7 @@
 
   &__description {
     flex: 4;
-    @include setFont(18px, 4300, $color-white);
+    @include setFont(18px, 300, $color-white);
     text-align: justify;
     line-height: 30px;
 
