@@ -16,7 +16,7 @@ import {
 
 const HomeHeader = () => {
   return (
-    <section className={`${styles.homeHeader}  container pB`}>
+    <section className={`${styles.homeHeader}  container paddingYLg`}>
       {/* Left block */}
       <div className={styles.homeHeader__leftBlock}>
         <SectionTitle icon={investmentsIcon} text="investments" />

@@ -17,7 +17,12 @@ import {
 const ServicesCategories = () => {
   return (
     <section className={styles.servicesCategories}>
-      <div className={clsx(styles.servicesCategories__categoryContainer, "pB")}>
+      <div
+        className={clsx(
+          styles.servicesCategories__categoryContainer,
+          "paddingYLg"
+        )}
+      >
         <div
           className={clsx(
             styles.servicesCategories__category,

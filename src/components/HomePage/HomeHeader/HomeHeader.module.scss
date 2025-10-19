@@ -27,6 +27,14 @@
     @include setFont(143px, 500);
     text-transform: uppercase;
     line-height: 115px;
+
+    @include lgScreenMedia {
+      font-size: 100px;
+    }
+
+    @include smScreenMedia {
+      font-size: 25vw;
+    }
   }
 
   &__titleThin {

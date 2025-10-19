@@ -46,7 +46,7 @@ const HomeBrands = () => {
 
   return (
     <section
-      className={clsx(styles.homeBrands, "container", "pB")}
+      className={clsx(styles.homeBrands, "container", "paddingYLg")}
       ref={brandsRef}
     >
       {brandsLogos.map(({ img, webImg, alt }, index) => (

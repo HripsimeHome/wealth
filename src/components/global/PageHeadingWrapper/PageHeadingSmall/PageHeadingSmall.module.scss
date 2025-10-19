@@ -32,21 +32,21 @@
   }
 
   &__title {
-    @include setFont(5.5vw, 600, $color-secondary);
+    @include setFont(4.5rem, 600, $color-secondary);
     line-height: 4.5rem;
 
     @include mdScreenMedia {
-      font-size: 9vw;
+      font-size: 3rem;
     }
 
     @include smScreenMedia {
-      line-height: 3.5rem;
+      font-size: 2.5rem;
     }
   }
 
   &__subtitle {
     flex: 1;
-    @include setFont(13px, 400, $color-secondary);
+    @include setFont(0.8125rem, 400, $color-secondary);
     text-transform: uppercase;
     line-height: 20px;
     letter-spacing: 0.14vw;

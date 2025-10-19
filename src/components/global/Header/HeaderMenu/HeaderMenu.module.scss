@@ -2,24 +2,11 @@
 @import "../../../../styles/vars";
 
 .headerMenu {
-  &__logo {
-    filter: invert(1);
-    width: 110px;
-
-    @include lgScreenMedia {
-      width: 65px;
-    }
-
-    @include smScreenMedia {
-      width: 48px;
-    }
-  }
-
   &__btnBurger {
     @include button();
     display: none;
 
-    @include smScreenMedia {
+    @include mdScreenMedia {
       display: block;
     }
   }
@@ -55,7 +42,7 @@
     display: flex;
     gap: 20px;
 
-    @include smScreenMedia {
+    @include mdScreenMedia {
       flex-direction: column;
       position: fixed;
       top: 0;
@@ -74,7 +61,7 @@
 
   // отдельный модификатор для "открытого" состояния
   &__nav_open {
-    @include smScreenMedia {
+    @include mdScreenMedia {
       transform: translateX(0);
     }
   }
@@ -84,7 +71,7 @@
     gap: 20px;
     list-style: none;
 
-    @include smScreenMedia {
+    @include mdScreenMedia {
       flex-direction: column;
       gap: 15px;
     }

@@ -9,26 +9,21 @@
   @include flexCol(space-between, center);
   transition: $transition;
   background-color: $color-lightGrey;
-  padding: 32px 4.5rem 15px;
+  padding: 1.5rem 14rem;
 
-  @include lgScreenMedia {
-    padding: 20px 0;
-  }
-
-  @include smScreenMedia {
-    padding: 15px 0;
+  @include mdScreenMedia {
+    padding: 1rem;
   }
 
   &__logo {
-    width: 110px;
-    border: none;
+    max-width: 25%;
 
-    @include lgScreenMedia {
-      width: 65px;
-    }
+    // @include lgScreenMedia {
+    //   width: 65px;
+    // }
 
-    @include smScreenMedia {
-      width: 48px;
-    }
+    // @include smScreenMedia {
+    //   width: 48px;
+    // }
   }
 }
