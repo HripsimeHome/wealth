@@ -84,12 +84,10 @@
 
     &:hover {
       text-decoration: underline;
-      transition: $transitionEaseOut;
-      cursor: pointer;
     }
 
     &_active {
-      text-decoration: underline;
+      font-weight: bold;
       cursor: default;
     }
   }

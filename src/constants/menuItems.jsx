@@ -28,7 +28,7 @@ export const headerMenu = [
     path: blogPagePath,
   },
   {
-    text: "Contacts",
+    text: "Contact",
     path: contactsPagePath,
   },
 ];
@@ -69,7 +69,7 @@ export const footerMenu = [
         path: privacyPolicyPagePath,
       },
       {
-        text: "Terms &amp; Conditions",
+        text: "Terms & Conditions",
         path: termsPagePath,
       },
     ],

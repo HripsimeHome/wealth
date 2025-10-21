@@ -2,6 +2,7 @@
 @import "../../../styles/vars";
 
 .header {
+  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
@@ -9,7 +10,7 @@
   @include flexCol(space-between, center);
   transition: $transition;
   background-color: $color-lightGrey;
-  padding: 1.5rem 14rem;
+  padding: 2.5rem 14rem;
 
   @include mdScreenMedia {
     padding: 1rem;

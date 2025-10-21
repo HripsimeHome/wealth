@@ -16,32 +16,26 @@
     width: 100%;
     gap: 50px;
     border-bottom: 1px solid $color-primary;
-    padding-bottom: 10px;
     margin-bottom: 20px;
+    padding-bottom: 10px;
 
     @include mdScreenMedia {
       gap: 25px;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     @include smScreenMedia {
       flex-direction: column;
-      gap: 15px;
-      padding-bottom: 15px;
+      gap: 10px;
     }
   }
 
   &__label {
-    @include setFont(24px, 400, $color-lightGrey);
-
-    @include lgScreenMedia {
-      font-size: 18px;
-    }
+    @include setFont(xxl, 400, $color-lightGrey);
+    line-height: 20px;
 
     @include smScreenMedia {
-      font-size: 16px;
-      line-height: 20px;
+      line-height: 18px;
     }
 
     &_active {
@@ -50,6 +44,7 @@
       color: $color-primary;
       transition: color 0.9s ease, border-color 09.3s ease;
       padding-bottom: 6px;
+      cursor: default;
 
       // &::after {
       //   content: "";
@@ -99,17 +94,12 @@
 
   &__description {
     flex: 4;
-    @include setFont(18px, 300, $color-white);
+    @include setFont(md, 300, $color-white);
     text-align: justify;
     line-height: 30px;
 
     @include lgScreenMedia {
-      font-size: 16px;
       line-height: 20px;
-    }
-
-    @include mdScreenMedia {
-      font-size: 14px;
     }
   }
 }

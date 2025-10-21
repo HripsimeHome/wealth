@@ -3,7 +3,7 @@
 @import "../../../styles/mixins";
 
 .aboutContent {
-  margin: 10vw 0;
+  margin-block: 8vw;
   padding-inline: 10%;
 
   @include smScreenMedia {

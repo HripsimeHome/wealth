@@ -1,14 +1,10 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import styles from "./HeaderMenu.module.scss";
-
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import { headerMenu } from "../../../../constants/menuItems";
-import ImageWebp from "../../../layout/ImageWebp/ImageWebp";
 import Svg from "../../../layout/Svg/Svg";
 
-import { logoImage, logoWebpImage } from "../../../../assets/images";
 import { burgerIcon, crossIcon } from "../../../../assets/svg";
-import { homePagePath } from "../../../../router/path";
 
 const HeaderMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
