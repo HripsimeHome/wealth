@@ -5,9 +5,7 @@ import ContactsFAQ from "../ContactsFAQ/ContactsFAQ";
 const ContactsMain = () => {
   return (
     <section className={styles.contactsMain}>
-      <div className={styles.contactsMain__contactsFormContainer}>
-        <ContactsForm />
-      </div>
+      <ContactsForm />
       <ContactsFAQ />
     </section>
   );

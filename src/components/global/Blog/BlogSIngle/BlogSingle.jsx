@@ -21,7 +21,7 @@ const BlogSingle = ({ article }) => {
   } = article;
 
   return (
-    <section className={styles.blogSingle}>
+    <section className={`${styles.blogSingle} container`}>
       <button
         className={` ${styles.blogSingle__back} btnPrimary`}
         onClick={() => navigate(-1)}

@@ -1,94 +1,116 @@
 import styles from "./HomeCategories.module.scss";
 import clsx from "clsx";
 import Svg from "../../layout/Svg/Svg";
-
 import {
   investmentsIcon,
   arrowTopCircleIcon,
   timeWhiteIcon,
 } from "../../../assets/svg";
+import { forwardRef, useRef } from "react";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
 
-const HomeCategories = () => {
+const HomeCategories = forwardRef((props, ref) => {
+  // Внутренний ref только для анимации
+  const { ref: inViewRef, inView } = useAnimationInView({
+    threshold: 0.1,
+  });
+
+  const categories = [
+    {
+      id: "spy",
+      className: styles.homeCategories__categorySpy,
+      content: (
+        <>
+          <div className={styles.homeCategories__spyContainer}>
+            <Svg
+              id={investmentsIcon}
+              className={styles.homeCategories__investmentsIcon}
+            />
+            <div className={styles.homeCategories__sizeContainer}>
+              <span className={styles.homeCategories__size}>2X</span>
+              <span className={styles.homeCategories__title}>spy</span>
+            </div>
+          </div>
+          <div className={styles.homeCategories__text}>
+            Cumulative Returns of Double the S&P 500
+          </div>
+        </>
+      ),
+    },
+    {
+      id: "returns",
+      className: styles.homeCategories__categoryReturn,
+      content: (
+        <>
+          <span>RETURNS</span>
+          <span className={styles.homeCategories__number}>
+            114
+            <label className={styles.homeCategories__percent}>%</label>
+          </span>
+        </>
+      ),
+    },
+    {
+      id: "capture",
+      className: styles.homeCategories__categoryCapture,
+      content: (
+        <>
+          <span>
+            CAPTURE
+            <Svg
+              id={arrowTopCircleIcon}
+              className={styles.homeCategories__arrowTopCircleIcon}
+            />
+          </span>
+          <span className={styles.homeCategories__gains}>GAINS</span>
+        </>
+      ),
+    },
+    {
+      id: "realtime",
+      className: styles.homeCategories__categoryRealtime,
+      content: (
+        <>
+          <span className={styles.homeCategories__realimeTitle}>
+            REAL-TIME
+            <Svg
+              id={timeWhiteIcon}
+              className={styles.homeCategories__timeWhiteIcon}
+            />
+          </span>
+          <span className={styles.homeCategories__realimeText}>
+            alerts to safely participate in the market
+          </span>
+        </>
+      ),
+    },
+  ];
+
   return (
-    <section className={styles.homeCategories}>
-      <div className="container">
+    <section className={styles.homeCategories} ref={ref}>
+      <div className="container" ref={inViewRef}>
+        {" "}
+        {/* внутренний ref только для анимации */}
         <div className={styles.homeCategories__categoryContainer}>
-          <div
-            className={clsx(
-              styles.homeCategories__category,
-              styles.homeCategories__categorySpy
-            )}
-          >
-            {/* Category Spy */}
-            <div className={styles.homeCategories__spyContainer}>
-              <Svg
-                id={investmentsIcon}
-                className={styles.homeCategories__investmentsIcon}
-              />
-              <div className={styles.homeCategories__sizeContainer}>
-                <span className={styles.homeCategories__size}>2X</span>
-                <span className={styles.homeCategories__title}>spy</span>
-              </div>
-            </div>
-
-            <div className={styles.homeCategories__text}>
-              Cumulative Returns of Double the S&P 500
-            </div>
-          </div>
-
-          {/* Category Return */}
-          <div
-            className={clsx(
-              styles.homeCategories__category,
-              styles.homeCategories__categoryReturn
-            )}
-          >
-            <span>RETURNS</span>
-            <span className={styles.homeCategories__number}>
-              114
-              <label className={styles.homeCategories__percent}>%</label>
-            </span>
-          </div>
-
-          {/* Category Capture */}
-          <div
-            className={clsx(
-              styles.homeCategories__category,
-              styles.homeCategories__categoryCapture
-            )}
-          >
-            <span>
-              CAPTURE
-              <Svg
-                id={arrowTopCircleIcon}
-                className={styles.homeCategories__arrowTopCircleIcon}
-              />
-            </span>
-            <span className={styles.homeCategories__gains}>GAINS</span>
-          </div>
-
-          {/* Category Realtime */}
-          <div
-            className={clsx(
-              styles.homeCategories__category,
-              styles.homeCategories__categoryRealtime
-            )}
-          >
-            <span className={styles.homeCategories__realimeTitle}>
-              REAL-TIME
-              <Svg
-                id={timeWhiteIcon}
-                className={styles.homeCategories__timeWhiteIcon}
-              />
-            </span>
-            <span className={styles.homeCategories__realimeText}>
-              alerts to safely participate in the market
-            </span>
-          </div>
+          {categories.map((cat, index) => (
+            <TransitionProvider
+              key={cat.id}
+              inProp={inView}
+              style={TransitionStyleTypes.bottom}
+              duration={600}
+              delay={index * 200} // поочередная анимация
+              className={clsx(styles.homeCategories__category, cat.className)}
+            >
+              {cat.content}
+            </TransitionProvider>
+          ))}
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default HomeCategories;

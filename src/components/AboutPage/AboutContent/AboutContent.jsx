@@ -8,8 +8,10 @@ const AboutContent = () => {
     <section
       className={`${styles.aboutContent} containerBlackRounded paddingYLg`}
     >
-      <AboutStatistic />
-      <AboutStaff />
+      <div className="container">
+        <AboutStatistic />
+        <AboutStaff />
+      </div>
     </section>
   );
 };

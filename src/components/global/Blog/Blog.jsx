@@ -21,7 +21,7 @@ const Blog = ({ posts }) => {
   const loadMoreRef = useInfiniteScroll(handleLoadMore);
 
   return (
-    <section className={styles.blog}>
+    <section className={`${styles.blog} container`}>
       <BlogHeader />
 
       <div className={styles.blog__cardContainer}>

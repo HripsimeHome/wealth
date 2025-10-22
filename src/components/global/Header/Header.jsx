@@ -8,19 +8,21 @@ import { homePagePath } from "../../../router/path";
 
 const Header = () => {
   return (
-    <section className={styles.header}>
+    <div className={styles.header}>
       <div className="container">
-        <Link to={homePagePath} className={styles.header__logoContainer}>
-          <ImageWebp
-            src={logoImage}
-            srcSet={logoWebpImage}
-            alt="Wealth Bento"
-            className={styles.header__logo}
-          />
-        </Link>
-        <HeaderMenu />
+        <div className={styles.header__test}>
+          <Link to={homePagePath} className={styles.header__logoContainer}>
+            <ImageWebp
+              src={logoImage}
+              srcSet={logoWebpImage}
+              alt="Wealth Bento"
+              className={styles.header__logo}
+            />
+          </Link>
+          <HeaderMenu />
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

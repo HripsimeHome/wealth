@@ -2,18 +2,21 @@
 @import "../../../styles/vars";
 
 .header {
-  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 10;
-  @include flexCol(space-between, center);
+  // @include flexCol(space-between, center);
   transition: $transition;
   background-color: $color-lightGrey;
-  padding: 2.5rem 14rem;
+  padding: 1.5rem;
 
   @include mdScreenMedia {
     padding: 1rem;
+  }
+
+  &__test {
+    @include flexCol(space-between, center);
   }
 
   &__logo {

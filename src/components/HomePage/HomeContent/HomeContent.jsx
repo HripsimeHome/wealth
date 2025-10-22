@@ -54,36 +54,38 @@ const HomeContent = ({ posts = [] }) => {
       <div
         className={`${styles.homeContent__wrapper} containerBlackTopRounded`}
       >
-        <StatusCounter
-          isTextWhite
-          data={[
-            {
-              number: "638",
-              suffix: "K",
-              title: "Customers",
-            },
+        <div className="container">
+          <StatusCounter
+            isTextWhite
+            data={[
+              {
+                number: "638",
+                suffix: "K",
+                title: "Customers",
+              },
 
-            {
-              number: "18",
-              suffix: "M",
-              title: "Selections",
-            },
+              {
+                number: "18",
+                suffix: "M",
+                title: "Selections",
+              },
 
-            {
-              number: "340",
-              suffix: "",
-              title: "Analysts",
-            },
+              {
+                number: "340",
+                suffix: "",
+                title: "Analysts",
+              },
 
-            {
-              number: "15",
-              suffix: "",
-              title: "Global Assets",
-            },
-          ]}
-        />
-        {/*  <BlogCard limit={3} /> */}
-        <Blog posts={posts} />
+              {
+                number: "15",
+                suffix: "",
+                title: "Global Assets",
+              },
+            ]}
+          />
+          {/*  <BlogCard limit={3} /> */}
+          <Blog posts={posts} />
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import styles from "./HomeHeader.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import ArrowAnimation from "../../layout/ArrowAnimation/ArrowAnimation";
 import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
-import { aboutPagePath } from "../../../router/path";
+
 import Svg from "../../layout/Svg/Svg";
 
 import { stocksImage, stocksWebpImage } from "../../../assets/images";
@@ -14,7 +14,7 @@ import {
   spinnerIcon,
 } from "../../../assets/svg";
 
-const HomeHeader = () => {
+const HomeHeader = ({ scrollToCategories, scrollToContent }) => {
   return (
     <section className={`${styles.homeHeader}  container`}>
       {/* Left block */}
@@ -63,12 +63,15 @@ const HomeHeader = () => {
         </div>
 
         {/* className={styles.homeHeader__spinner} */}
+        <div onClick={scrollToCategories}>
+          <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
+        </div>
 
-        <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
-
-        <div className={styles.homeHeader__circleContainer}>
+        <div
+          className={styles.homeHeader__circleContainer}
+          onClick={scrollToContent}
+        >
           <ArrowAnimation
-            to={aboutPagePath}
             circleClass={styles.homeHeader__circle}
             arrowClass={styles.homeHeader__icon}
           />

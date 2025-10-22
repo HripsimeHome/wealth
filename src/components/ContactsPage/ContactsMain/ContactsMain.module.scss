@@ -4,9 +4,9 @@
 .contactsMain {
   max-width: 620px;
   width: 100%;
-  margin: 0 auto 8vw;
+  margin: 0 auto 50px;
 
-  &__contactsFormContainer {
-    min-height: 400px;
+  @include smScreenMedia {
+    margin-bottom: 25px;
   }
 }

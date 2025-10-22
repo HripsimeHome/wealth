@@ -38,7 +38,7 @@ const cardData = [
 
 const AboutStatistic = () => {
   return (
-    <section className={`${styles.aboutStatistic}`}>
+    <section className={styles.aboutStatistic}>
       <div className={styles.aboutStatistic__valueContainer}>
         <span className={styles.aboutStatistic__value}>114%</span>
         <span className={styles.aboutStatistic__description}>
