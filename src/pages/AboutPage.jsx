@@ -1,13 +1,20 @@
+import { useRef } from "react";
+import { useSmoothScroll } from "../hooks/useSmoothScroll.js";
 import AboutHeader from "../components/AboutPage/AboutHeader/AboutHeader";
 import AboutSlider from "../components/AboutPage/AboutSlider/AboutSlider";
 import AboutContent from "../components/AboutPage/AboutContent/AboutContent";
 
 const AboutPage = () => {
+  const statisticSectionRef = useRef(null);
+  const smoothScroll = useSmoothScroll();
+
   return (
     <>
-      <AboutHeader />
+      <AboutHeader
+        scrollToStatistic={() => smoothScroll(statisticSectionRef.current, 30)}
+      />
       <AboutSlider />
-      <AboutContent />
+      <AboutContent ref={statisticSectionRef} />
     </>
   );
 };

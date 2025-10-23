@@ -3,7 +3,7 @@ import PageHeadingBig from "../../global/PageHeadingWrapper/PageHeadingBig/PageH
 import MainBtn from "../../layout/MainBtn/MainBtn";
 import { companyIcon } from "../../../assets/svg";
 
-const AboutHeader = () => {
+const AboutHeader = ({ scrollToStatistic }) => {
   return (
     <section className={styles.aboutHeader}>
       <PageHeadingBig
@@ -12,7 +12,9 @@ const AboutHeader = () => {
         title="about us"
         subtitle="we are a research site that manages a portfolio in real-time."
       />
-      <MainBtn btnSecondaryBg>explore</MainBtn>
+      <MainBtn btnSecondaryBg onClick={scrollToStatistic}>
+        explore
+      </MainBtn>
     </section>
   );
 };

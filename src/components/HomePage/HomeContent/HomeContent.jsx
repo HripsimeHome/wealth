@@ -1,4 +1,5 @@
 import styles from "./HomeContent.module.scss";
+import { forwardRef } from "react";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import StatusCounter from "../../layout/StatusCounter/StatusCounter";
 import Blog from "../../global/Blog/Blog";
@@ -19,9 +20,9 @@ import {
   tradeLeftBottomIcon,
 } from "../../../assets/svg";
 
-const HomeContent = ({ posts = [] }) => {
+const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
   return (
-    <section className={styles.homeContent}>
+    <section className={styles.homeContent} ref={contentSectionRef}>
       <div className="container">
         <TwoColumnSection
           image={analystsImage}
@@ -89,6 +90,6 @@ const HomeContent = ({ posts = [] }) => {
       </div>
     </section>
   );
-};
+});
 
 export default HomeContent;

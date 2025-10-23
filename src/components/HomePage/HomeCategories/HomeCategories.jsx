@@ -6,17 +6,19 @@ import {
   arrowTopCircleIcon,
   timeWhiteIcon,
 } from "../../../assets/svg";
-import { forwardRef, useRef } from "react";
+import { forwardRef } from "react";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
 import { useAnimationInView } from "../../../hooks/useInViewAnimation";
 
-const HomeCategories = forwardRef((props, ref) => {
+const HomeCategories = forwardRef((_, categoriesSectionRef) => {
+  // здесь —, пишется вместо props, чтобы VS Code не выдавал ошибку
   // Внутренний ref только для анимации
-  const { ref: inViewRef, inView } = useAnimationInView({
-    threshold: 0.1,
-  });
+  const { ref: categoryCardRef, inView: isCategoryCardInview } =
+    useAnimationInView({
+      threshold: 0.1,
+    });
 
   const categories = [
     {
@@ -90,15 +92,15 @@ const HomeCategories = forwardRef((props, ref) => {
   ];
 
   return (
-    <section className={styles.homeCategories} ref={ref}>
-      <div className="container" ref={inViewRef}>
+    <section className={styles.homeCategories} ref={categoriesSectionRef}>
+      <div className="container" ref={categoryCardRef}>
         {" "}
         {/* внутренний ref только для анимации */}
         <div className={styles.homeCategories__categoryContainer}>
           {categories.map((cat, index) => (
             <TransitionProvider
               key={cat.id}
-              inProp={inView}
+              inProp={isCategoryCardInview}
               style={TransitionStyleTypes.bottom}
               duration={600}
               delay={index * 200} // поочередная анимация

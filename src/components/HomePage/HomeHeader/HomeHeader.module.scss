@@ -141,6 +141,7 @@
     border: 10px solid $color-lightGrey;
     border-radius: 100%;
     animation: spinnerRotation 18s linear infinite;
+    cursor: pointer;
   }
 
   @keyframes spinnerRotation {
