@@ -11,7 +11,7 @@ const AboutPage = () => {
   return (
     <>
       <AboutHeader
-        scrollToStatistic={() => smoothScroll(statisticSectionRef.current, 30)}
+        scrollToStatistic={() => smoothScroll(statisticSectionRef.current, 50)}
       />
       <AboutSlider />
       <AboutContent ref={statisticSectionRef} />

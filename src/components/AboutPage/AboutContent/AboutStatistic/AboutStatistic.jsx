@@ -82,7 +82,7 @@ const AboutStatistic = forwardRef((_, statisticSectionRef) => {
               inProp={isStatisticCardInview}
               style={TransitionStyleTypes.bottom}
               duration={600}
-              delay={index * 200} // поочередная анимация
+              delay={index * 200}
             >
               <div
                 className={`

@@ -2,7 +2,6 @@ import styles from "./HomeHeader.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import ArrowAnimation from "../../layout/ArrowAnimation/ArrowAnimation";
 import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
-
 import Svg from "../../layout/Svg/Svg";
 
 import { stocksImage, stocksWebpImage } from "../../../assets/images";
@@ -16,7 +15,7 @@ import {
 
 const HomeHeader = ({ scrollToCategories, scrollToContent }) => {
   return (
-    <section className={`${styles.homeHeader}  container`}>
+    <section className={`${styles.homeHeader} container`}>
       {/* Left block */}
       <div className={styles.homeHeader__leftBlock}>
         <SectionTitle icon={investmentsIcon} text="investments" />
@@ -63,7 +62,10 @@ const HomeHeader = ({ scrollToCategories, scrollToContent }) => {
         </div>
 
         {/* className={styles.homeHeader__spinner} */}
-        <div onClick={scrollToCategories}>
+        <div
+          className={styles.homeHeader__spinnerCotainer}
+          onClick={scrollToCategories}
+        >
           <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
         </div>
 

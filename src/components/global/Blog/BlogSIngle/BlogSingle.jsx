@@ -44,12 +44,14 @@ const BlogSingle = ({ article }) => {
           {formatDate(date, true)}
         </span>
 
-        <ImageWebp
-          src={image}
-          srcSet={webpImage}
-          alt={title}
-          className={styles.blogSingle__img}
-        />
+        <div className={styles.blogSingle__imgContainer}>
+          <ImageWebp
+            src={image}
+            srcSet={webpImage}
+            alt={title}
+            className={styles.blogSingle__img}
+          />
+        </div>
       </div>
 
       <div className={`${styles.blogSingle__contentContainer} paddingYLg`}>

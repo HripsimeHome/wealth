@@ -14,8 +14,16 @@
   }
 
   &__title {
-    @include setFont(46px, 500, $color-white);
+    @include setFont(3.5rem, 500, $color-white);
     flex: 2;
+
+    @include mdScreenMedia {
+      font-size: 3rem;
+    }
+
+    @include mdScreenMedia {
+      font-size: 2rem;
+    }
   }
 
   &__descriptionContainer {
@@ -25,5 +33,9 @@
     flex: 1.5;
     @include setFont(sm, 300, $color-white);
     letter-spacing: 1px;
+
+    @include mdScreenMedia {
+      gap: 10px;
+    }
   }
 }

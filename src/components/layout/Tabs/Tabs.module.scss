@@ -5,12 +5,6 @@
   min-height: 200px;
   color: $color-darkGrey;
 
-  &:hover {
-    // color: $color-white;
-    cursor: pointer;
-    transition: $transitionEaseOut;
-  }
-
   &__labelsContainer {
     display: flex;
     width: 100%;
@@ -25,39 +19,28 @@
     }
 
     @include smScreenMedia {
-      flex-direction: column;
+      // flex-direction: column;
+      flex-wrap: wrap;
       gap: 10px;
     }
   }
 
   &__label {
     @include setFont(xxl, 400, $color-lightGrey);
-    line-height: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @include smScreenMedia {
       line-height: 18px;
     }
 
     &_active {
-      width: fit-content;
-      position: relative;
       color: $color-primary;
       transition: color 0.9s ease, border-color 09.3s ease;
       padding-bottom: 6px;
       cursor: default;
-
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   bottom: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   width: 100%;
-      //   height: 2px;
-      //   background-color: $color-primary;
-      //   border-radius: 2px;
-      //   transition: background-color 0.3s ease;
-      // }
     }
   }
 
@@ -66,40 +49,25 @@
     flex-direction: column;
     width: 100%;
     gap: 20px;
+    line-height: 30px;
 
     @include mdScreenMedia {
-      flex-direction: column;
       gap: 10px;
     }
 
     @include smScreenMedia {
-      gap: 5px;
+      line-height: 20px;
       padding: 10px 0;
     }
   }
 
   &__title {
-    @include setFont(24px, 400, $color-white);
-    line-height: 30px;
-
-    @include lgScreenMedia {
-      font-size: 20px;
-    }
-
-    @include smScreenMedia {
-      font-size: 16px;
-      line-height: 20px;
-    }
+    @include setFont(xxl, 400, $color-white);
   }
 
   &__description {
     flex: 4;
     @include setFont(md, 300, $color-white);
     text-align: justify;
-    line-height: 30px;
-
-    @include lgScreenMedia {
-      line-height: 20px;
-    }
   }
 }

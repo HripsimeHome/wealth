@@ -3,99 +3,64 @@ const TermsPage = () => {
     <section className="container document">
       <h1>Terms &amp; Conditions</h1>
       <p>
-        Kindly review these Terms and Conditions thoroughly prior to utilizing
-        our template.
+        These Terms and Conditions outline the rules and regulations for using
+        our website and services. By accessing or using our platform, you agree
+        to comply with these terms.
       </p>
+      <p>If you do not agree, please do not continue to use our website.</p>
+
+      <h2>1. Use of Our Services</h2>
       <p>
-        Your access or utilization of the template implies your acceptance of
-        these Terms and Conditions.
-      </p>
-      <p>
-        If you disagree with any aspect of these Terms and Conditions, please
-        abstain from using the template.
+        You agree to use our website and services only for lawful purposes and
+        in a manner that does not infringe the rights of others or restrict
+        their use. Misuse, including unauthorized access, modification, or
+        distribution of content, is strictly prohibited.
       </p>
 
-      <h2>1. Intellectual Property</h2>
+      <h2>2. Limitation of Liability</h2>
       <p>
-        You must obtain our prior written consent to modify, reproduce,
-        distribute, or exhibit any portion of the template.
+        We strive to keep all information accurate, but we do not guarantee that
+        the website will always be error-free or uninterrupted.
       </p>
 
-      <h2>2. Use of the Template‍</h2>
+      <h2>3. Payments and Refunds</h2>
       <p>
-        You are granted a non-exclusive, non-transferable license to employ the
-        website template for your personal or business purposes.
+        All payments are processed securely through authorized providers.
+        Refunds and cancellations are handled in accordance with our Refund
+        Policy. Please review it carefully before making a purchase.
       </p>
 
-      <h2>3. User Content</h2>
+      <h2>4. Account Responsibility</h2>
       <p>
-        You are accountable for any content you post or upload to the website
-        template. By submitting content, you provide us with a non-exclusive,
-        global, royalty-free license to utilize, reproduce, adjust, adapt,
-        publish, and exhibit the content for the purpose of operating and
-        enhancing the template.
+        If you create an account with us, you are responsible for maintaining
+        the confidentiality of your login information and for all activities
+        under your account. Please notify us immediately if you suspect
+        unauthorized use.
       </p>
 
-      <h2>4. Prohibited Activities</h2>
+      <h2>5. Privacy and Data Protection</h2>
       <p>
-        While utilizing the website template, you commit to refraining from:any
-        other harmful code. Attempt to gain unauthorized access to the template
-        or its related systems. ‍
+        We respect your privacy. Any personal information you share with us is
+        handled according to our Privacy Policy. Please review it to understand
+        how we collect, store, and use your data.
       </p>
-
       <ul>
         <li>
-          Violating applicable laws, regulations, or the rights of third
-          parties.
+          We are committed to protecting your personal data in accordance with
+          our Privacy Policy.
         </li>
-        <li>Engaging in fraudulent, deceptive, or unlawful conduct.</li>
-
         <li>
-          Disrupting or interfering with the functionality of the template or
-          its related servers.
+          Your information will never be sold or shared without your consent.
         </li>
-
-        <li>
-          Uploading or transmitting viruses, malware, or any other harmful code.
-        </li>
-
-        <li>
-          Attempting unauthorized access to the template or its associated
-          systems.
-        </li>
+        <li>Please review our privacy practices for full details.</li>
       </ul>
 
-      <h2>5. Limitation of Liability</h2>
+      <h2>6. Changes to These Terms</h2>
       <p>
-        We make every effort to provide precise and current information within
-        the website template. Nevertheless, we do not assure the accuracy,
-        completeness, or reliability of any content. You acknowledge and agree
-        to use the template at your own risk, and we disclaim any liability for
-        damages arising from your template usage.
-      </p>
-
-      <h2>6. Third-Party Links</h2>
-      <p>
-        The website template may include links to third-party websites or
-        services. We neither control nor endorse the content or practices of
-        these third-party sites. Accessing such sites is your responsibility,
-        and we recommend reviewing their respective terms and privacy policies.
-      </p>
-
-      <h2>7. Termination</h2>
-      <p>
-        We retain the authority to terminate or suspend your access to the
-        website template at any time, with or without cause. Upon termination,
-        you must cease all utilization of the template and delete any copies in
-        your possession. ‍
-      </p>
-
-      <h2>8. Modifications</h2>
-      <p>
-        We reserve the right to amend these Terms and Conditions at any time
-        without prior notice. By continuing to use the website template
-        following any modifications, you affirm your agreement to be bound by
-        the revised Terms and Conditions.
+        We reserve the right to update or modify these Terms and Conditions at
+        any time without prior notice. Any changes will be effective immediately
+        upon posting. Continued use of the website means you accept the updated
+        terms.
       </p>
     </section>
   );
