@@ -52,10 +52,8 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
         />
       </div>
 
-      <div
-        className={`${styles.homeContent__wrapper} containerBlackTopRounded`}
-      >
-        <div className="container">
+      <div className="container containerBlackTopRounded">
+        <div className={styles.homeContent__wrapper}>
           <StatusCounter
             isTextWhite
             data={[
@@ -85,8 +83,8 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
             ]}
           />
           {/*  <BlogCard limit={3} /> */}
-          <Blog posts={posts} />
         </div>
+        <Blog posts={posts} />
       </div>
     </section>
   );

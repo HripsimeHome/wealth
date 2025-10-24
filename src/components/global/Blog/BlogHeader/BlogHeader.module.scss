@@ -5,12 +5,19 @@
   @include flexCol(space-between);
   color: $color-white;
   border-bottom: 1px solid $color-white;
-  padding-bottom: 13px;
+  margin-inline: 5%;
+  padding-top: 8%;
+  padding-bottom: 20px;
 
   @include mdScreenMedia {
     flex-direction: column;
     text-align: center;
     gap: 20px;
+    padding-top: 12%;
+  }
+
+  @include xsmScreenMedia {
+    border: none;
   }
 
   &__title {
@@ -21,7 +28,7 @@
       font-size: 3rem;
     }
 
-    @include mdScreenMedia {
+    @include smScreenMedia {
       font-size: 2rem;
     }
   }

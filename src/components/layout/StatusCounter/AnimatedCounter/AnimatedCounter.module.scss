@@ -4,13 +4,21 @@
 .animatedCounter {
   @include flexCol();
   gap: 5px;
+  font-size: 65px;
+
+  @include smScreenMedia {
+    font-size: 35px;
+  }
+
+  @include xsmScreenMedia {
+    font-size: 30px;
+  }
 
   &__number {
     min-width: 50px;
-    font-size: 65px;
-  }
 
-  &__plus {
-    font-size: 50px;
+    @include smScreenMedia {
+      min-width: 40px;
+    }
   }
 }

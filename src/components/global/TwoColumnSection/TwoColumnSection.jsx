@@ -32,7 +32,7 @@ const TwoColumnSection = ({
         ${styles.twoColumnSection} 
         ${reverse ? styles.twoColumnSection_reverse : ""}  
         ${textWhite ? styles.twoColumnSection_textWhite : ""}
-
+paddingB
       `}
     >
       <div className={styles.twoColumnSection__imgWrapper}>

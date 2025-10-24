@@ -2,8 +2,6 @@
 @import "../../../styles/vars";
 
 .blog {
-  padding: 8% 6%;
-
   &__cardContainer {
     max-width: 670px;
     display: grid;
@@ -11,7 +9,7 @@
     justify-content: center;
     align-items: center;
     gap: 2.6vw;
-    margin: 50px auto;
+    margin: 5% auto;
 
     @include mdScreenMedia {
       max-width: 360px;

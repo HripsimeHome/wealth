@@ -29,7 +29,7 @@ const tabContent = [
 
 const AboutStatisticTabs = () => {
   return (
-    <div>
+    <div className="paddingB">
       <Tabs tabLabels={tabLabels} tabContent={tabContent} />
     </div>
   );

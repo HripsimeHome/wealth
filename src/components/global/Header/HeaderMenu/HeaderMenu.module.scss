@@ -89,6 +89,10 @@
     &_active {
       font-weight: bold;
       cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 

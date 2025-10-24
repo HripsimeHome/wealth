@@ -23,13 +23,14 @@
   &__title {
     @include setFont(6rem, 600, $color-secondary);
     text-transform: uppercase;
-    line-height: 10vw;
+    line-height: 6rem;
 
     @include lgScreenMedia {
       font-size: 4rem;
     }
     @include smScreenMedia {
       font-size: 2.5rem;
+      line-height: 4rem;
     }
   }
 

@@ -35,7 +35,7 @@ const AnimatedCounter = ({ number, suffix }) => {
         {value}
         {suffix}
       </span>
-      <span className={styles.animatedCounter__plus}>+</span>
+      <span>+</span>
     </div>
   );
 };

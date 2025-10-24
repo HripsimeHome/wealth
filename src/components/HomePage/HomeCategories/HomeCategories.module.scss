@@ -2,10 +2,10 @@
 @import "../../../styles/vars";
 
 .homeCategories {
-  padding: 0 12%;
+  padding-inline: 12%;
 
   @include lgScreenMedia {
-    padding: 0 5%;
+    padding-inline: 5%;
   }
 
   @include smScreenMedia {

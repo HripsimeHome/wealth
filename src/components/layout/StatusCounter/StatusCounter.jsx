@@ -8,10 +8,10 @@ const StatusCounter = ({ data, isTextWhite }) => {
         <div
           key={index}
           className={`
-            ${styles.statusCounter__column}
+            ${styles.statusCounter__digitColumn}
             ${
               styles[
-                `statusCounter__column_${
+                `statusCounter__digitColumn_${
                   isTextWhite ? "textWhite" : "textSecondary"
                 }`
               ]

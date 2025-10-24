@@ -20,7 +20,7 @@ const ContactsForm = () => {
         style={TransitionStyleTypes.bottom}
       > */}
       <form className={styles.contactsForm__form}>
-        <div className="gridSpan3">
+        <div className={styles.contactsForm__gridSpan3}>
           <label htmlFor="name">Name</label>
           <MainInput
             name="name"
@@ -29,7 +29,7 @@ const ContactsForm = () => {
             placeholder="e.g. John Doe"
           />
         </div>
-        <div className="gridSpan3">
+        <div className={styles.contactsForm__gridSpan3}>
           <label htmlFor="surname">Surname</label>
           <MainInput
             name="surname"
@@ -38,7 +38,7 @@ const ContactsForm = () => {
             placeholder="e.g. John Doe"
           />
         </div>
-        <div className="gridSpan3">
+        <div className={styles.contactsForm__gridSpan3}>
           <label htmlFor="email">Email Address</label>
           <MainInput
             type="email"
@@ -48,7 +48,7 @@ const ContactsForm = () => {
             placeholder="e.g. johndoe@email.com"
           />
         </div>
-        <div className="gridSpan3">
+        <div className={styles.contactsForm__gridSpan3}>
           <label htmlFor="phone">Phone Number</label>
           <MainInput
             name="phone"
@@ -57,14 +57,14 @@ const ContactsForm = () => {
             placeholder="(123) - 456 - 789"
           />
         </div>
-        <div className="gridSpan2">
+        <div className={styles.contactsForm__gridSpan2}>
           Country <Select />
         </div>
-        <div className="gridSpan2">
+        <div className={styles.contactsForm__gridSpan2}>
           Services
           <Select />
         </div>
-        <div className="gridSpan2">
+        <div className={styles.contactsForm__gridSpan2}>
           Department
           <Select />
         </div>

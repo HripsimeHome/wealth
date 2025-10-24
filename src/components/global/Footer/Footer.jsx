@@ -15,13 +15,13 @@ import { logoImage, logoWebpImage } from "../../../assets/images";
 const Footer = () => {
   const { ref: topContainerRef, inView: isTopContainerInView } =
     useAnimationInView({
-      threshold: 0.5,
+      threshold: 0.4,
       triggerOnce: false,
     });
 
   const { ref: bottomContainerRef, inView: isBottomContainerInView } =
     useAnimationInView({
-      threshold: 0.5,
+      threshold: 0.2,
       // triggerOnce: false,
     });
   return (
@@ -58,7 +58,7 @@ const Footer = () => {
         <div ref={bottomContainerRef}>
           <TransitionProvider
             inProp={isBottomContainerInView}
-            delay={500}
+            delay={600}
             style={TransitionStyleTypes.bottom}
             className={styles.footer__bottomContainer}
           >

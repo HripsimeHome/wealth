@@ -92,7 +92,10 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
   ];
 
   return (
-    <section className={styles.homeCategories} ref={categoriesSectionRef}>
+    <section
+      className={clsx(styles.homeCategories, "paddingB")}
+      ref={categoriesSectionRef}
+    >
       <div className="container" ref={categoryCardRef}>
         {" "}
         {/* внутренний ref только для анимации */}

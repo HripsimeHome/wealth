@@ -65,7 +65,7 @@ button {
   color: $color-red;
 }
 
-.pB {
+.paddingB {
   padding-bottom: 100px;
 
   @include lgScreenMedia {
@@ -73,7 +73,7 @@ button {
   }
 
   @include smScreenMedia {
-    padding-bottom: 25px;
+    padding-bottom: 30px;
   }
 }
 
@@ -108,16 +108,18 @@ h1 {
   }
 
   @include smScreenMedia {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 .btnPrimary {
+  min-width: 100px;
   background-color: $color-primary;
   border-radius: 10px;
   border: none;
-  padding: 9px 15px;
+  padding-block: 10px;
+
   &:hover {
     color: $color-white;
     background-color: $color-secondary;
@@ -129,11 +131,6 @@ h1 {
 .container {
   // max-width: 1100px;
 
-  // width: 100%;
-  // margin: 0 auto;
-
-  // padding-left: 50px;
-  // padding-right: 50px;
   // padding-left: 10%;
   //padding-right: 10%;
   max-width: 1280px;

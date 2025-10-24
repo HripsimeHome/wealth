@@ -2,8 +2,8 @@
 @import "../../../../styles/vars";
 
 .blogSingle {
-  padding-inline: 10%;
   position: relative;
+  padding-inline: 10%;
 
   &__back {
     position: absolute;
@@ -68,6 +68,7 @@
 
   &__imgContainer {
     max-width: 800px;
+    margin: 0 auto;
 
     @include lgScreenMedia {
       max-width: 600px;

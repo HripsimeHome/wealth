@@ -10,9 +10,14 @@
 
   @include lgScreenMedia {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
-  &__column {
+  @include xsmScreenMedia {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__digitColumn {
     @include flexCol();
     flex-direction: column;
     gap: 5px;
