@@ -1,9 +1,9 @@
-import TestState from "../components/TestPages/TestState/TestState";
+import TestRedux from "../components/TestPages/TestRedux/TestRedux";
 
 const TestStatePage = () => {
   return (
     <>
-      <TestState />
+      <TestRedux />
     </>
   );
 };

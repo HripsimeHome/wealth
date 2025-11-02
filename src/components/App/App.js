@@ -11,6 +11,7 @@ import { scrollTop } from "../../utils/scrollTop";
 import {
   testStatePagePath,
   testRefPagePath,
+  testReduxPagePath,
   homePagePath,
   aboutPagePath,
   servicesPagePath,
@@ -20,6 +21,7 @@ function App() {
   const location = useLocation();
   const isTestStatePage = location.pathname === testStatePagePath;
   const isTestRefPage = location.pathname === testRefPagePath;
+  const isTestReduxPage = location.pathname === testReduxPagePath;
 
   const showSubscription = [
     homePagePath,
@@ -49,7 +51,7 @@ function App() {
       <PageHeadingWrapper />
       <AppRouter />
       {/* {showSubscription && <Subscription />} */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

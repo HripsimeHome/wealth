@@ -8,6 +8,7 @@ import PrivacyPolicyPage from "../pages/PrivacyPolicyPage";
 import TermsPage from "../pages/TermsPage";
 import TestStatePage from "../pages/TestStatePage";
 import TestRefPage from "../pages/TestRefPage";
+import TestReduxPage from "../pages/TestReduxPage";
 
 //import { Navigate } from "TestPage-router-dom";
 
@@ -22,6 +23,7 @@ export const termsPagePath = "/terms";
 
 export const testStatePagePath = "/test-state";
 export const testRefPagePath = "/test-ref";
+export const testReduxPagePath = "/test-redux";
 
 // Routes
 export const routes = [
@@ -68,5 +70,9 @@ export const routes = [
   {
     path: testRefPagePath,
     component: <TestRefPage />,
+  },
+  {
+    path: testReduxPagePath,
+    component: <TestReduxPage />,
   },
 ];

@@ -1,4 +1,4 @@
-import TestRef from "../components/TestPage/TestRef/TestRef";
+import TestRef from "../components/TestPages/TestRef/TestRef";
 
 const TestRefPage = () => {
   return (
