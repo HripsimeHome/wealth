@@ -1,10 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "../../../redux/actions/userActions";
-import { increment, decrement } from "../../../redux/actions/counterActions";
+import { setUser } from "../../../redux/actions/userProfileActions";
+import {
+  setIncrement,
+  setDecrement,
+} from "../../../redux/actions/counterActions";
 
 const TestRedux = () => {
   const dispatch = useDispatch();
-  const userInfo = useSelector((state) => state.user);
+  const userInfo = useSelector((state) => state.userProfile);
+
+  const counter = useSelector((state) => state.counter.count);
 
   //const count = useSelector((state) => state.counter)
 
@@ -13,7 +18,6 @@ const TestRedux = () => {
       {/* <p>
         User name and Email: {userInfo.name}, {userInfo.email}
       </p> */}
-
       {/* Вариант 1: */}
       {/* <p>
         User name and Email:{" "}
@@ -21,7 +25,6 @@ const TestRedux = () => {
           ? `${userInfo.name}, ${userInfo.email}`
           : null}
       </p> */}
-
       {/* Вариант 2: */}
       <p>
         User name and Email:{" "}
@@ -29,14 +32,12 @@ const TestRedux = () => {
           userInfo.email &&
           `${userInfo.name}; ${userInfo.email}`}
       </p>
-
       {/* Вариант 3: */}
       {/* {userInfo.name && userInfo.email && (
         <p>
           User name and Email: {userInfo.name}; {userInfo.email}
         </p>
       )} */}
-
       <button
         className="btnPrimary"
         onClick={() =>
@@ -45,6 +46,19 @@ const TestRedux = () => {
       >
         Set user
       </button>
+      <br />
+      <br />
+      <p> {counter}</p>
+      <button className="btnPrimary" onClick={() => dispatch(setIncrement())}>
+        +1
+      </button>{" "}
+      Increment
+      <br /> <br />
+      <button className="btnPrimary" onClick={() => dispatch(setDecrement())}>
+        -1
+      </button>{" "}
+      Decrement
+      <br />
     </div>
   );
 };

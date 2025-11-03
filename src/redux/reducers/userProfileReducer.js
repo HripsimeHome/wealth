@@ -1,11 +1,11 @@
 import { SET_USER } from "../types";
 
 const initialState = {
-  name: "",
+  name: "Janna",
   email: "",
 };
 
-export const userReducer = (state = initialState, action) => {
+export const userProfileReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
       return { ...state, ...action.payload };
