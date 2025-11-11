@@ -25,6 +25,7 @@
     //letter-spacing: 1px;
     color: $color-secondary;
     @include setFont(38px, 500);
+    text-transform: uppercase;
   }
 
   &__icon {
@@ -68,5 +69,9 @@
   &--lightGrey {
     background-color: $color-lightGrey;
     // color: $color-secondary;
+  }
+
+  &--darkGrey {
+    background-color: $color-darkGrey;
   }
 }

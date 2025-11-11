@@ -73,6 +73,11 @@
       0 1px $color-secondary, 0 -1px $color-secondary;
   }
 
+  &__spyDescription {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
   // Category Return
 
   &__categoryReturn {

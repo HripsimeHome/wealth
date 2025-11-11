@@ -42,25 +42,16 @@
     }
   }
 
-  &__category {
-    border-radius: 24px;
-    //padding: 20px;
-    //padding: 3.3vw;
-  }
-
   &__categorySpy {
     grid-area: spy;
-    background-color: $color-white;
   }
 
   &__categoryTrade {
     grid-area: trade;
-    background-color: $color-lightGrey;
   }
 
   &__categoryEntry {
     grid-area: entry;
-    background-color: $color-darkGrey;
   }
 
   &__categoryInsights {

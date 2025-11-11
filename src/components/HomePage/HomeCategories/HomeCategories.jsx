@@ -41,8 +41,8 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
               <span className={styles.homeCategories__spyTitle}>spy</span>
             </div>
           </div>
-          <div className={styles.homeCategories__text}>
-            Cumulative Returns of Double the S&P 500
+          <div className={styles.homeCategories__spyDescription}>
+            cumulative Returns of Double the S&P 500
           </div>
         </>
       ),
@@ -64,6 +64,7 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
     },
 
     {
+      id: "capture",
       title: "capture",
       description: "GAINS",
       icon: arrowTopCircleIcon,

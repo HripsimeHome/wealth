@@ -36,21 +36,7 @@ const CategoryCard = ({
         </>
       )}
     </div>
-
-    // <div className={clsx(styles.categoryCard, className)}>
-    //   <span className={styles.categoryCard__title}>
-    //     {title}
-    //     <Svg id={icon} className={styles.categoryCard__icon} />
-    //   </span>
-    //   <span className={styles.categoryCard__description}>{description}</span>
-    // </div>
   );
 };
-
-//  <div className={clsx(styles.card, className)}>
-//       {icon && <div className={styles.card__icon}>{icon}</div>}
-//       {title && <h3 className={styles.card__title}>{title}</h3>}
-//       {text && <p className={styles.card__text}>{text}</p>}
-//     </div>
 
 export default CategoryCard;

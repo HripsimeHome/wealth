@@ -1,5 +1,7 @@
 import styles from "./ServicesCategories.module.scss";
 import clsx from "clsx";
+
+import CategoryCard from "../../../layout/CategoryCard/CategoryCard";
 import ServicesCategoriesTabs from "./ServicesCategoriesTabs/ServicesCategoriesTabs";
 
 // import TransitionProvider, {
@@ -19,68 +21,73 @@ import {
 //             <Svg id={arrowTopCircleIcon} />
 //             <Svg id={plusCircleIcon} />
 
+const categories = [
+  {
+    id: "spy",
+    title: "double tHe",
+    description: "spy",
+    backgroundColor: "white",
+    className: styles.servicesCategories__categorySpy,
+  },
+
+  {
+    id: "trade",
+    title: "real-time",
+    description: "trade alerts",
+    icon: timeBlackIcon,
+    backgroundColor: "lightGrey",
+    className: styles.servicesCategories__categoryTrade,
+  },
+  {
+    id: "entry",
+    title: "entry & exit",
+    description: "trade alerts",
+    icon: exitIcon,
+    backgroundColor: "darkGrey",
+    className: styles.servicesCategories__categoryEntry,
+  },
+
+  {
+    id: "insights",
+    title: "quality insights",
+    description: "In-depth market knowledge to identify trading opportunities.",
+    icon: plusCircleIcon,
+    backgroundColor: "primary",
+    className: styles.servicesCategories__categoryInsights,
+  },
+
+  {
+    id: "qualityInsights",
+    title: "quality insights",
+    description: "X2",
+    backgroundColor: "lightGrey",
+    className: styles.servicesCategories__categoryQualityX2,
+  },
+
+  {
+    id: "stocks",
+    title: "stocks",
+    description: "stocks",
+    icon: arrowTopCircleIcon,
+    backgroundColor: "lightGrey",
+    className: styles.servicesCategories__categoryStocks,
+  },
+];
+
 const ServicesCategories = () => {
   return (
-    <section className={styles.servicesCategories}>
+    <section className={clsx(styles.servicesCategories)}>
       <div
         className={clsx(
           styles.servicesCategories__categoryContainer,
           "paddingYLg"
         )}
       >
-        <div
-          className={clsx(
-            styles.servicesCategories__category,
-            styles.servicesCategories__categorySpy
-          )}
-        >
-          Spy
-        </div>
-
-        <div
-          className={clsx(
-            styles.servicesCategories__category,
-            styles.servicesCategories__categoryTrade
-          )}
-        >
-          trade
-        </div>
-
-        <div
-          className={clsx(
-            styles.servicesCategories__category,
-            styles.servicesCategories__categoryEntry
-          )}
-        >
-          entry
-        </div>
-
-        <div
-          className={clsx(
-            styles.servicesCategories__category,
-            styles.servicesCategories__categoryInsights
-          )}
-        >
-          Insights
-        </div>
-
-        <div
-          className={clsx(
-            styles.servicesCategories__category,
-            styles.servicesCategories__categoryQualityX2
-          )}
-        >
-          qualityX2
-        </div>
-
-        <div
-          className={clsx(
-            styles.servicesCategories__category,
-            styles.servicesCategories__categoryStocks
-          )}
-        >
-          stocks
-        </div>
+        {categories.map(({ id, children, ...rest }) => (
+          <CategoryCard key={id} {...rest}>
+            {children}
+          </CategoryCard>
+        ))}
       </div>
       <ServicesCategoriesTabs />
     </section>
