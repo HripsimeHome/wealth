@@ -1,0 +1,72 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.categoryCard {
+  position: relative;
+  @include flexCol(space-between, start);
+  flex-direction: column;
+  border-radius: 24px;
+  //padding: 20px;
+  padding: 3.3vw 2.2vw;
+
+  //   @include setFont(xsm, 300);
+  //   letter-spacing: 1px;
+
+  &__title {
+    @include setFont(xsm, 400);
+    text-transform: uppercase;
+    color: $color-secondary;
+    letter-spacing: 1px;
+  }
+
+  &__description {
+    // @include setFont(xsm, 300);
+    // text-transform: uppercase;
+    //letter-spacing: 1px;
+    color: $color-secondary;
+    @include setFont(38px, 500);
+  }
+
+  &__icon {
+    @include svg(30px, $color-secondary);
+    position: absolute;
+    top: 2vw;
+    right: 2.3vw;
+  }
+
+  // &__title {
+  //   @include setFont(70px, 500);
+  //   text-transform: uppercase;
+  //   color: $color-primary; /* fill color */
+  //   text-shadow: 1px 0 $color-secondary, -1px 0 $color-secondary,
+  //     0 1px $color-secondary, 0 -1px $color-secondary;
+  // }
+
+  &__shadowTitle {
+    @include setFont(35px, 300);
+    text-transform: uppercase;
+    color: $color-secondary;
+    text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
+      0 -1px $color-white;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    // color: $color-secondary;
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+  }
+
+  &--white {
+    background-color: $color-white;
+    // color: $color-white;
+  }
+
+  &--lightGrey {
+    background-color: $color-lightGrey;
+    // color: $color-secondary;
+  }
+}

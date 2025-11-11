@@ -18,7 +18,7 @@
     grid-template-columns: repeat(4, 1fr);
 
     // @include grid(4,2, 15px);
-    grid-auto-rows: 200px 200px;
+    grid-auto-rows: 210px 210px;
 
     grid-template-areas:
       "spy spy return capture"
@@ -43,18 +43,10 @@
     }
   }
 
-  &__category {
-    border-radius: 24px;
-    //padding: 20px;
-    padding: 2vw;
-  }
-
   // Category Spy
 
   &__categorySpy {
     grid-area: spy;
-    @include flexCol(space-between, start);
-    flex-direction: column;
     color: $color-secondary;
     background-color: $color-primary;
   }
@@ -73,7 +65,7 @@
     color: $color-secondary;
   }
 
-  &__title {
+  &__spyTitle {
     @include setFont(70px, 500);
     text-transform: uppercase;
     color: $color-primary; /* fill color */
@@ -81,20 +73,12 @@
       0 1px $color-secondary, 0 -1px $color-secondary;
   }
 
-  &__text {
-    @include setFont(xsm, 300);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
   // Category Return
 
   &__categoryReturn {
     grid-area: return;
-    @include flexCol(space-between, start);
-    flex-direction: column;
     color: $color-secondary;
-    background-color: $color-white;
+    background-color: $color-primary;
   }
 
   &__number {
@@ -108,27 +92,17 @@
 
   &__categoryCapture {
     grid-area: capture;
-    @include flexCol(space-between, start);
-    flex-direction: column;
-    position: relative;
     color: $color-secondary;
-    background-color: $color-white;
-  }
-
-  &__gains {
-    @include setFont(38px, 500);
+    background-color: $color-primary;
   }
 
   &__categoryRealtime {
     grid-area: realtime;
-    @include flexCol(space-between, start);
-    flex-direction: column;
-    position: relative;
     color: $color-white;
     background-color: $color-secondary;
   }
 
-  &__realimeTitle {
+  &__shadowTitle {
     @include setFont(35px, 300);
     text-transform: uppercase;
     color: $color-secondary;

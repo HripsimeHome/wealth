@@ -1,6 +1,11 @@
 import styles from "./ServicesCategories.module.scss";
 import clsx from "clsx";
 import ServicesCategoriesTabs from "./ServicesCategoriesTabs/ServicesCategoriesTabs";
+
+// import TransitionProvider, {
+//   TransitionStyleTypes,
+// } from "../../../providers/TransitionProvider";
+// import { useAnimationInView } from "../../../hooks/useInViewAnimation";
 import Svg from "../../../layout/Svg/Svg";
 
 import {

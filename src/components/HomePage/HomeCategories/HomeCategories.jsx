@@ -1,12 +1,16 @@
 import styles from "./HomeCategories.module.scss";
 import clsx from "clsx";
+import CategoryCard from "../../layout/CategoryCard/CategoryCard";
+
 import Svg from "../../layout/Svg/Svg";
+
 import {
   investmentsIcon,
   arrowTopCircleIcon,
   timeWhiteIcon,
 } from "../../../assets/svg";
 import { forwardRef } from "react";
+
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
@@ -23,8 +27,9 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
   const categories = [
     {
       id: "spy",
+      backgroundColor: "primary",
       className: styles.homeCategories__categorySpy,
-      content: (
+      children: (
         <>
           <div className={styles.homeCategories__spyContainer}>
             <Svg
@@ -33,7 +38,7 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
             />
             <div className={styles.homeCategories__sizeContainer}>
               <span className={styles.homeCategories__size}>2X</span>
-              <span className={styles.homeCategories__title}>spy</span>
+              <span className={styles.homeCategories__spyTitle}>spy</span>
             </div>
           </div>
           <div className={styles.homeCategories__text}>
@@ -42,12 +47,14 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
         </>
       ),
     },
+
     {
       id: "returns",
+      icon: arrowTopCircleIcon,
       className: styles.homeCategories__categoryReturn,
-      content: (
+      children: (
         <>
-          <span>RETURNS</span>
+          <span className={styles.homeCategories__title}>returns</span>
           <span className={styles.homeCategories__number}>
             114
             <label className={styles.homeCategories__percent}>%</label>
@@ -55,28 +62,21 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
         </>
       ),
     },
+
     {
-      id: "capture",
+      title: "capture",
+      description: "GAINS",
+      icon: arrowTopCircleIcon,
       className: styles.homeCategories__categoryCapture,
-      content: (
-        <>
-          <span>
-            CAPTURE
-            <Svg
-              id={arrowTopCircleIcon}
-              className={styles.homeCategories__arrowTopCircleIcon}
-            />
-          </span>
-          <span className={styles.homeCategories__gains}>GAINS</span>
-        </>
-      ),
     },
+
     {
       id: "realtime",
+      backgroundColor: "secondary",
       className: styles.homeCategories__categoryRealtime,
-      content: (
+      children: (
         <>
-          <span className={styles.homeCategories__realimeTitle}>
+          <span className={styles.homeCategories__shadowTitle}>
             REAL-TIME
             <Svg
               id={timeWhiteIcon}
@@ -90,27 +90,17 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
       ),
     },
   ];
-
   return (
     <section
       className={clsx(styles.homeCategories, "paddingB")}
       ref={categoriesSectionRef}
     >
       <div className="container" ref={categoryCardRef}>
-        {" "}
-        {/* внутренний ref только для анимации */}
         <div className={styles.homeCategories__categoryContainer}>
-          {categories.map((cat, index) => (
-            <TransitionProvider
-              key={cat.id}
-              inProp={isCategoryCardInview}
-              style={TransitionStyleTypes.bottom}
-              duration={600}
-              delay={index * 200} // поочередная анимация
-              className={clsx(styles.homeCategories__category, cat.className)}
-            >
-              {cat.content}
-            </TransitionProvider>
+          {categories.map(({ id, children, ...rest }) => (
+            <CategoryCard key={id} {...rest}>
+              {children}
+            </CategoryCard>
           ))}
         </div>
       </div>

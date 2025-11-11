@@ -51,6 +51,7 @@ const HomeBrands = () => {
     >
       {brandsLogos.map(({ img, webImg, alt }, index) => (
         <TransitionProvider
+          key={index}
           inProp={isBrandsInView}
           delay={400}
           style={TransitionStyleTypes.bottom}
