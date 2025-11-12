@@ -3,10 +3,12 @@ import clsx from "clsx";
 import Svg from "../../layout/Svg/Svg";
 
 const CategoryCard = ({
+  backgroundColor = "white",
   title,
+  titleSize,
+  titleShadow,
   description,
   icon,
-  backgroundColor = "white",
   className,
   children,
 }) => {
@@ -22,10 +24,17 @@ const CategoryCard = ({
         children
       ) : (
         <>
-          <div className={styles.categoryCard__title}>
+          <span
+            className={clsx(
+              styles.categoryCard__title,
+              titleShadow && styles[`categoryCard__title_${titleShadow}`],
+              titleSize && styles[`categoryCard__title_${titleSize}`]
+            )}
+          >
             {title}
-            <Svg id={icon} className={styles.categoryCard__icon} />
-          </div>
+          </span>
+
+          <Svg id={icon} className={styles.categoryCard__icon} />
 
           <div className={styles.categoryCard__description}>{description}</div>
         </>

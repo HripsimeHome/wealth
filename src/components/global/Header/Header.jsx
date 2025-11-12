@@ -1,5 +1,4 @@
 import styles from "./Header.module.scss";
-import clsx from "clsx";
 import { Link } from "react-router-dom";
 import HeaderMenu from "./HeaderMenu/HeaderMenu";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";

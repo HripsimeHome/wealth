@@ -47,8 +47,6 @@
 
   &__categorySpy {
     grid-area: spy;
-    color: $color-secondary;
-    background-color: $color-primary;
   }
 
   &__spyContainer {
@@ -58,6 +56,10 @@
   &__sizeContainer {
     @include flexCol(start, start);
     flex-direction: column;
+  }
+
+  &__investmentsIcon {
+    @include svg(230px, $color-secondary);
   }
 
   &__size {
@@ -82,8 +84,6 @@
 
   &__categoryReturn {
     grid-area: return;
-    color: $color-secondary;
-    background-color: $color-primary;
   }
 
   &__number {
@@ -97,38 +97,27 @@
 
   &__categoryCapture {
     grid-area: capture;
-    color: $color-secondary;
-    background-color: $color-primary;
   }
 
   &__categoryRealtime {
     grid-area: realtime;
-    color: $color-white;
-    background-color: $color-secondary;
   }
 
-  &__shadowTitle {
-    @include setFont(35px, 300);
-    text-transform: uppercase;
-    color: $color-secondary;
-    text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
-      0 -1px $color-white;
-  }
+  // &__shadowTitle {
+  //   @include setFont(35px, 300);
+  //   color: $color-secondary;
+  //   text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
+  //     0 -1px $color-white;
+  // }
 
   &__realTimeText {
     @include setFont(xsm, 300, $color-white);
-    text-transform: uppercase;
   }
 
-  &__arrowTopCircleIcon,
   &__timeWhiteIcon {
     @include svg(30px, $color-secondary);
     position: absolute;
     top: 2vw;
     right: 2.3vw;
-  }
-
-  &__investmentsIcon {
-    @include svg(230px, $color-secondary);
   }
 }

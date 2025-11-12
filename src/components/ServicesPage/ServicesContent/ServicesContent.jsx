@@ -18,7 +18,7 @@ import {
   detailedDataLeftTopIcon,
   detailedDataRightBottomIcon,
   timeBlackIcon,
-  exitIcon,
+  entryIcon,
   insightsIcon,
   stocksIcon,
 } from "../../../assets/svg";

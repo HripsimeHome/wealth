@@ -6,25 +6,65 @@
   @include flexCol(space-between, start);
   flex-direction: column;
   color: $color-secondary;
+  background-color: $color-white;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 24px;
   padding: 3.3vw 2.2vw;
   //padding: 20px;
+  &_primaryBg {
+    background-color: $color-primary;
+  }
+
+  &_secondaryBg {
+    background-color: $color-secondary;
+  }
+
+  &_whiteBg {
+    background-color: $color-white;
+  }
+
+  &_lightGreyBg {
+    background-color: $color-lightGrey;
+  }
+
+  &_darkGreyBg {
+    background-color: $color-darkGrey;
+  }
 
   &__title {
     @include setFont(xsm, 400);
-  }
 
-  &__description {
-    @include setFont(38px, 500);
-  }
+    &_large {
+      @include setFont(35px, 400);
+    }
 
-  &__icon {
-    @include svg(30px, $color-secondary);
-    position: absolute;
-    top: 2vw;
-    right: 2.3vw;
+    &_primaryShadow {
+      color: $color-primary;
+      text-shadow: 1px 0 $color-secondary, -1px 0 $color-secondary,
+        0 1px $color-secondary, 0 -1px $color-secondary;
+      -webkit-text-stroke: 1px $color-secondary;
+    }
+
+    &_whiteShadow {
+      // color: $color-secondary;
+      // text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
+      //   0 -1px $color-white;
+
+      //  -webkit-text-stroke: 1px $color-secondary;
+
+      color: $color-secondary;
+      text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
+        0 -1px $color-white;
+    }
+
+    &_lightGreyShadow {
+      color: $color-lightGrey;
+      // text-shadow: 1px 0 $color-secondary, -2px 0 $color-secondary,
+      //   0 2px $color-secondary, 0 -1px $color-secondary;
+
+      -webkit-text-stroke: 1px $color-secondary;
+    }
   }
 
   // &__title {
@@ -43,23 +83,14 @@
       0 -1px $color-white;
   }
 
-  &_primary {
-    background-color: $color-primary;
+  &__icon {
+    @include svg(30px, $color-secondary);
+    position: absolute;
+    top: 2vw;
+    right: 2.3vw;
   }
 
-  &_secondary {
-    background-color: $color-secondary;
-  }
-
-  &_white {
-    background-color: $color-white;
-  }
-
-  &_lightGrey {
-    background-color: $color-lightGrey;
-  }
-
-  &_darkGrey {
-    background-color: $color-darkGrey;
+  &__description {
+    @include setFont(38px, 500);
   }
 }

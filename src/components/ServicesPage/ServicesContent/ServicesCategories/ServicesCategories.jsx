@@ -12,7 +12,7 @@ import Svg from "../../../layout/Svg/Svg";
 
 import {
   timeBlackIcon,
-  exitIcon,
+  entryIcon,
   plusCircleIcon,
   arrowTopCircleIcon,
 } from "../../../../assets/svg";
@@ -26,7 +26,7 @@ const categories = [
     id: "spy",
     title: "double tHe",
     description: "spy",
-    backgroundColor: "white",
+    //backgroundColor: "whiteBg",
     className: styles.servicesCategories__categorySpy,
   },
 
@@ -35,24 +35,34 @@ const categories = [
     title: "real-time",
     description: "trade alerts",
     icon: timeBlackIcon,
-    backgroundColor: "lightGrey",
+    //backgroundColor: "lightGreyBg",
     className: styles.servicesCategories__categoryTrade,
   },
   {
     id: "entry",
     title: "entry & exit",
+    titleShadow: "lightGreyShadow",
+    titleSize: "large",
     description: "quality Risk management strategies",
-    icon: exitIcon,
-    backgroundColor: "darkGrey",
+    icon: entryIcon,
+    backgroundColor: "darkGreyBg",
     className: styles.servicesCategories__categoryEntry,
   },
 
   {
     id: "insights",
-    title: "quality insights",
+    title: (
+      <>
+        quality
+        <br />
+        insights
+      </>
+    ),
+    titleShadow: "primaryShadow",
+    titleSize: "large",
     description: "In-depth market knowledge to identify trading opportunities.",
     icon: plusCircleIcon,
-    backgroundColor: "primary",
+    backgroundColor: "primaryBg",
     className: styles.servicesCategories__categoryInsights,
   },
 
@@ -60,7 +70,7 @@ const categories = [
     id: "qualityInsights",
     title: "quality insights",
     description: "X2",
-    backgroundColor: "lightGrey",
+    backgroundColor: "lightGreyBg",
     className: styles.servicesCategories__categoryQualityX2,
   },
 
@@ -69,7 +79,7 @@ const categories = [
     title: "earn with",
     description: "stocks",
     icon: arrowTopCircleIcon,
-    backgroundColor: "lightGrey",
+    backgroundColor: "whiteBg",
     className: styles.servicesCategories__categoryStocks,
   },
 ];

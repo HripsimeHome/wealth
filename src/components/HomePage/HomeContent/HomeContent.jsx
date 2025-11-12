@@ -14,7 +14,7 @@ import {
 } from "../../../assets/images";
 
 import {
-  exitIcon,
+  entryIcon,
   timeBlackIcon,
   analystsLeftTopIcon,
   tradeLeftBottomIcon,
@@ -29,7 +29,7 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           webpImage={analystsWebpImage}
           alt="Our team of experienced analysts."
           imgLeftTopCorner={analystsLeftTopIcon}
-          sectionTitle={{ icon: exitIcon, text: "experts" }}
+          sectionTitle={{ icon: entryIcon, text: "experts" }}
           title={["Our team of experienced", "analysts"]}
           description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
           btnPath={aboutPagePath}

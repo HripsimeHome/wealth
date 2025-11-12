@@ -3,7 +3,7 @@
 export const timeWhiteIcon = "timeWhite";
 export const timeBlackIcon = "timeBlack";
 export const arrowHorizontalIcon = "arrowHorizontal";
-export const exitIcon = "exit";
+export const entryIcon = "entry";
 
 // Header
 export const burgerIcon = "burger";

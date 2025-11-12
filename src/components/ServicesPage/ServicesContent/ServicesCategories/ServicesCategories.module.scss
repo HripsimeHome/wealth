@@ -56,16 +56,13 @@
 
   &__categoryInsights {
     grid-area: insights;
-    background-color: $color-primary;
   }
 
   &__categoryQualityX2 {
     grid-area: qualityX2;
-    background-color: $color-lightGrey;
   }
 
   &__categoryStocks {
     grid-area: stocks;
-    background-color: $color-white;
   }
 }

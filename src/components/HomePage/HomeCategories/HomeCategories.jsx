@@ -27,7 +27,7 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
   const categories = [
     {
       id: "spy",
-      backgroundColor: "primary",
+      backgroundColor: "primaryBg",
       className: styles.homeCategories__categorySpy,
       children: (
         <>
@@ -73,22 +73,13 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
 
     {
       id: "realtime",
-      backgroundColor: "secondary",
+      title: "real-time",
+      titleShadow: "whiteShadow",
+      titleSize: "large",
+      description: "alerts to safely participate in the market",
+      icon: timeWhiteIcon,
+      backgroundColor: "secondaryBg",
       className: styles.homeCategories__categoryRealtime,
-      children: (
-        <>
-          <span className={styles.homeCategories__shadowTitle}>
-            REAL-TIME
-            <Svg
-              id={timeWhiteIcon}
-              className={styles.homeCategories__timeWhiteIcon}
-            />
-          </span>
-          <span className={styles.homeCategories__realTimeText}>
-            alerts to safely participate in the market
-          </span>
-        </>
-      ),
     },
   ];
   return (
