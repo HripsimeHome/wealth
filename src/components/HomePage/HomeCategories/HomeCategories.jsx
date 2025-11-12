@@ -36,14 +36,14 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
               id={investmentsIcon}
               className={styles.homeCategories__investmentsIcon}
             />
-            <div className={styles.homeCategories__sizeContainer}>
-              <span className={styles.homeCategories__size}>2X</span>
+            <div className={styles.homeCategories__spyBlock}>
+              <span className={styles.homeCategories__spySize}>2X</span>
               <span className={styles.homeCategories__spyTitle}>spy</span>
             </div>
           </div>
-          <div className={styles.homeCategories__spyDescription}>
-            cumulative Returns of Double the S&P 500
-          </div>
+          <span className={styles.homeCategories__spyDescription}>
+            cumulative returns of double the S&P 500
+          </span>
         </>
       ),
     },
@@ -55,10 +55,10 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
       children: (
         <>
           <span className={styles.homeCategories__title}>returns</span>
-          <span className={styles.homeCategories__number}>
-            114
+          <div>
+            <span className={styles.homeCategories__number}>114</span>
             <label className={styles.homeCategories__percent}>%</label>
-          </span>
+          </div>
         </>
       ),
     },
@@ -77,6 +77,8 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
       titleShadow: "whiteShadow",
       titleSize: "large",
       description: "alerts to safely participate in the market",
+      descriptionSize: "descriptionSmall",
+      textWhite: true,
       icon: timeWhiteIcon,
       backgroundColor: "secondaryBg",
       className: styles.homeCategories__categoryRealtime,
@@ -89,10 +91,17 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
     >
       <div className="container" ref={categoryCardRef}>
         <div className={styles.homeCategories__categoryContainer}>
-          {categories.map(({ id, children, ...rest }) => (
-            <CategoryCard key={id} {...rest}>
-              {children}
-            </CategoryCard>
+          {categories.map(({ id, children, className, ...rest }) => (
+            <TransitionProvider
+              key={id}
+              inProp={isCategoryCardInview}
+              style={TransitionStyleTypes.bottom}
+              duration={600}
+              delay={id * 200}
+              className={className}
+            >
+              <CategoryCard {...rest}>{children}</CategoryCard>
+            </TransitionProvider>
           ))}
         </div>
       </div>

@@ -8,6 +8,8 @@ const CategoryCard = ({
   titleSize,
   titleShadow,
   description,
+  descriptionSize,
+  textWhite,
   icon,
   className,
   children,
@@ -17,6 +19,7 @@ const CategoryCard = ({
       className={clsx(
         styles.categoryCard,
         styles[`categoryCard_${backgroundColor}`],
+        textWhite && styles.categoryCard__textWhite,
         className
       )}
     >
@@ -36,7 +39,15 @@ const CategoryCard = ({
 
           <Svg id={icon} className={styles.categoryCard__icon} />
 
-          <div className={styles.categoryCard__description}>{description}</div>
+          <div
+            className={clsx(
+              styles.categoryCard__description,
+              descriptionSize &&
+                styles[`categoryCard__description_${descriptionSize}`]
+            )}
+          >
+            {description}
+          </div>
         </>
       )}
     </div>

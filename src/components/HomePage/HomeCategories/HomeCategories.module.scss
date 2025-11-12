@@ -53,16 +53,20 @@
     @include flexCol();
   }
 
-  &__sizeContainer {
-    @include flexCol(start, start);
+  &__investmentsIcon {
+    @include svg(230px, $color-secondary);
+
+    // display: inline-block;
+    // vertical-align: middle;
+    // flex-shrink: 0; // чтобы не растягивалась внутри flex
+  }
+
+  &__spyBlock {
+    display: flex;
     flex-direction: column;
   }
 
-  &__investmentsIcon {
-    @include svg(230px, $color-secondary);
-  }
-
-  &__size {
+  &__spySize {
     @include setFont(60px, 500);
     color: $color-secondary;
   }
@@ -76,8 +80,7 @@
   }
 
   &__spyDescription {
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    @include setFont(xsm, 300);
   }
 
   // Category Return
@@ -86,13 +89,19 @@
     grid-area: return;
   }
 
+  &__title {
+    @include setFont(xsm, 400);
+  }
+
   &__number {
     @include setFont(60px, 700);
+    line-height: 50px;
   }
 
   &__percent {
     @include setFont(38px, 500);
     vertical-align: top;
+    line-height: 20px;
   }
 
   &__categoryCapture {

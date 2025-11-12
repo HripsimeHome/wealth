@@ -1,6 +1,5 @@
 import styles from "./ServicesCategories.module.scss";
 import clsx from "clsx";
-
 import CategoryCard from "../../../layout/CategoryCard/CategoryCard";
 import ServicesCategoriesTabs from "./ServicesCategoriesTabs/ServicesCategoriesTabs";
 
@@ -8,7 +7,6 @@ import ServicesCategoriesTabs from "./ServicesCategoriesTabs/ServicesCategoriesT
 //   TransitionStyleTypes,
 // } from "../../../providers/TransitionProvider";
 // import { useAnimationInView } from "../../../hooks/useInViewAnimation";
-import Svg from "../../../layout/Svg/Svg";
 
 import {
   timeBlackIcon,
@@ -17,15 +15,12 @@ import {
   arrowTopCircleIcon,
 } from "../../../../assets/svg";
 
-//  <Svg id={timeBlackIcon} />
-//             <Svg id={arrowTopCircleIcon} />
-//             <Svg id={plusCircleIcon} />
-
 const categories = [
   {
     id: "spy",
     title: "double tHe",
     description: "spy",
+    descriptionSize: "descriptionLarge",
     //backgroundColor: "whiteBg",
     className: styles.servicesCategories__categorySpy,
   },
@@ -35,7 +30,7 @@ const categories = [
     title: "real-time",
     description: "trade alerts",
     icon: timeBlackIcon,
-    //backgroundColor: "lightGreyBg",
+    backgroundColor: "lightGreyBg",
     className: styles.servicesCategories__categoryTrade,
   },
   {
@@ -44,6 +39,7 @@ const categories = [
     titleShadow: "lightGreyShadow",
     titleSize: "large",
     description: "quality Risk management strategies",
+    descriptionSize: "descriptionSmall",
     icon: entryIcon,
     backgroundColor: "darkGreyBg",
     className: styles.servicesCategories__categoryEntry,
@@ -61,6 +57,7 @@ const categories = [
     titleShadow: "primaryShadow",
     titleSize: "large",
     description: "In-depth market knowledge to identify trading opportunities.",
+    descriptionSize: "descriptionSmall",
     icon: plusCircleIcon,
     backgroundColor: "primaryBg",
     className: styles.servicesCategories__categoryInsights,
@@ -70,6 +67,7 @@ const categories = [
     id: "qualityInsights",
     title: "quality insights",
     description: "X2",
+    descriptionSize: "descriptionLarge",
     backgroundColor: "lightGreyBg",
     className: styles.servicesCategories__categoryQualityX2,
   },

@@ -12,6 +12,8 @@
   border-radius: 24px;
   padding: 3.3vw 2.2vw;
   //padding: 20px;
+  padding: 40px 30px;
+
   &_primaryBg {
     background-color: $color-primary;
   }
@@ -30,6 +32,10 @@
 
   &_darkGreyBg {
     background-color: $color-darkGrey;
+  }
+
+  &__textWhite {
+    color: $color-white;
   }
 
   &__title {
@@ -91,6 +97,15 @@
   }
 
   &__description {
-    @include setFont(38px, 500);
+    @include setFont(36px, 500);
+
+    &_descriptionSmall {
+      @include setFont(xsm, 300);
+    }
+
+    &_descriptionLarge {
+      @include setFont(64px, 600);
+      line-height: 55px;
+    }
   }
 }
