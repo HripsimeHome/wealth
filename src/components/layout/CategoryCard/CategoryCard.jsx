@@ -14,7 +14,7 @@ const CategoryCard = ({
     <div
       className={clsx(
         styles.categoryCard,
-        styles[`categoryCard--${backgroundColor}`],
+        styles[`categoryCard_${backgroundColor}`],
         className
       )}
     >
@@ -22,21 +22,29 @@ const CategoryCard = ({
         children
       ) : (
         <>
-          {title && (
-            <div className={styles.categoryCard__title}>
-              {title}
-              <Svg id={icon} className={styles.categoryCard__icon} />
-            </div>
-          )}
-          {description && (
-            <div className={styles.categoryCard__description}>
-              {description}
-            </div>
-          )}
+          <div className={styles.categoryCard__title}>
+            {title}
+            <Svg id={icon} className={styles.categoryCard__icon} />
+          </div>
+
+          <div className={styles.categoryCard__description}>{description}</div>
         </>
       )}
     </div>
   );
 };
 
+//  <>
+//           {title && (
+//             <div className={styles.categoryCard__title}>
+//               {title}
+//               <Svg id={icon} className={styles.categoryCard__icon} />
+//             </div>
+//           )}
+//           {description && (
+//             <div className={styles.categoryCard__description}>
+//               {description}
+//             </div>
+//           )}
+//         </>
 export default CategoryCard;

@@ -115,8 +115,8 @@
       0 -1px $color-white;
   }
 
-  &__realimeText {
-    @include setFont(xsm, 300);
+  &__realTimeText {
+    @include setFont(xsm, 300, $color-white);
     text-transform: uppercase;
   }
 

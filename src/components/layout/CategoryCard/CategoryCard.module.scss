@@ -5,27 +5,19 @@
   position: relative;
   @include flexCol(space-between, start);
   flex-direction: column;
+  color: $color-secondary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border-radius: 24px;
-  //padding: 20px;
   padding: 3.3vw 2.2vw;
-
-  //   @include setFont(xsm, 300);
-  //   letter-spacing: 1px;
+  //padding: 20px;
 
   &__title {
     @include setFont(xsm, 400);
-    text-transform: uppercase;
-    color: $color-secondary;
-    letter-spacing: 1px;
   }
 
   &__description {
-    // @include setFont(xsm, 300);
-    // text-transform: uppercase;
-    //letter-spacing: 1px;
-    color: $color-secondary;
     @include setFont(38px, 500);
-    text-transform: uppercase;
   }
 
   &__icon {
@@ -51,27 +43,23 @@
       0 -1px $color-white;
   }
 
-  &--primary {
+  &_primary {
     background-color: $color-primary;
-    // color: $color-secondary;
   }
 
-  &--secondary {
+  &_secondary {
     background-color: $color-secondary;
-    color: $color-white;
   }
 
-  &--white {
+  &_white {
     background-color: $color-white;
-    // color: $color-white;
   }
 
-  &--lightGrey {
+  &_lightGrey {
     background-color: $color-lightGrey;
-    // color: $color-secondary;
   }
 
-  &--darkGrey {
+  &_darkGrey {
     background-color: $color-darkGrey;
   }
 }

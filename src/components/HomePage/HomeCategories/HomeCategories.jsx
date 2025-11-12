@@ -84,7 +84,7 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
               className={styles.homeCategories__timeWhiteIcon}
             />
           </span>
-          <span className={styles.homeCategories__realimeText}>
+          <span className={styles.homeCategories__realTimeText}>
             alerts to safely participate in the market
           </span>
         </>

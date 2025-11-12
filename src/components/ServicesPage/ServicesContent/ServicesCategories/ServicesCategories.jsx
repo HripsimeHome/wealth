@@ -41,7 +41,7 @@ const categories = [
   {
     id: "entry",
     title: "entry & exit",
-    description: "trade alerts",
+    description: "quality Risk management strategies",
     icon: exitIcon,
     backgroundColor: "darkGrey",
     className: styles.servicesCategories__categoryEntry,
@@ -66,7 +66,7 @@ const categories = [
 
   {
     id: "stocks",
-    title: "stocks",
+    title: "earn with",
     description: "stocks",
     icon: arrowTopCircleIcon,
     backgroundColor: "lightGrey",
@@ -80,7 +80,7 @@ const ServicesCategories = () => {
       <div
         className={clsx(
           styles.servicesCategories__categoryContainer,
-          "paddingYLg"
+          "paddingB"
         )}
       >
         {categories.map(({ id, children, ...rest }) => (
