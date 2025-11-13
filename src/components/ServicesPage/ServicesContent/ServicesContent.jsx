@@ -43,7 +43,7 @@ const ServicesContent = () => {
         </video>
       )}
       <div className="container">
-        <TwoColumnSection
+        {/* <TwoColumnSection
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
@@ -69,9 +69,8 @@ const ServicesContent = () => {
           btnPath={aboutPagePath}
           btnLabel="view more"
           textWhite
-        />
+        /> */}
         <ServicesCategories />
-        <br /> <br />
       </div>
     </section>
   );

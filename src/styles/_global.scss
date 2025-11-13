@@ -136,8 +136,7 @@ h1 {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-inline: 20px;
 
   @include smScreenMedia {
     // padding-left: 5%;

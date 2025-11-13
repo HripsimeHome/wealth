@@ -2,17 +2,20 @@
 @import "../../../styles/vars";
 
 .categoryCard {
-  position: relative;
   @include flexCol(space-between, start);
   flex-direction: column;
+  position: relative;
+  height: 100%;
   color: $color-secondary;
   background-color: $color-white;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 24px;
-  padding: 3.3vw 2.2vw;
-  //padding: 20px;
-  padding: 40px 30px;
+  padding: 3vw 2.1vw;
+
+  @include mdScreenMedia {
+    padding: 6.5vw 4vw;
+  }
 
   &_primaryBg {
     background-color: $color-primary;
@@ -42,7 +45,11 @@
     @include setFont(xsm, 400);
 
     &_large {
-      @include setFont(35px, 400);
+      @include setFont(2rem, 400);
+
+      @include smScreenMedia {
+        font-size: 1.5rem;
+      }
     }
 
     &_primaryShadow {
@@ -92,19 +99,23 @@
   &__icon {
     @include svg(30px, $color-secondary);
     position: absolute;
-    top: 2vw;
-    right: 2.3vw;
+    top: 2.8vw;
+    right: 2.1vw;
+
+    @include mdScreenMedia {
+      top: 6.5vw;
+    }
   }
 
   &__description {
-    @include setFont(36px, 500);
+    @include setFont(2.25rem, 500);
 
     &_descriptionSmall {
       @include setFont(xsm, 300);
     }
 
     &_descriptionLarge {
-      @include setFont(64px, 600);
+      @include setFont(4rem, 600);
       line-height: 55px;
     }
   }
