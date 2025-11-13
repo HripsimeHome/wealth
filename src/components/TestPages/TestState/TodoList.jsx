@@ -12,21 +12,21 @@ const TodoList = () => {
   const [newTask, setNewTask] = useState("");
 
   // 3. Добавить задачу
-  const addNewTask = () => {
-    if (newTask.trim() === "") return; // защита от пустых строк
+  // const addNewTask = () => {
+  //   if (newTask.trim() === "") return; // защита от пустых строк
 
-    const newItem = {
-      id: Date.now(), // уникальный id (время в миллисекундах)
-      text: newTask,
-    };
+  //   const newItem = {
+  //     id: Date.now(), // уникальный id (время в миллисекундах)
+  //     text: newTask,
+  //   };
 
-    // создаём новый массив на основе старого
+  //   // создаём новый массив на основе старого
 
-    setTasks([...tasks, newItem]);
+  //   setTasks([...tasks, newItem]);
 
-    // очищаем input
-    setNewTask("");
-  };
+  //   // очищаем input
+  //   setNewTask("");
+  // };
 
   return (
     <div>
