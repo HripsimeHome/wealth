@@ -1,6 +1,7 @@
 import styles from "./ServicesContent.module.scss";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import ServicesCategories from "../ServicesContent/ServicesCategories/ServicesCategories";
+import ServicesCategoriesTabs from "./ServicesCategories/ServicesCategoriesTabs/ServicesCategoriesTabs";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath } from "../../../router/path";
 
@@ -17,10 +18,6 @@ import {
   investIcon,
   detailedDataLeftTopIcon,
   detailedDataRightBottomIcon,
-  timeBlackIcon,
-  entryIcon,
-  insightsIcon,
-  stocksIcon,
 } from "../../../assets/svg";
 
 const ServicesContent = () => {
@@ -43,7 +40,7 @@ const ServicesContent = () => {
         </video>
       )}
       <div className="container">
-        {/* <TwoColumnSection
+        <TwoColumnSection
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
@@ -69,8 +66,9 @@ const ServicesContent = () => {
           btnPath={aboutPagePath}
           btnLabel="view more"
           textWhite
-        /> */}
+        />
         <ServicesCategories />
+        <ServicesCategoriesTabs />
       </div>
     </section>
   );

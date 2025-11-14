@@ -1,7 +1,6 @@
 import styles from "./ServicesCategories.module.scss";
 import clsx from "clsx";
 import CategoryCard from "../../../layout/CategoryCard/CategoryCard";
-import ServicesCategoriesTabs from "./ServicesCategoriesTabs/ServicesCategoriesTabs";
 
 // import TransitionProvider, {
 //   TransitionStyleTypes,
@@ -97,7 +96,6 @@ const ServicesCategories = () => {
           </CategoryCard>
         ))}
       </div>
-      <ServicesCategoriesTabs />
     </section>
   );
 };

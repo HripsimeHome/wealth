@@ -60,12 +60,6 @@
     }
 
     &_whiteShadow {
-      // color: $color-secondary;
-      // text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
-      //   0 -1px $color-white;
-
-      //  -webkit-text-stroke: 1px $color-secondary;
-
       color: $color-secondary;
       text-shadow: 1px 0 $color-white, -1px 0 $color-white, 0 1px $color-white,
         0 -1px $color-white;
@@ -75,18 +69,9 @@
       color: $color-lightGrey;
       // text-shadow: 1px 0 $color-secondary, -2px 0 $color-secondary,
       //   0 2px $color-secondary, 0 -1px $color-secondary;
-
       -webkit-text-stroke: 1px $color-secondary;
     }
   }
-
-  // &__title {
-  //   @include setFont(70px, 500);
-  //   text-transform: uppercase;
-  //   color: $color-primary; /* fill color */
-  //   text-shadow: 1px 0 $color-secondary, -1px 0 $color-secondary,
-  //     0 1px $color-secondary, 0 -1px $color-secondary;
-  // }
 
   &__shadowTitle {
     @include setFont(35px, 300);
