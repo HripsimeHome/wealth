@@ -12,9 +12,10 @@ const ImageWebp = ({
 }) => {
   return (
     <picture
-      className={`${styles.imageWebp} ${
-        useLoader ? styles.imageWebp_loader : ""
-      } ${pictureClass ? pictureClass : ""}`}
+      className={`
+        ${styles.imageWebp} 
+        ${useLoader ? styles.imageWebp_loader : ""} 
+        ${pictureClass ? pictureClass : ""}`}
     >
       <source srcSet={srcSet} type="image/webp" />
       <img alt={alt} src={src} ref={forwardedRef} {...properties} />

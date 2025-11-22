@@ -13,6 +13,10 @@
     margin-bottom: 20px;
     padding-bottom: 10px;
 
+    @include lgScreenMedia {
+      gap: 35px;
+    }
+
     @include mdScreenMedia {
       gap: 25px;
       margin-bottom: 10px;
@@ -26,7 +30,7 @@
   }
 
   &__label {
-    @include setFont(xxl, 400, $color-lightGrey);
+    @include setFont(xl, 400, $color-lightGrey);
 
     &:hover {
       cursor: pointer;

@@ -13,7 +13,7 @@ const MainBtn = memo(
       `}
         onClick={onclick}
         type={type}
-        aria-label={ariaLabel}
+        arialabel={ariaLabel}
         {...attributes}
       >
         <span className={styles.mainBtn__btnText}>{children}</span>

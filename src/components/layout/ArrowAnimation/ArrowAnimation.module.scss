@@ -3,8 +3,8 @@
 
 .arrowAnimation {
   @include flexCol();
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
 
@@ -13,8 +13,8 @@
   }
 
   &__icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     transform: rotate(-45deg);
     transition: $transition;
   }

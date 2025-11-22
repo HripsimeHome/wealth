@@ -6,22 +6,26 @@ import {
   JaneWebpImage,
   JacobImage,
   JacobWebpImage,
+  //  img corners
+  JaneLeftTopImage,
+  JaneLeftTopWebpImage,
+  JaneRightBottomImage,
+  JaneRightBottomWebpImage,
+  JacobLeftBottomImage,
+  JacobLeftBottomWebpImage,
+  JacobRightTopImage,
+  JacobRightTopWebpImage,
 } from "../../../../assets/images";
-
-import {
-  JaneLeftTopIcon,
-  JaneRightBottomIcon,
-  JacobRightTopIcon,
-  JacobLeftBottomIcon,
-} from "../../../../assets/svg";
 
 export const staffInfo = [
   {
     title: "Jane Doe",
     image: JaneImage,
     webpImage: JaneWebpImage,
-    imgLeftTopCorner: JaneLeftTopIcon,
-    imgRightBottomCorner: JaneRightBottomIcon,
+    leftTopCornerImg: JaneLeftTopImage,
+    leftTopCornerWebpImg: JaneLeftTopWebpImage,
+    rightBottomCornerImg: JaneRightBottomImage,
+    rightBottomCornerWebpImg: JaneRightBottomWebpImage,
     description: [
       "With over 15 years of experience as a stock analyst on Wall Street, Jane has solidified her reputation as a seasoned professional.",
       "Her insights, honed during the post-financial crisis, have consistently garnered attention and respect.",
@@ -32,8 +36,11 @@ export const staffInfo = [
     title: "Jacob Smith",
     image: JacobImage,
     webpImage: JacobWebpImage,
-    imgRightTopCorner: JacobRightTopIcon,
-    imgLeftBottomCorner: JacobLeftBottomIcon,
+    leftBottomCornerImg: JacobLeftBottomImage,
+    leftBottomCornerWebpImg: JacobLeftBottomWebpImage,
+    rightTopCornerImg: JacobRightTopImage,
+    rightTopCornerWebpImg: JacobRightTopWebpImage,
+
     reverse: true,
     description: [
       "Our seasoned Portfolio Manager, actively oversees the Bento Wealth Fund, delivering insights and actionable strategies. He manages our real-time trade alerts and stock positions.",

@@ -5,7 +5,14 @@ import { useInView } from "react-intersection-observer";
 const AnimatedCounter = ({ number, suffix }) => {
   const [value, setValue] = useState(0);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+  // const valueRef = useRef(value);
+
+  // useEffect(() => {
+  //   valueRef.current = value;
+  // }, [value]);
+
   // ref → специальный реф, который нужно привязать к DOM-элементу. inView → булевое значение (true или false), которое показывает, находится ли элемент в зоне видимости (например, хотя бы на 50% внутри viewport при threshold: 0.5).
+
   useEffect(() => {
     if (!inView) return;
 
@@ -17,6 +24,8 @@ const AnimatedCounter = ({ number, suffix }) => {
     // Math.ceil округляет в большую сторону, чтобы число гарантированно дошло до digit и не остановилось чуть раньше.
 
     const statusCounterInterval = setInterval(() => {
+      // console.log({ value, valueRef: valueRef.current, number });
+
       setValue((prev) => {
         if (prev + stepValue >= number) {
           clearInterval(statusCounterInterval);

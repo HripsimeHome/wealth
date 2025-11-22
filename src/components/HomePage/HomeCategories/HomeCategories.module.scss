@@ -116,13 +116,8 @@
     @include setFont(xsm, 400);
   }
 
-  &__number {
-    @include setFont(60px, 700);
-    line-height: 50px;
-  }
-
   &__percent {
-    @include setFont(38px, 500);
+    @include setFont(2.2rem, 700);
     vertical-align: top;
     line-height: 20px;
   }

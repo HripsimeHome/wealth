@@ -1,7 +1,12 @@
 import styles from "./HomeCategories.module.scss";
 import clsx from "clsx";
+import { forwardRef } from "react";
 import CategoryCard from "../../layout/CategoryCard/CategoryCard";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
 
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
 import Svg from "../../layout/Svg/Svg";
 
 import {
@@ -9,12 +14,6 @@ import {
   arrowTopCircleIcon,
   timeWhiteIcon,
 } from "../../../assets/svg";
-import { forwardRef } from "react";
-
-import TransitionProvider, {
-  TransitionStyleTypes,
-} from "../../../providers/TransitionProvider";
-import { useAnimationInView } from "../../../hooks/useInViewAnimation";
 
 const HomeCategories = forwardRef((_, categoriesSectionRef) => {
   // здесь —, пишется вместо props, чтобы VS Code не выдавал ошибку
@@ -26,7 +25,6 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
 
   const categories = [
     {
-      id: "spy",
       backgroundColor: "primaryBg",
       className: styles.homeCategories__categorySpy,
       children: (
@@ -49,22 +47,17 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
     },
 
     {
-      id: "returns",
-      icon: arrowTopCircleIcon,
       className: styles.homeCategories__categoryReturn,
-      children: (
+      title: "returns",
+      descriptionSize: "large",
+      description: (
         <>
-          <span className={styles.homeCategories__title}>returns</span>
-          <div>
-            <span className={styles.homeCategories__number}>114</span>
-            <label className={styles.homeCategories__percent}>%</label>
-          </div>
+          114<sup className={styles.homeCategories__percent}>%</sup>{" "}
         </>
       ),
     },
 
     {
-      id: "capture",
       title: "capture",
       description: "GAINS",
       icon: arrowTopCircleIcon,
@@ -72,12 +65,11 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
     },
 
     {
-      id: "realtime",
       title: "real-time",
       titleShadow: "whiteShadow",
       titleSize: "large",
       description: "alerts to safely participate in the market",
-      descriptionSize: "descriptionSmall",
+      descriptionSize: "small",
       textWhite: true,
       icon: timeWhiteIcon,
       backgroundColor: "secondaryBg",
@@ -91,13 +83,12 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
     >
       <div className="container" ref={categoryCardRef}>
         <div className={styles.homeCategories__categoryContainer}>
-          {categories.map(({ id, children, className, ...rest }) => (
+          {categories.map(({ children, className, ...rest }, index) => (
             <TransitionProvider
-              key={id}
               inProp={isCategoryCardInview}
               style={TransitionStyleTypes.bottom}
               duration={600}
-              delay={id * 200}
+              delay={index * 200}
               className={className}
             >
               <CategoryCard {...rest}>{children}</CategoryCard>

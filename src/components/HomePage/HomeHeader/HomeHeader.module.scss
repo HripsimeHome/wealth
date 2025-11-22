@@ -6,15 +6,15 @@
   gap: 50px;
 
   @include lgScreenMedia {
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flexCol();
+    flex-direction: column;
     gap: 30px;
   }
 
   &__leftBlock {
     display: flex;
     flex-direction: column;
-
+    flex: 1;
     gap: 30px;
 
     @include lgScreenMedia {
@@ -61,8 +61,6 @@
 
   &__stocksBlock {
     @include flexCol();
-    flex-direction: column;
-    //padding: 20px;
     background-color: $color-primary;
     border-radius: 24px;
   }
@@ -79,7 +77,6 @@
 
   &__customersBlock {
     @include flexCol();
-    flex-direction: column;
     background-color: $color-secondary;
     border-radius: 24px;
     color: $color-white;
@@ -89,32 +86,38 @@
     @include setFont(55px, 500);
   }
 
-  // Right block
+  //Right block
 
-  &__imgContainer {
+  &__rightBlock {
+    flex: 1;
     position: relative;
-    max-width: 500px;
+    width: 100%;
   }
 
-  &__img {
-    width: 100%;
+  &__imgWrapper {
+    position: relative;
+    // width: 100%;
+    // aspect-ratio: 1 / 1; // подбери под свою высоту картинки
     border-radius: 24px;
   }
 
-  &__test {
-    position: absolute;
-    left: 0;
-    top: 0;
+  &__imgMain {
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+    border-radius: 24px;
   }
 
   &__marqueeContainer {
     position: absolute;
     top: 20px;
-    left: 0;
+    z-index: 2;
     overflow: hidden;
     white-space: nowrap;
-    width: 20%;
-    //background: $color-lightGrey;
+
+    @include smScreenMedia {
+      display: none;
+    }
   }
 
   &__marquee {
@@ -149,8 +152,7 @@
     cursor: pointer;
 
     @include smScreenMedia {
-      position: absolute;
-      top: auto; // убирает предыдущее значение top
+      top: auto;
       left: auto;
       width: 90px;
       height: 90px;
@@ -169,8 +171,9 @@
   &__circleContainer {
     @include flexCol();
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
     border: 1px solid $color-secondary;
     border-radius: 50px;
     padding: 10px;

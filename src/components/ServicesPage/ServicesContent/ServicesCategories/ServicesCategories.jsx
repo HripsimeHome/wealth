@@ -2,10 +2,11 @@ import styles from "./ServicesCategories.module.scss";
 import clsx from "clsx";
 import CategoryCard from "../../../layout/CategoryCard/CategoryCard";
 
-// import TransitionProvider, {
-//   TransitionStyleTypes,
-// } from "../../../providers/TransitionProvider";
-// import { useAnimationInView } from "../../../hooks/useInViewAnimation";
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../../providers/TransitionProvider";
+
+import { useAnimationInView } from "../../../../hooks/useInViewAnimation";
 
 import {
   timeBlackIcon,
@@ -16,16 +17,13 @@ import {
 
 const categories = [
   {
-    id: "spy",
     title: "double tHe",
     description: "spy",
-    descriptionSize: "descriptionLarge",
-    //backgroundColor: "whiteBg",
+    descriptionSize: "large",
     className: styles.servicesCategories__categorySpy,
   },
 
   {
-    id: "trade",
     title: "real-time",
     description: "trade alerts",
     icon: timeBlackIcon,
@@ -33,19 +31,17 @@ const categories = [
     className: styles.servicesCategories__categoryTrade,
   },
   {
-    id: "entry",
     title: "entry & exit",
     titleShadow: "lightGreyShadow",
     titleSize: "large",
     description: "quality Risk management strategies",
-    descriptionSize: "descriptionSmall",
+    descriptionSize: "small",
     icon: entryIcon,
     backgroundColor: "darkGreyBg",
     className: styles.servicesCategories__categoryEntry,
   },
 
   {
-    id: "insights",
     title: (
       <>
         quality
@@ -56,23 +52,21 @@ const categories = [
     titleShadow: "primaryShadow",
     titleSize: "large",
     description: "In-depth market knowledge to identify trading opportunities.",
-    descriptionSize: "descriptionSmall",
+    descriptionSize: "small",
     icon: plusCircleIcon,
     backgroundColor: "primaryBg",
     className: styles.servicesCategories__categoryInsights,
   },
 
   {
-    id: "qualityInsights",
     title: "quality insights",
     description: "X2",
-    descriptionSize: "descriptionLarge",
+    descriptionSize: "large",
     backgroundColor: "lightGreyBg",
     className: styles.servicesCategories__categoryQualityX2,
   },
 
   {
-    id: "stocks",
     title: "earn with",
     description: "stocks",
     icon: arrowTopCircleIcon,
@@ -82,18 +76,30 @@ const categories = [
 ];
 
 const ServicesCategories = () => {
+  const { ref: categoryCardRef, inView: isCategoryCardInview } =
+    useAnimationInView({
+      threshold: 0.3,
+    });
+
   return (
     <section className={clsx(styles.servicesCategories)}>
       <div
+        ref={categoryCardRef}
         className={clsx(
           styles.servicesCategories__categoryContainer,
           "paddingB"
         )}
       >
-        {categories.map(({ id, children, ...rest }) => (
-          <CategoryCard key={id} {...rest}>
-            {children}
-          </CategoryCard>
+        {categories.map(({ children, className, ...rest }, index) => (
+          <TransitionProvider
+            inProp={isCategoryCardInview}
+            style={TransitionStyleTypes.bottom}
+            duration={600}
+            delay={index * 200}
+            className={className}
+          >
+            <CategoryCard {...rest}>{children}</CategoryCard>
+          </TransitionProvider>
         ))}
       </div>
     </section>

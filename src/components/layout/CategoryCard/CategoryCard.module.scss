@@ -95,11 +95,11 @@
   &__description {
     @include setFont(2.25rem, 500);
 
-    &_descriptionSmall {
+    &_small {
       @include setFont(xsm, 300);
     }
 
-    &_descriptionLarge {
+    &_large {
       @include setFont(4rem, 600);
       line-height: 55px;
     }

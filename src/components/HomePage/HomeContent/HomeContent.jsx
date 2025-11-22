@@ -11,14 +11,14 @@ import {
   analystsWebpImage,
   tradeImage,
   tradeWebpImage,
+  // img corners
+  analystsLeftTopImage,
+  analystsLeftTopWebpImage,
+  tradeLeftBottomImage,
+  tradeLeftBottomWebpImage,
 } from "../../../assets/images";
 
-import {
-  entryIcon,
-  timeBlackIcon,
-  analystsLeftTopIcon,
-  tradeLeftBottomIcon,
-} from "../../../assets/svg";
+import { entryIcon, timeBlackIcon } from "../../../assets/svg";
 
 const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
   return (
@@ -28,7 +28,8 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           image={analystsImage}
           webpImage={analystsWebpImage}
           alt="Our team of experienced analysts."
-          imgLeftTopCorner={analystsLeftTopIcon}
+          leftTopCornerImg={analystsLeftTopImage}
+          leftTopCornerWebpImg={analystsLeftTopWebpImage}
           sectionTitle={{ icon: entryIcon, text: "experts" }}
           title={["Our team of experienced", "analysts"]}
           description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
@@ -41,7 +42,8 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           image={tradeImage}
           webpImage={tradeWebpImage}
           alt="Quality trade"
-          imgLeftBottomCorner={tradeLeftBottomIcon}
+          leftBottomCornerImg={tradeLeftBottomImage}
+          leftBottomCornerWebpImg={tradeLeftBottomWebpImage}
           sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
           title={["quality trade alerts with", "wealth bento"]}
           description="Never miss a chance to capitalize on market movements and make informed decisions."

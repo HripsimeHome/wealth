@@ -9,10 +9,19 @@ import Svg from "../../layout/Svg/Svg";
 const TwoColumnSection = ({
   image,
   webpImage,
-  imgLeftTopCorner,
-  imgRightTopCorner,
-  imgLeftBottomCorner,
-  imgRightBottomCorner,
+
+  leftTopCornerImg,
+  leftTopCornerWebpImg,
+  //
+  rightTopCornerImg,
+  rightTopCornerWebpImg,
+  //
+  leftBottomCornerImg,
+  leftBottomCornerWebpImg,
+  //
+  rightBottomCornerImg,
+  rightBottomCornerWebpImg,
+  //
   sectionTitle,
   title = ["", ""],
   description,
@@ -43,28 +52,42 @@ paddingB
           className={styles.twoColumnSection__img}
         />
 
-        {imgLeftTopCorner && (
+        {/* {imgLeftTopCorner && (
           <div className={styles.twoColumnSection__leftTop}>
             <Svg id={imgLeftTopCorner} />
           </div>
+        )} */}
+
+        {leftTopCornerImg && leftTopCornerWebpImg && (
+          <ImageWebp
+            src={leftTopCornerImg}
+            srcSet={leftTopCornerWebpImg}
+            className={`imgCorner leftTopCorner`}
+          />
         )}
 
-        {imgRightTopCorner && (
-          <div className={styles.twoColumnSection__rightTop}>
-            <Svg id={imgRightTopCorner} />
-          </div>
+        {rightTopCornerImg && rightTopCornerWebpImg && (
+          <ImageWebp
+            src={rightTopCornerImg}
+            srcSet={rightTopCornerWebpImg}
+            className={`imgCorner rightTopCorner`}
+          />
         )}
 
-        {imgLeftBottomCorner && (
-          <div className={styles.twoColumnSection__leftBottom}>
-            <Svg id={imgLeftBottomCorner} />
-          </div>
+        {leftBottomCornerImg && leftBottomCornerWebpImg && (
+          <ImageWebp
+            src={leftBottomCornerImg}
+            srcSet={leftBottomCornerWebpImg}
+            className={`imgCorner leftBottomCorner`}
+          />
         )}
 
-        {imgRightBottomCorner && (
-          <div className={styles.twoColumnSection__rightBottom}>
-            <Svg id={imgRightBottomCorner} />
-          </div>
+        {rightBottomCornerImg && rightBottomCornerWebpImg && (
+          <ImageWebp
+            src={rightBottomCornerImg}
+            srcSet={rightBottomCornerWebpImg}
+            className={`imgCorner rightBottomCorner`}
+          />
         )}
       </div>
 

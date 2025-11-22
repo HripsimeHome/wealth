@@ -4,12 +4,20 @@ import ArrowAnimation from "../../layout/ArrowAnimation/ArrowAnimation";
 import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import { stocksImage, stocksWebpImage } from "../../../assets/images";
+import {
+  stocksImage,
+  stocksWebpImage,
+  stockLeftTopImage,
+  stockLeftTopWebpImage,
+  stockLeftBottomImage,
+  stockLeftBottomWebpImage,
+  stockRightBottomImage,
+  stockRightBottomWebpImage,
+} from "../../../assets/images";
 
 import {
   investmentsIcon,
   innovationIcon,
-  leftTopIcon,
   spinnerIcon,
 } from "../../../assets/svg";
 
@@ -51,43 +59,56 @@ const HomeHeader = ({ scrollToCategories, scrollToContent }) => {
       {/* /Left block */}
 
       {/* Right Block */}
-      <div className={styles.homeHeader__imgContainer}>
-        <ImageWebp
-          src={stocksImage}
-          srcSet={stocksWebpImage}
-          className={styles.homeHeader__img}
-        />
-        <div className={styles.homeHeader__test}>
-          {/* <Svg id={leftTopIcon} className={styles.homeHeader__test} /> */}
-        </div>
-
-        {/* className={styles.homeHeader__spinner} */}
-        <div
-          className={styles.homeHeader__spinnerCotainer}
-          onClick={scrollToCategories}
-        >
-          <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
-        </div>
-
-        <div
-          className={styles.homeHeader__circleContainer}
-          onClick={scrollToContent}
-        >
-          <ArrowAnimation
-            circleClass={styles.homeHeader__circle}
-            arrowClass={styles.homeHeader__icon}
+      <div className={styles.homeHeader__rightBlock}>
+        <div className={styles.homeHeader__imgWrapper}>
+          <ImageWebp
+            src={stocksImage}
+            srcSet={stocksWebpImage}
+            className={styles.homeHeader__imgMain}
           />
-        </div>
 
-        <div className={styles.homeHeader__marqueeContainer}>
-          <div className={styles.homeHeader__marquee}>
-            <span>• Stock Alerts</span>
+          <ImageWebp
+            src={stockLeftTopImage}
+            srcSet={stockLeftTopWebpImage}
+            className="imgCorner leftTopCorner"
+          />
+
+          <div className={styles.homeHeader__marqueeContainer}>
+            <div className={styles.homeHeader__marquee}>
+              <span>• Stock Alerts</span>
+            </div>
+          </div>
+
+          <div
+            className={styles.homeHeader__spinnerCotainer}
+            onClick={scrollToCategories}
+          >
+            <Svg id={spinnerIcon} className={styles.homeHeader__spinner} />
+          </div>
+
+          <ImageWebp
+            src={stockLeftBottomImage}
+            srcSet={stockLeftBottomWebpImage}
+            className="imgCorner leftBottomCorner"
+          />
+
+          <ImageWebp
+            src={stockRightBottomImage}
+            srcSet={stockRightBottomWebpImage}
+            className="imgCorner rightBottomCorner"
+          />
+
+          <div
+            className={styles.homeHeader__circleContainer}
+            onClick={scrollToContent}
+          >
+            <ArrowAnimation
+              circleClass={styles.homeHeader__circle}
+              arrowClass={styles.homeHeader__icon}
+            />
           </div>
         </div>
       </div>
-
-      {/* <div className="animationScroll">ass</div> */}
-
       {/* /Right Block */}
     </section>
   );

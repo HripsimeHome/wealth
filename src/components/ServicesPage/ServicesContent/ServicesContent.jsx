@@ -10,15 +10,16 @@ import {
   cuttingEdgeTechWebpImage,
   detailedDataImage,
   detailedDatanWebpImage,
+  //img corners
+  cuttingEdgeTechLefBottomImage,
+  cuttingEdgeTechLefBottomWebpImage,
+  detailedDataLeftTopImage,
+  detailedDataLeftTopWebpImage,
+  detailedDataRightBottomImage,
+  detailedDataRightBottomWebpImage,
 } from "../../../assets/images";
 
-import {
-  searchIcon,
-  cuttingEdgeTechLefBottomIcon,
-  investIcon,
-  detailedDataLeftTopIcon,
-  detailedDataRightBottomIcon,
-} from "../../../assets/svg";
+import { searchIcon, investIcon } from "../../../assets/svg";
 
 const ServicesContent = () => {
   return (
@@ -44,8 +45,9 @@ const ServicesContent = () => {
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
+          leftBottomCornerImg={cuttingEdgeTechLefBottomImage}
+          leftBottomCornerWebpImg={cuttingEdgeTechLefBottomWebpImage}
           sectionTitle={{ icon: searchIcon, text: "identify" }}
-          imgLeftBottomCorner={cuttingEdgeTechLefBottomIcon}
           title={["cutting-edge tech and in-depth market", "wknowledge"]}
           description="Receive actionable insights and make informed decisions based on expert analysis."
           textWhite
@@ -58,8 +60,10 @@ const ServicesContent = () => {
           image={detailedDataImage}
           webpImage={detailedDatanWebpImage}
           alt="Detailed data and experts"
-          imgLeftTopCorner={detailedDataLeftTopIcon}
-          imgRightBottomCorner={detailedDataRightBottomIcon}
+          leftTopCornerImg={detailedDataLeftTopImage}
+          leftTopCornerWebpImg={detailedDataLeftTopWebpImage}
+          rightBottomCornerImg={detailedDataRightBottomImage}
+          rightBottomCornerWebpImg={detailedDataRightBottomWebpImage}
           sectionTitle={{ icon: investIcon, text: "invest" }}
           title={["detailed data and experts", "view Ppoints"]}
           description="Never miss a chance to capitalize on market movements and make informed investment decisions."

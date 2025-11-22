@@ -6,18 +6,22 @@
   gap: 5vw;
   //--content-color: #{$color-secondary};
 
+  @include lgScreenMedia {
+    flex-direction: column;
+  }
+
   &_textWhite {
     // --content-color: #{$color-white};
     // color: var(--content-color);
     color: $color-white;
   }
 
-  @include lgScreenMedia {
-    flex-direction: column;
-  }
-
   &_reverse {
     flex-direction: row-reverse;
+
+    @include lgScreenMedia {
+      flex-direction: column;
+    }
   }
 
   &__imgWrapper {
@@ -28,45 +32,6 @@
   &__img {
     width: 100%;
     border-radius: 24px;
-  }
-
-  //Corner images
-
-  &__leftTop,
-  &__rightTop,
-  &__leftBottom,
-  &__rightBottom {
-    position: absolute;
-    //width: 100%; // Adjust to control scaling with image
-    // height: auto;
-    svg {
-      //width: 100%;
-      // height: auto;
-    }
-  }
-
-  &__leftTop {
-    top: 0;
-    left: 0;
-    transform: translate(0%, -10%);
-  }
-
-  &__rightTop {
-    top: 0;
-    right: 0;
-    transform: translate(20%, -20%);
-  }
-
-  &__leftBottom {
-    bottom: 0;
-    left: 0;
-    transform: translate(0%, 17%);
-  }
-
-  &__rightBottom {
-    bottom: 0;
-    right: 0;
-    transform: translate(20%, 20%);
   }
 
   &__content {

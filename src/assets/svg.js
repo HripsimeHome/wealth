@@ -17,6 +17,12 @@ export const leftTopIcon = "leftTop";
 export const analystsLeftTopIcon = "analystsLeftTop";
 export const tradeLeftBottomIcon = "tradeLeftBottom";
 
+// Stock image corners
+
+export const stockLeftTopIcon = "stockLeftTop";
+export const stockLeftBottomIcon = "stockLeftBottom";
+export const stockRightBottomIcon = "stockRightBottom";
+
 // About
 export const companyIcon = "company";
 export const hardworkIcon = "hardwork";

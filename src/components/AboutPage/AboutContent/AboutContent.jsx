@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import AboutStatistic from "./AboutStatistic/AboutStatistic";
 import AboutStaff from "./AboutStaff/AboutStaff";
 
-const AboutContent = forwardRef((props, statisticSectionRef) => {
+const AboutContent = forwardRef((__, statisticSectionRef) => {
   return (
     <section
       className={`${styles.aboutContent} containerBlackRounded paddingYLg`}

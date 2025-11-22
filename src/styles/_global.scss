@@ -157,6 +157,42 @@ h1 {
   border-top-right-radius: 89px;
 }
 
+.imgCorner {
+  position: absolute;
+  //width: 60px; // регулируй нужный размер
+  // height: auto; // ← ДОБАВИТЬ ОБЯЗАТЕЛЬНО
+  //object-fit: contain;
+  z-index: 1;
+
+  @include smScreenMedia {
+    display: none;
+  }
+}
+
+.leftTopCorner {
+  top: 0;
+  left: 0;
+  max-height: 6.6rem;
+}
+
+.leftBottomCorner {
+  bottom: 0;
+  left: 0;
+  max-height: 8.6rem;
+}
+
+.rightTopCorner {
+  top: 0;
+  right: 0;
+  max-height: 8.6rem;
+}
+
+.rightBottomCorner {
+  bottom: 0;
+  right: 0;
+  max-height: 8.6rem;
+}
+
 .scrollAnim {
   animation: animationScroll;
 }

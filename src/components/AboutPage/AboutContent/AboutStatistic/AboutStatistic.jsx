@@ -42,7 +42,24 @@ const cardData = [
 ];
 
 const AboutStatistic = forwardRef((_, statisticSectionRef) => {
-  // здесь —, пишется вместо props, чтобы VS Code не выдавал ошибку
+  // здесь пишется  —, вместо props, чтобы VS Code не выдавал ошибку
+
+  //   ........ = forwardRef((props, ref) => {
+  //   return <div ref={ref}>...</div>;
+  // });
+
+  // здесь props — обычные свойства.
+  // ref — ref от родителя
+
+  // Если компонент будет принимать пропсы (например, className, children):
+  // const Component = forwardRef((props, ref) => {
+  //   return <div ref={ref} className={props.className}>{props.children}</div>;
+  // });
+
+  // Деструктурировать сразу нужные поля
+  // const Component = forwardRef(({ className, children }, ref) => {
+  //   return <div ref={ref} className={className}>{children}</div>;
+  // });
 
   const { ref: statisticValueRef, inView: isStatisticValueInview } =
     useAnimationInView({
