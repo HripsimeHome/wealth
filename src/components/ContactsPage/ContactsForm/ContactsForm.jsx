@@ -10,6 +10,7 @@ import TransitionProvider, {
 const ContactsForm = () => {
   const { ref: formAnimationRef, inView: isFormInView } = useAnimationInView({
     threshold: 0.5,
+    // triggerOnce: true,
   });
 
   return (

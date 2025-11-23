@@ -4,10 +4,13 @@
 .twoColumnSection {
   @include flexCol();
   gap: 5vw;
+  max-width: 80vw;
+  margin: 0 auto;
   //--content-color: #{$color-secondary};
 
   @include lgScreenMedia {
     flex-direction: column;
+    max-width: 65vw;
   }
 
   &_textWhite {
@@ -47,13 +50,20 @@
   &__title {
     // @include setFont(3.5rem, 500, var(--content-color));
     @include setFont(3.5rem, 500);
+    max-width: 80%;
     line-height: 4rem;
     letter-spacing: -0.06rem;
     text-transform: capitalize;
     margin: 15px 0;
 
     @include lgScreenMedia {
+      max-width: 100%;
       font-size: 2.5rem;
+      line-height: 3rem;
+    }
+
+    @include smScreenMedia {
+      font-size: 2rem;
       line-height: 2.5rem;
     }
   }
@@ -70,6 +80,10 @@
     &_row {
       display: flex;
       column-gap: 70px;
+
+      @include smScreenMedia {
+        column-gap: 30px;
+      }
     }
 
     &_column {

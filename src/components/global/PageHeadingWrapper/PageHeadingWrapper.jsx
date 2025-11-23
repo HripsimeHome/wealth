@@ -1,4 +1,5 @@
 import PageHeadingSmall from "./PageHeadingSmall/PageHeadingSmall";
+//import PageHeadingBig from "./PageHeadingBig/PageHeadingBig";
 import { useLocation } from "react-router-dom";
 import { useAnimationInView } from "../../../hooks/useInViewAnimation";
 import TransitionProvider, {
@@ -14,10 +15,10 @@ const PageHeadingWrapper = () => {
   const { ref, inView } = useAnimationInView({
     threshold: 0.1,
     //triggerOnce: false,
+    // triggerOnce:true
   });
   const { pathname } = useLocation();
 
-  // Данные для заголовков прямо в компоненте
   const headers = {
     "/blog": {
       icon: articlesIcon,
@@ -51,6 +52,7 @@ const PageHeadingWrapper = () => {
         style={TransitionStyleTypes.zoomIn}
       >
         <PageHeadingSmall {...data} />
+        {/* <PageHeadingBig {...data} /> */}
       </TransitionProvider>
     </div>
   );

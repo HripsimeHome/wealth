@@ -3,10 +3,11 @@
 
 .homeHeader {
   @include flexCol(start, start);
-  gap: 50px;
+  gap: 45px;
 
   @include lgScreenMedia {
-    @include flexCol();
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 30px;
   }
@@ -24,9 +25,10 @@
   }
 
   &__title {
-    @include setFont(143px, 500);
+    @include setFont(155px, 500);
     text-transform: uppercase;
-    line-height: 115px;
+    line-height: 125px;
+    letter-spacing: 1px;
 
     @include lgScreenMedia {
       font-size: 100px;
@@ -55,8 +57,8 @@
 
   &__promoContainer {
     @include grid(2, 1, 20px);
-    grid-template-rows: 135px;
-    width: 100%;
+    grid-template-rows: 140px;
+    width: 85%;
   }
 
   &__stocksBlock {
@@ -71,12 +73,13 @@
   }
 
   &__stocksIcon {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
   }
 
   &__customersBlock {
     @include flexCol();
+    flex-direction: column;
     background-color: $color-secondary;
     border-radius: 24px;
     color: $color-white;
@@ -96,9 +99,13 @@
 
   &__imgWrapper {
     position: relative;
-    // width: 100%;
     // aspect-ratio: 1 / 1; // подбери под свою высоту картинки
     border-radius: 24px;
+
+    @include lgScreenMedia {
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__imgMain {

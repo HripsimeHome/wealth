@@ -4,21 +4,17 @@ import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import MainBtn from "../../layout/MainBtn/MainBtn";
 import PropTypes from "prop-types";
-import Svg from "../../layout/Svg/Svg";
 
 const TwoColumnSection = ({
   image,
   webpImage,
-
+  //img corners
   leftTopCornerImg,
   leftTopCornerWebpImg,
-  //
   rightTopCornerImg,
   rightTopCornerWebpImg,
-  //
   leftBottomCornerImg,
   leftBottomCornerWebpImg,
-  //
   rightBottomCornerImg,
   rightBottomCornerWebpImg,
   //
@@ -51,12 +47,6 @@ paddingB
           srcSet={webpImage}
           className={styles.twoColumnSection__img}
         />
-
-        {/* {imgLeftTopCorner && (
-          <div className={styles.twoColumnSection__leftTop}>
-            <Svg id={imgLeftTopCorner} />
-          </div>
-        )} */}
 
         {leftTopCornerImg && leftTopCornerWebpImg && (
           <ImageWebp
@@ -106,7 +96,8 @@ paddingB
         <h2 className={styles.twoColumnSection__title}>
           {Array.isArray(title) ? (
             <>
-              {title[0]}&nbsp;
+              {title[0]}
+              <br />
               <span className={styles.twoColumnSection__titleThin}>
                 {title[1]}.
               </span>
