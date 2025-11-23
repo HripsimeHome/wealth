@@ -54,6 +54,10 @@
     gap: 30px;
     line-height: 30px;
 
+    &:last-child {
+      border: none;
+    }
+
     @include mdScreenMedia {
       flex-direction: column;
       gap: 10px;

@@ -26,7 +26,7 @@ const ServicesContent = () => {
     <section
       className={`${styles.servicesContent} containerBlackRounded paddingYLg`}
     >
-      {process.env.NODE_ENV !== "development" && (
+      {/* {process.env.NODE_ENV !== "development" && (
         <video
           autoPlay
           loop
@@ -39,14 +39,29 @@ const ServicesContent = () => {
           <source src="/videos/services/services.webm" type="video/mp4" />
           <source src="/videos/services/services.mp4" type="video/mp4" />
         </video>
-      )}
-      <div className="container">
+      )} */}
+
+      <video
+        autoPlay
+        loop
+        muted
+        preload="auto"
+        className={styles.servicesContent__video}
+        playsInline
+      >
+        Your browser does not support the video tag.
+        <source src="/videos/services/services.webm" type="video/mp4" />
+        <source src="/videos/services/services.mp4" type="video/mp4" />
+      </video>
+
+      <div className="container paddingT">
         <TwoColumnSection
           image={cuttingEdgeTechImage}
           webpImage={cuttingEdgeTechWebpImage}
           alt="Cutting-edge tech and in-depth market"
           leftBottomCornerImg={cuttingEdgeTechLefBottomImage}
           leftBottomCornerWebpImg={cuttingEdgeTechLefBottomWebpImage}
+          cornerHeight="20%"
           sectionTitle={{ icon: searchIcon, text: "identify" }}
           title={["cutting-edge tech and in-depth market", "wknowledge"]}
           description="Receive actionable insights and make informed decisions based on expert analysis."
@@ -64,6 +79,7 @@ const ServicesContent = () => {
           leftTopCornerWebpImg={detailedDataLeftTopWebpImage}
           rightBottomCornerImg={detailedDataRightBottomImage}
           rightBottomCornerWebpImg={detailedDataRightBottomWebpImage}
+          cornerHeight="25%"
           sectionTitle={{ icon: investIcon, text: "invest" }}
           title={["detailed data and experts", "view Ppoints"]}
           description="Never miss a chance to capitalize on market movements and make informed investment decisions."

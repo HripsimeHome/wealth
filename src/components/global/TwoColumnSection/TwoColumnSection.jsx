@@ -9,6 +9,7 @@ const TwoColumnSection = ({
   image,
   webpImage,
   //img corners
+  cornerHeight,
   leftTopCornerImg,
   leftTopCornerWebpImg,
   rightTopCornerImg,
@@ -41,7 +42,14 @@ const TwoColumnSection = ({
 paddingB
       `}
     >
-      <div className={styles.twoColumnSection__imgWrapper}>
+      <div
+        className={styles.twoColumnSection__imgWrapper}
+        // style={cornerHeight ? { "--corner-height": cornerHeight } : {}}
+        // style={{ "--corner-height": cornerHeight || "20%" }}
+        // style={{
+        //       maxHeight: cornerHeight,
+        //     }}
+      >
         <ImageWebp
           src={image}
           srcSet={webpImage}
@@ -53,6 +61,7 @@ paddingB
             src={leftTopCornerImg}
             srcSet={leftTopCornerWebpImg}
             className={`imgCorner leftTopCorner`}
+            style={cornerHeight && { maxHeight: cornerHeight }}
           />
         )}
 
@@ -61,6 +70,7 @@ paddingB
             src={rightTopCornerImg}
             srcSet={rightTopCornerWebpImg}
             className={`imgCorner rightTopCorner`}
+            style={cornerHeight && { maxHeight: cornerHeight }}
           />
         )}
 
@@ -69,6 +79,7 @@ paddingB
             src={leftBottomCornerImg}
             srcSet={leftBottomCornerWebpImg}
             className={`imgCorner leftBottomCorner`}
+            style={cornerHeight && { maxHeight: cornerHeight }}
           />
         )}
 
@@ -77,6 +88,7 @@ paddingB
             src={rightBottomCornerImg}
             srcSet={rightBottomCornerWebpImg}
             className={`imgCorner rightBottomCorner`}
+            style={cornerHeight && { maxHeight: cornerHeight }}
           />
         )}
       </div>
@@ -96,8 +108,7 @@ paddingB
         <h2 className={styles.twoColumnSection__title}>
           {Array.isArray(title) ? (
             <>
-              {title[0]}
-              <br />
+              <span>{title[0]}</span>
               <span className={styles.twoColumnSection__titleThin}>
                 {title[1]}.
               </span>

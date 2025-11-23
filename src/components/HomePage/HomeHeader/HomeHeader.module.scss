@@ -30,6 +30,10 @@
     line-height: 125px;
     letter-spacing: 1px;
 
+    @include xlScreenMedia {
+      font-size: 135px;
+    }
+
     @include lgScreenMedia {
       font-size: 100px;
     }

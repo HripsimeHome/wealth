@@ -65,6 +65,18 @@ button {
   color: $color-red;
 }
 
+.paddingT {
+  padding-top: 100px;
+
+  @include lgScreenMedia {
+    padding-top: 50px;
+  }
+
+  @include smScreenMedia {
+    padding-top: 30px;
+  }
+}
+
 .paddingB {
   padding-bottom: 100px;
 
@@ -145,7 +157,7 @@ h1 {
 }
 
 .containerBlackRounded {
-  min-height: 500px;
+  // min-height: 500px;
   background-color: $color-secondary;
   border-radius: 89px;
 }
@@ -159,10 +171,14 @@ h1 {
 
 .imgCorner {
   position: absolute;
-  //width: 60px; // регулируй нужный размер
-  // height: auto; // ← ДОБАВИТЬ ОБЯЗАТЕЛЬНО
-  //object-fit: contain;
   z-index: 1;
+  max-width: 100%;
+  max-height: var(
+    --corner-height,
+    20%
+  ); // 20% — это значение по умолчанию, которое CSS использует, если переменная --corner-height не задана.
+
+  //object-fit: contain;
 
   @include smScreenMedia {
     display: none;
@@ -172,25 +188,21 @@ h1 {
 .leftTopCorner {
   top: 0;
   left: 0;
-  max-height: 6.6rem;
 }
 
 .leftBottomCorner {
   bottom: 0;
   left: 0;
-  max-height: 8.6rem;
 }
 
 .rightTopCorner {
   top: 0;
   right: 0;
-  max-height: 8.6rem;
 }
 
 .rightBottomCorner {
   bottom: 0;
   right: 0;
-  max-height: 8.6rem;
 }
 
 .scrollAnim {

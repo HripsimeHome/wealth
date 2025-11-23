@@ -30,6 +30,7 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           alt="Our team of experienced analysts."
           leftTopCornerImg={analystsLeftTopImage}
           leftTopCornerWebpImg={analystsLeftTopWebpImage}
+          cornerHeight="27%"
           sectionTitle={{ icon: entryIcon, text: "experts" }}
           title={["Our team of experienced", "analysts"]}
           description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
@@ -44,6 +45,7 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           alt="Quality trade"
           leftBottomCornerImg={tradeLeftBottomImage}
           leftBottomCornerWebpImg={tradeLeftBottomWebpImage}
+          cornerHeight="19%"
           sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
           title={["quality trade alerts with", "wealth bento"]}
           description="Never miss a chance to capitalize on market movements and make informed decisions."
