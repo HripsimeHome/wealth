@@ -25,7 +25,7 @@
   }
 
   &__title {
-    @include setFont(155px, 500);
+    @include setFont(150px, 500);
     text-transform: uppercase;
     line-height: 125px;
     letter-spacing: 1px;
@@ -36,10 +36,12 @@
 
     @include lgScreenMedia {
       font-size: 100px;
+      line-height: 100px;
     }
 
     @include smScreenMedia {
-      font-size: 25vw;
+      font-size: 70px;
+      line-height: 70px;
     }
   }
 

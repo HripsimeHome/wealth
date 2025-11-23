@@ -1,6 +1,12 @@
 import styles from "./HomeHeader.module.scss";
 import SectionTitle from "../../layout/SectionTitle/SectionTitle";
 import ArrowAnimation from "../../layout/ArrowAnimation/ArrowAnimation";
+
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
+
 import ImageWebp from "./../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 

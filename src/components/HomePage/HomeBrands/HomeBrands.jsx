@@ -55,7 +55,6 @@ const HomeBrands = () => {
           inProp={isBrandsInView}
           delay={400}
           style={TransitionStyleTypes.bottom}
-          className={styles.footer__topCcontainer}
         >
           <ImageWebp
             key={index}

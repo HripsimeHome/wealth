@@ -1,6 +1,11 @@
 import TwoColumnSection from "../../../global/TwoColumnSection/TwoColumnSection";
 import SocialIcons from "../../../layout/SocialIcons/SocialIcons";
 
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../../providers/TransitionProvider";
+import { useAnimationInView } from "../../../../hooks/useInViewAnimation";
+
 import {
   JaneImage,
   JaneWebpImage,

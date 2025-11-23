@@ -6,6 +6,11 @@ import Blog from "../../global/Blog/Blog";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath, servicesPagePath } from "../../../router/path";
 
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
+
 import {
   analystsImage,
   analystsWebpImage,
@@ -21,9 +26,18 @@ import {
 import { entryIcon, timeBlackIcon } from "../../../assets/svg";
 
 const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
+  const { ref: contentRef, inView: isContentInView } = useAnimationInView({
+    threshold: 0.5,
+  });
+
   return (
     <section className={styles.homeContent} ref={contentSectionRef}>
-      <div className="container">
+      <div className="container" ref={contentRef}>
+        <TransitionProvider
+          inProp={isContentInView}
+          delay={400}
+          style={TransitionStyleTypes.left}
+        ></TransitionProvider>
         <TwoColumnSection
           image={analystsImage}
           webpImage={analystsWebpImage}
@@ -38,22 +52,27 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           btnLabel="explore"
           btnSecondaryBg
         />
-
-        <TwoColumnSection
-          image={tradeImage}
-          webpImage={tradeWebpImage}
-          alt="Quality trade"
-          leftBottomCornerImg={tradeLeftBottomImage}
-          leftBottomCornerWebpImg={tradeLeftBottomWebpImage}
-          cornerHeight="19%"
-          sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
-          title={["quality trade alerts with", "wealth bento"]}
-          description="Never miss a chance to capitalize on market movements and make informed decisions."
-          arrowButton={
-            <ArrowRotation to={servicesPagePath} isSecondaryCircle />
-          }
-          reverse
-        />
+        <TransitionProvider
+          inProp={isContentInView}
+          delay={400}
+          style={TransitionStyleTypes.right}
+        >
+          <TwoColumnSection
+            image={tradeImage}
+            webpImage={tradeWebpImage}
+            alt="Quality trade"
+            leftBottomCornerImg={tradeLeftBottomImage}
+            leftBottomCornerWebpImg={tradeLeftBottomWebpImage}
+            cornerHeight="19%"
+            sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
+            title={["quality trade alerts with", "wealth bento"]}
+            description="Never miss a chance to capitalize on market movements and make informed decisions."
+            arrowButton={
+              <ArrowRotation to={servicesPagePath} isSecondaryCircle />
+            }
+            reverse
+          />
+        </TransitionProvider>
       </div>
 
       <div className="container containerBlackTopRounded">

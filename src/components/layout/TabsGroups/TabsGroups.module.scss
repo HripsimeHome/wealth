@@ -97,5 +97,9 @@
     flex: 4;
     @include setFont(md, 300, $color-white);
     text-align: justify;
+
+    @include smScreenMedia {
+      text-align: left;
+    }
   }
 }

@@ -5,6 +5,11 @@ import ServicesCategoriesTabs from "./ServicesCategories/ServicesCategoriesTabs/
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath } from "../../../router/path";
 
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { useAnimationInView } from "../../../hooks/useInViewAnimation";
+
 import {
   cuttingEdgeTechImage,
   cuttingEdgeTechWebpImage,

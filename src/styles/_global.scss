@@ -89,6 +89,21 @@ button {
   }
 }
 
+.paddingYLg {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  @include lgScreenMedia {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include smScreenMedia {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 h1 {
   font-size: 2rem; // 32px
   letter-spacing: -0.07vw;
@@ -110,21 +125,6 @@ h1 {
 //   font-size: 1.125; // 18px
 // } paddingYLg
 
-.paddingYLg {
-  padding-top: 75px;
-  padding-bottom: 75px;
-
-  @include lgScreenMedia {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  @include smScreenMedia {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-
 .btnPrimary {
   min-width: 100px;
   background-color: $color-primary;
@@ -142,7 +142,6 @@ h1 {
 
 .container {
   // max-width: 1100px;
-
   // padding-left: 10%;
   //padding-right: 10%;
   max-width: 1280px;
@@ -160,6 +159,7 @@ h1 {
   // min-height: 500px;
   background-color: $color-secondary;
   border-radius: 89px;
+  padding: 30px;
 }
 
 .containerBlackTopRounded {
