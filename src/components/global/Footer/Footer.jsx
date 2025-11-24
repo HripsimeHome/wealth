@@ -40,7 +40,7 @@ const Footer = () => {
                   src={logoImage}
                   srcSet={logoWebpImage}
                   alt="Wealth Bento"
-                  className={styles.footer__logo}
+                  className={styles.footer__logoImg}
                 />
               </Link>
 

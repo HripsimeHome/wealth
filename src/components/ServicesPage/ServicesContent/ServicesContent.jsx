@@ -27,6 +27,14 @@ import {
 import { searchIcon, investIcon } from "../../../assets/svg";
 
 const ServicesContent = () => {
+  const { ref: marketRef, inView: isMarketInView } = useAnimationInView({
+    threshold: 0.5,
+  });
+
+  const { ref: expertsRef, inView: isexpertsInView } = useAnimationInView({
+    threshold: 0.5,
+  });
+
   return (
     <section
       className={`${styles.servicesContent} containerBlackRounded paddingYLg`}
@@ -60,38 +68,54 @@ const ServicesContent = () => {
       </video>
 
       <div className="container paddingT">
-        <TwoColumnSection
-          image={cuttingEdgeTechImage}
-          webpImage={cuttingEdgeTechWebpImage}
-          alt="Cutting-edge tech and in-depth market"
-          leftBottomCornerImg={cuttingEdgeTechLefBottomImage}
-          leftBottomCornerWebpImg={cuttingEdgeTechLefBottomWebpImage}
-          cornerHeight="20%"
-          sectionTitle={{ icon: searchIcon, text: "identify" }}
-          title={["cutting-edge tech and in-depth market", "wknowledge"]}
-          description="Receive actionable insights and make informed decisions based on expert analysis."
-          textWhite
-          reverse
-          arrowButton={
-            <ArrowRotation to={aboutPagePath} variant="greyCircle" />
-          }
-        />
-        <TwoColumnSection
-          image={detailedDataImage}
-          webpImage={detailedDatanWebpImage}
-          alt="Detailed data and experts"
-          leftTopCornerImg={detailedDataLeftTopImage}
-          leftTopCornerWebpImg={detailedDataLeftTopWebpImage}
-          rightBottomCornerImg={detailedDataRightBottomImage}
-          rightBottomCornerWebpImg={detailedDataRightBottomWebpImage}
-          cornerHeight="25%"
-          sectionTitle={{ icon: investIcon, text: "invest" }}
-          title={["detailed data and experts", "view Ppoints"]}
-          description="Never miss a chance to capitalize on market movements and make informed investment decisions."
-          btnPath={aboutPagePath}
-          btnLabel="view more"
-          textWhite
-        />
+        <div ref={marketRef}>
+          <TransitionProvider
+            inProp={isMarketInView}
+            delay={400}
+            style={TransitionStyleTypes.left}
+          >
+            <TwoColumnSection
+              image={cuttingEdgeTechImage}
+              webpImage={cuttingEdgeTechWebpImage}
+              alt="Cutting-edge tech and in-depth market"
+              leftBottomCornerImg={cuttingEdgeTechLefBottomImage}
+              leftBottomCornerWebpImg={cuttingEdgeTechLefBottomWebpImage}
+              cornerHeight="20%"
+              sectionTitle={{ icon: searchIcon, text: "identify" }}
+              title={["cutting-edge tech and in-depth market", "wknowledge"]}
+              description="Receive actionable insights and make informed decisions based on expert analysis."
+              textWhite
+              reverse
+              arrowButton={
+                <ArrowRotation to={aboutPagePath} variant="greyCircle" />
+              }
+            />
+          </TransitionProvider>
+        </div>
+        <div ref={expertsRef}>
+          <TransitionProvider
+            inProp={isexpertsInView}
+            delay={800}
+            style={TransitionStyleTypes.right}
+          >
+            <TwoColumnSection
+              image={detailedDataImage}
+              webpImage={detailedDatanWebpImage}
+              alt="Detailed data and experts"
+              leftTopCornerImg={detailedDataLeftTopImage}
+              leftTopCornerWebpImg={detailedDataLeftTopWebpImage}
+              rightBottomCornerImg={detailedDataRightBottomImage}
+              rightBottomCornerWebpImg={detailedDataRightBottomWebpImage}
+              cornerHeight="25%"
+              sectionTitle={{ icon: investIcon, text: "invest" }}
+              title={["detailed data and experts", "view Ppoints"]}
+              description="Never miss a chance to capitalize on market movements and make informed investment decisions."
+              btnPath={aboutPagePath}
+              btnLabel="view more"
+              textWhite
+            />
+          </TransitionProvider>
+        </div>
         <ServicesCategories />
         <ServicesCategoriesTabs />
       </div>

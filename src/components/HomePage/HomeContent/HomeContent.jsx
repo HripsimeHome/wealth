@@ -26,53 +26,64 @@ import {
 import { entryIcon, timeBlackIcon } from "../../../assets/svg";
 
 const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
-  const { ref: contentRef, inView: isContentInView } = useAnimationInView({
+  const { ref: analystsRef, inView: isАnalystsInView } = useAnimationInView({
+    threshold: 0.5,
+  });
+
+  const { ref: tradeRef, inView: isTradeInView } = useAnimationInView({
     threshold: 0.5,
   });
 
   return (
     <section className={styles.homeContent} ref={contentSectionRef}>
-      <div className="container" ref={contentRef}>
-        <TransitionProvider
-          inProp={isContentInView}
-          delay={400}
-          style={TransitionStyleTypes.left}
-        ></TransitionProvider>
-        <TwoColumnSection
-          image={analystsImage}
-          webpImage={analystsWebpImage}
-          alt="Our team of experienced analysts."
-          leftTopCornerImg={analystsLeftTopImage}
-          leftTopCornerWebpImg={analystsLeftTopWebpImage}
-          cornerHeight="27%"
-          sectionTitle={{ icon: entryIcon, text: "experts" }}
-          title={["Our team of experienced", "analysts"]}
-          description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
-          btnPath={aboutPagePath}
-          btnLabel="explore"
-          btnSecondaryBg
-        />
-        <TransitionProvider
-          inProp={isContentInView}
-          delay={400}
-          style={TransitionStyleTypes.right}
-        >
-          <TwoColumnSection
-            image={tradeImage}
-            webpImage={tradeWebpImage}
-            alt="Quality trade"
-            leftBottomCornerImg={tradeLeftBottomImage}
-            leftBottomCornerWebpImg={tradeLeftBottomWebpImage}
-            cornerHeight="19%"
-            sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
-            title={["quality trade alerts with", "wealth bento"]}
-            description="Never miss a chance to capitalize on market movements and make informed decisions."
-            arrowButton={
-              <ArrowRotation to={servicesPagePath} isSecondaryCircle />
-            }
-            reverse
-          />
-        </TransitionProvider>
+      <div className="container">
+        <div ref={analystsRef}>
+          <TransitionProvider
+            inProp={isАnalystsInView}
+            delay={400}
+            style={TransitionStyleTypes.left}
+          >
+            <TwoColumnSection
+              image={analystsImage}
+              webpImage={analystsWebpImage}
+              alt="Our team of experienced analysts."
+              leftTopCornerImg={analystsLeftTopImage}
+              leftTopCornerWebpImg={analystsLeftTopWebpImage}
+              cornerHeight="27%"
+              sectionTitle={{ icon: entryIcon, text: "experts" }}
+              title={["Our team of experienced", "analysts"]}
+              description="Leverage cutting-edge technology and in-depth market knowledge to identify potential trading opportunities"
+              btnPath={aboutPagePath}
+              btnLabel="explore"
+              btnSecondaryBg
+            />
+          </TransitionProvider>
+        </div>
+
+        <div ref={tradeRef}>
+          <TransitionProvider
+            inProp={isTradeInView}
+            delay={800}
+            style={TransitionStyleTypes.right}
+          >
+            <TwoColumnSection
+              ref={tradeRef}
+              image={tradeImage}
+              webpImage={tradeWebpImage}
+              alt="Quality trade"
+              leftBottomCornerImg={tradeLeftBottomImage}
+              leftBottomCornerWebpImg={tradeLeftBottomWebpImage}
+              cornerHeight="19%"
+              sectionTitle={{ icon: timeBlackIcon, text: "real-time" }}
+              title={["quality trade alerts with", "wealth bento"]}
+              description="Never miss a chance to capitalize on market movements and make informed decisions."
+              arrowButton={
+                <ArrowRotation to={servicesPagePath} isSecondaryCircle />
+              }
+              reverse
+            />
+          </TransitionProvider>
+        </div>
       </div>
 
       <div className="container containerBlackTopRounded">

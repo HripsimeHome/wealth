@@ -8,20 +8,17 @@ import TransitionProvider, {
 import ImageWebp from "./../../../layout/ImageWebp/ImageWebp";
 
 const BlogSingle = ({ article }) => {
-  const { ref: blogSingleHeaderRef, inView: isBlogSingleHeaderInView } =
-    useAnimationInView({
-      threshold: 0.1,
-    });
+  const { ref: headerRef, inView: isHeaderInView } = useAnimationInView({
+    threshold: 0.1,
+  });
 
-  const { ref: blogSingleImgRef, inView: isBlogSingleImgInView } =
-    useAnimationInView({
-      threshold: 0.5,
-    });
+  const { ref: imgRef, inView: isImgInView } = useAnimationInView({
+    threshold: 0.5,
+  });
 
-  const { ref: blogSingleContentRef, inView: isBlogSingleContentInView } =
-    useAnimationInView({
-      threshold: 0.5,
-    });
+  const { ref: contentRef, inView: isContentInView } = useAnimationInView({
+    threshold: 0.5,
+  });
 
   const navigate = useNavigate();
 
@@ -48,9 +45,9 @@ const BlogSingle = ({ article }) => {
         Back to all posts
       </button>
 
-      <div ref={blogSingleHeaderRef}>
+      <div ref={headerRef}>
         <TransitionProvider
-          inProp={isBlogSingleHeaderInView}
+          inProp={isHeaderInView}
           delay={100}
           style={TransitionStyleTypes.zoomIn}
           className={styles.blogSingle__header}
@@ -70,9 +67,9 @@ const BlogSingle = ({ article }) => {
           </span>
         </TransitionProvider>
 
-        <div className={styles.blogSingle__imgContainer} ref={blogSingleImgRef}>
+        <div className={styles.blogSingle__imgContainer} ref={imgRef}>
           <TransitionProvider
-            inProp={isBlogSingleImgInView}
+            inProp={isImgInView}
             delay={400}
             style={TransitionStyleTypes.bottom}
           >
@@ -88,11 +85,11 @@ const BlogSingle = ({ article }) => {
 
       <div
         className={`${styles.blogSingle__contentContainer} paddingYLg`}
-        ref={blogSingleContentRef}
+        ref={contentRef}
       >
         {content.map(({ heading, text, subtext }, index) => (
           <TransitionProvider
-            inProp={isBlogSingleContentInView}
+            inProp={isContentInView}
             delay={800}
             style={TransitionStyleTypes.bottom}
             className={styles.blogHeader}

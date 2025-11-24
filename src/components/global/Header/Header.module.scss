@@ -5,8 +5,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 10;
-  // @include flexCol(space-between, center);
+  z-index: 5;
   transition: $transition;
   background-color: $color-lightGrey;
   padding: 1.5rem;
@@ -15,19 +14,77 @@
     padding: 1rem;
   }
 
-  &__test {
+  &__headerContainer {
     @include flexCol(space-between, center);
   }
 
-  &__logo {
-    max-width: 25%;
+  &__logoImg {
+    max-width: 130px;
+  }
 
-    // @include lgScreenMedia {
-    //   width: 65px;
-    // }
+  &__nav {
+    // display: flex;
+    // gap: 20px;
+  }
 
-    // @include smScreenMedia {
-    //   width: 48px;
-    // }
+  &__list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  &__link {
+    @include setFont(base, 300, $color-secondary);
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &_active {
+      font-weight: bold;
+      cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__btnBurger {
+    @include button();
+    display: none;
+
+    @include mdScreenMedia {
+      display: block;
+    }
+  }
+
+  &__iconBurger {
+    @include svg(27px, $color-secondary);
+
+    &:hover {
+      fill: $color-darkGrey;
+      transition: $transitionEaseOut;
+      cursor: pointer;
+    }
+  }
+
+  &__btnClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    @include button();
+  }
+
+  &__iconCross {
+    @include svg(40px, $color-white);
+
+    &:hover {
+      fill: $color-primary;
+      transition: $transition;
+    }
   }
 }

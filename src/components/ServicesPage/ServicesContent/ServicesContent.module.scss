@@ -4,13 +4,24 @@
 .servicesContent {
   margin-top: 240px;
 
+  @include smScreenMedia {
+    margin-top: 110px;
+  }
+
   &__video {
     @include flexCol;
-    max-width: 850px;
+    max-width: 860px;
     width: 100%;
     // transform: translateY(-50%);
     // padding-top: -200px;
     border-radius: 24px;
-    margin: -300px auto 0;
+    margin: -240px auto 0;
+
+    position: relative;
+    z-index: 2;
+
+    @include smScreenMedia {
+      margin-top: -130px;
+    }
   }
 }

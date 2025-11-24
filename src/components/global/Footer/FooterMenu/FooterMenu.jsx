@@ -16,7 +16,7 @@ const FooterMenu = () => {
                     to={path}
                     className={({ isActive }) =>
                       `${styles.footerMenu__link} 
-                        ${isActive ? styles.footerMenu__link_active : ""}`
+                       ${isActive ? styles.footerMenu__link_active : ""}`
                     }
                   >
                     {text}

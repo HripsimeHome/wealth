@@ -55,6 +55,9 @@ export const staffInfo = [
   },
 ];
 const AboutStaff = () => {
+  //   const { ref: analystsRef, inView: isАnalystsInView } = useAnimationInView({
+  //   threshold: 0.5,
+  // });
   return (
     <>
       {staffInfo.map((staffMember, i) => (
