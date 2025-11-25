@@ -3,6 +3,7 @@ import { forwardRef } from "react";
 import TwoColumnSection from "../../global/TwoColumnSection/TwoColumnSection";
 import StatusCounter from "../../layout/StatusCounter/StatusCounter";
 import Blog from "../../global/Blog/Blog";
+import BlogCardList from "../../global/Blog/BlogCardList/BlogCardList";
 import ArrowRotation from "../../layout/ArrowRotation/ArrowRotation";
 import { aboutPagePath, servicesPagePath } from "../../../router/path";
 
@@ -116,9 +117,9 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
               },
             ]}
           />
-          {/*  <BlogCard limit={3} /> */}
         </div>
-        <Blog posts={posts} />
+        {/* <BlogCardList limit={3} /> */}
+        <Blog posts={posts.slice(0, 4)} limit={34} />
       </div>
     </section>
   );

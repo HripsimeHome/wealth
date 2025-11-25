@@ -1,19 +1,17 @@
 import styles from "./MobileMenu.module.scss";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { headerMenu } from "../../../../constants/menuItems";
-import { burgerIcon, crossIcon } from "../../../../assets/svg";
-import Svg from "../../../layout/Svg/Svg";
+import clsx from "clsx";
 
-const MobileMenu = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-  const closeMenu = () => setIsMenuOpen(false);
-
+const MobileMenu = ({ closeMenu, isMenuOpen }) => {
   return (
-    <div className={styles.mobileMenu}>
-      <nav className={styles.mobileMenu__nav}>
+    <>
+      <nav
+        className={clsx(
+          styles.mobileMenu__nav,
+          isMenuOpen && styles.mobileMenu__nav_open
+        )}
+      >
         <ul className={styles.mobileMenu__list}>
           {headerMenu.map(({ text, path }, index) => (
             <li key={index}>
@@ -35,9 +33,9 @@ const MobileMenu = () => {
         </ul>
       </nav>
       {isMenuOpen && (
-        <div className={styles.mbileMenu__overlay} onClick={closeMenu} />
+        <div className={styles.mobileMenu__overlay} onClick={closeMenu} />
       )}
-    </div>
+    </>
   );
 };
 

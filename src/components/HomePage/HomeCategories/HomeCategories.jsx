@@ -88,6 +88,7 @@ const HomeCategories = forwardRef((_, categoriesSectionRef) => {
               inProp={isCategoryCardInview}
               style={TransitionStyleTypes.bottom}
               duration={600}
+              key={index}
               delay={index * 200}
               className={className}
             >

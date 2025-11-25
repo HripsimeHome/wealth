@@ -64,18 +64,4 @@
       padding: 10px 0;
     }
   }
-
-  &__title {
-    @include setFont(xxl, 400, $color-white);
-  }
-
-  &__description {
-    flex: 4;
-    @include setFont(md, 300, $color-white);
-    text-align: justify;
-
-    @include smScreenMedia {
-      text-align: left;
-    }
-  }
 }

@@ -27,24 +27,10 @@ const Header = () => {
           />
         </Link>
 
-        {/* <MobileMenu /> */}
-        {/* 
-          <button
-            className={styles.header__btnBurger}
-            onClick={toggleMenu}
-            aria-label="Open menu"
-          >
-            <Svg id={burgerIcon} className={styles.header__iconBurger} />
-          </button> */}
-        <nav
-          className={`
-        ${styles.header__nav}
-        ${isMenuOpen ? styles.header__nav_open : ""}
-        `}
-        >
+        <nav>
           {isMenuOpen && (
-            <button className={styles.mobileMenu__btnClose} onClick={closeMenu}>
-              <Svg id={crossIcon} className={styles.mobileMenu__iconCross} />
+            <button className={styles.header__btnClose} onClick={closeMenu}>
+              <Svg id={crossIcon} className={styles.header__iconCross} />
             </button>
           )}
 
@@ -67,6 +53,15 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+
+        <button
+          className={styles.header__btnBurger}
+          onClick={toggleMenu}
+          aria-label="Open menu"
+        >
+          <Svg id={burgerIcon} className={styles.header__iconBurger} />
+        </button>
+        <MobileMenu isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
       </div>
     </div>
   );

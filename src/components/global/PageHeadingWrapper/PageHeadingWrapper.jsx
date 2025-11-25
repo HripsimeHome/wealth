@@ -10,6 +10,11 @@ import {
   investmentsIcon,
   contactsIcon,
 } from "../../../assets/svg";
+import {
+  blogPagePath,
+  contactsPagePath,
+  servicesPagePath,
+} from "../../../router/path";
 
 const PageHeadingWrapper = () => {
   const { ref: headingSmallRef, inView: isHeadingSmallInView } =
@@ -19,36 +24,41 @@ const PageHeadingWrapper = () => {
       // triggerOnce:true
     });
   const { pathname } = useLocation();
-
-  const headers = {
-    "/blog": {
+  // keep a list (array) of headers and also build a lookup map for backwards compatibility
+  const headers = [
+    {
+      path: blogPagePath,
       icon: articlesIcon,
       sectionTitle: "articles",
       title: "Blog",
       subtitle: "insightful articles paired with timely market updates",
     },
-    "/services": {
+    {
+      path: servicesPagePath,
       icon: investmentsIcon,
       sectionTitle: "Stock Analysis",
       title: "Services",
       subtitle: "quality research paired with real-time trade alerts",
     },
-    "/contacts": {
+    {
+      path: contactsPagePath,
       icon: contactsIcon,
       sectionTitle: "get in touch",
       title: "Contact",
       subtitle: "contact us today for support and tailored assistance",
     },
-  };
+  ];
 
-  const data = headers[pathname];
+  const data = headers.find((item) =>
+    [item.path, item.path + "/"].includes(pathname)
+  );
 
   if (!data) return null;
 
   return (
     <div
       ref={headingSmallRef}
-      // style={{ height: "400px", backgroundColor: "green" }}
+      // style={{ minHeight: "400px", backgroundColor: "green" }}
     >
       <TransitionProvider
         inProp={isHeadingSmallInView}

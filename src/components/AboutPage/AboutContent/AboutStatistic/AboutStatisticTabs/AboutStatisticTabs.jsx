@@ -1,5 +1,5 @@
 import Tabs from "../../../../layout/Tabs/Tabs";
-
+import styles from "./AboutStatisticTabs.module.scss";
 const tabLabels = ["Hardwork", "Research", "Innovation", "Veterans"];
 
 const tabContent = [
@@ -26,11 +26,21 @@ const tabContent = [
       "We deeply value the service and sacrifice of veterans. Our initiatives provide tailored support, resources, and opportunities to help them transition successfully, continue their professional growth, and be recognized for their contributions. Through guidance, community programs, and personalized assistance, we ensure veterans feel empowered, respected, and connected to meaningful opportunities.",
   },
 ];
+const tabContentViews = tabContent.map((item) => (
+  <>
+    <h3 className={styles.aboutStatisticTabs__title}>{item?.title}</h3>
+    <div className={styles.aboutStatisticTabs__description}>
+      {item?.description}
+    </div>
+  </>
+));
 
 const AboutStatisticTabs = () => {
+  console.log({ tabContentViews });
+
   return (
     <div className="paddingB">
-      <Tabs tabLabels={tabLabels} tabContent={tabContent} />
+      <Tabs tabLabels={tabLabels} tabContent={tabContentViews} />
     </div>
   );
 };

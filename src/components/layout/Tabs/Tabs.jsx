@@ -24,14 +24,7 @@ const Tabs = ({ tabLabels = [], tabContent = [] }) => {
       </div>
 
       {/* Tab content */}
-      <div className={styles.tabs__content}>
-        <h3 className={styles.tabs__title}>
-          {tabContent[activeTabIndex]?.title}
-        </h3>
-        <div className={styles.tabs__description}>
-          {tabContent[activeTabIndex]?.description}
-        </div>
-      </div>
+      <div className={styles.tabs__content}>{tabContent[activeTabIndex]}</div>
     </section>
   );
 };

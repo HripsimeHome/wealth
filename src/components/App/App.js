@@ -51,7 +51,7 @@ function App() {
       <PageHeadingWrapper />
       <AppRouter />
       {/* {showSubscription && <Subscription />} */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
