@@ -17,8 +17,9 @@
     border-radius: 24px;
     margin: -240px auto 0;
 
-    position: relative;
-    z-index: 2;
+    @include mdScreenMedia {
+      margin-top: -200px;
+    }
 
     @include smScreenMedia {
       margin-top: -130px;

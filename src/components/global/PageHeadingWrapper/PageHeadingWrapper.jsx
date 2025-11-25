@@ -12,11 +12,12 @@ import {
 } from "../../../assets/svg";
 
 const PageHeadingWrapper = () => {
-  const { ref, inView } = useAnimationInView({
-    threshold: 0.1,
-    //triggerOnce: false,
-    // triggerOnce:true
-  });
+  const { ref: headingSmallRef, inView: isHeadingSmallInView } =
+    useAnimationInView({
+      threshold: 0.5,
+      //triggerOnce: false,
+      // triggerOnce:true
+    });
   const { pathname } = useLocation();
 
   const headers = {
@@ -45,9 +46,12 @@ const PageHeadingWrapper = () => {
   if (!data) return null;
 
   return (
-    <div ref={ref}>
+    <div
+      ref={headingSmallRef}
+      // style={{ height: "400px", backgroundColor: "green" }}
+    >
       <TransitionProvider
-        inProp={inView}
+        inProp={isHeadingSmallInView}
         delay={100}
         style={TransitionStyleTypes.zoomIn}
       >

@@ -41,7 +41,7 @@ const HomeContent = forwardRef(({ posts = [] }, contentSectionRef) => {
           <TransitionProvider
             inProp={isАnalystsInView}
             delay={400}
-            style={TransitionStyleTypes.left}
+            style={TransitionStyleTypes.top}
           >
             <TwoColumnSection
               image={analystsImage}
